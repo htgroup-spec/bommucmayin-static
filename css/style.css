@@ -3,30 +3,36 @@
    International Style: grid rõ, whitespace rộng, 1 primary + 1 accent.
    ========================================================================== */
 
+/* Ngôn ngữ thiết kế lấy theo TemplateMo 565 "Onix Digital" (templatemo.com):
+   cam san hô làm màu nhấn, xanh làm màu phụ, nền tối #2a2a2a, font Poppins,
+   nút bo tròn hoàn toàn, bóng mềm. Viết lại bằng CSS thuần — KHÔNG kéo theo
+   Bootstrap, jQuery, Owl Carousel, Isotope hay FontAwesome của bản gốc
+   (~2 MB) vì tốc độ là lợi thế xếp hạng của site dịch vụ local. */
 :root {
-  --primary:        #14457f;
-  --primary-dark:   #0e3360;
-  --primary-light:  #e8f0fa;
-  --accent:         #e2620f;
-  --accent-dark:    #c05009;
+  --primary:        #03a4ed;
+  --primary-dark:   #0288c4;
+  --primary-light:  #e6f6fe;
+  --accent:         #ff695f;
+  --accent-dark:    #ef4e43;
 
-  --ink:            #16191d;
-  --body:           #3c444e;
-  --muted:          #6b747f;
-  --line:           #dfe3e8;
+  --ink:            #2a2a2a;
+  --body:           #4a4a4a;
+  --muted:          #8a8a8a;
+  --line:           #e7e7e7;
   --bg:             #ffffff;
-  --bg-alt:         #f5f7fa;
-  --bg-dark:        #11161d;
+  --bg-alt:         #f7f7f7;
+  --bg-dark:        #1e1e1e;
 
   --ok:             #1b7f4b;
 
-  --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font: "Poppins", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 
   --gutter: 24px;
-  --maxw:   1160px;
-  --radius: 6px;
-  --shadow: 0 1px 2px rgba(16,24,40,.06), 0 4px 16px rgba(16,24,40,.06);
-  --shadow-lg: 0 2px 4px rgba(16,24,40,.06), 0 12px 32px rgba(16,24,40,.10);
+  --maxw:   1200px;
+  --radius: 10px;
+  --radius-pill: 100px;
+  --shadow: 0 2px 6px rgba(42,42,42,.05), 0 8px 24px rgba(42,42,42,.06);
+  --shadow-lg: 0 4px 10px rgba(42,42,42,.06), 0 18px 44px rgba(42,42,42,.12);
 }
 
 /* ---------- reset ---------- */
@@ -312,3 +318,93 @@ td.price { color: var(--accent); font-weight: 700; white-space: nowrap; }
 .footer-areas h3 { margin-bottom: 14px; }
 .footer-areas .chips a { background: #1a222c; border-color: #2b3440; color: #b9c2cf; }
 .footer-areas .chips a:hover { background: #222c38; border-color: #3a4654; color: #fff; }
+
+/* ==========================================================================
+   Lớp phủ giao diện theo TemplateMo "Onix Digital" — ghi đè các khối phía trên.
+   Đặt cuối file để dễ gỡ nếu đổi hướng thiết kế.
+   ========================================================================== */
+
+/* nút bo tròn hoàn toàn, kiểu pill của template gốc */
+.btn { border-radius: var(--radius-pill); font-weight: 600; letter-spacing: .01em; }
+.btn-primary { background: var(--accent); box-shadow: 0 6px 16px rgba(255,105,95,.28); }
+.btn-primary:hover { background: var(--accent-dark); box-shadow: 0 8px 22px rgba(255,105,95,.36); }
+.btn-secondary { background: var(--primary); box-shadow: 0 6px 16px rgba(3,164,237,.26); }
+.btn-secondary:hover { background: var(--primary-dark); }
+
+/* tiêu đề đậm hơn, sát chữ hơn — đúng nhịp của template */
+h1, h2, h3, h4 { font-weight: 700; letter-spacing: -.01em; }
+h1 { font-size: clamp(2rem, 4.6vw, 2.9rem); line-height: 1.2; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.05rem); }
+
+/* gạch nhấn ngắn dưới tiêu đề mục */
+.section-head h2 { position: relative; padding-bottom: 16px; }
+.section-head h2::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 54px; height: 3px; border-radius: 3px; background: var(--accent);
+}
+.cta-band h2::after, .text-center .section-head h2::after { left: 50%; transform: translateX(-50%); }
+
+/* eyebrow kiểu pill cam nhạt */
+.eyebrow { background: #fff0ef; color: var(--accent); }
+
+/* card bo tròn, viền mảnh, nhấc lên khi rê chuột */
+.card { border-radius: var(--radius); border-color: var(--line); }
+.card-link:hover { border-color: var(--accent); transform: translateY(-4px); }
+.card-icon { color: var(--accent); }
+
+/* số bước: tròn, gradient cam như template */
+.step-number {
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8a6e 100%);
+  box-shadow: 0 6px 16px rgba(255,105,95,.3);
+  width: 46px; height: 46px; font-size: 1rem;
+}
+.step { padding-top: 62px; }
+
+/* hero: nền sáng, khối xanh rất nhạt */
+.hero { background: linear-gradient(160deg, var(--primary-light) 0%, #fff 65%); }
+
+/* thanh trên cùng và header */
+.topbar { background: var(--ink); color: #cfcfcf; }
+.site-header { background: rgba(255,255,255,.97); }
+.nav-list a { font-weight: 500; }
+.nav-list a:hover, .nav-list a[aria-current="page"] { color: var(--accent); background: #fff0ef; }
+.brand-mark { background: var(--accent); border-radius: var(--radius); }
+.brand-sub { color: var(--muted); }
+
+/* dải CTA: nền tối thay vì xanh đậm */
+.cta-band { background: var(--ink); }
+.cta-band p { color: #c9c9c9; }
+
+/* hộp liên kết nhấn: viền trái màu cam */
+.link-box {
+  background: var(--bg-alt); border-color: var(--line);
+  border-left: 4px solid var(--accent); border-radius: var(--radius);
+}
+
+/* bảng: bo góc, hàng hover nhạt */
+.table-wrap { border-radius: var(--radius); }
+tbody tr:hover { background: #fff7f6; }
+td.price { color: var(--accent); }
+
+/* FAQ: bo góc, dấu cộng màu cam */
+.faq details { border-radius: var(--radius); }
+.faq summary::after { color: var(--accent); }
+
+/* chips bo tròn hẳn */
+.chips a { border-radius: var(--radius-pill); }
+.chips a:hover { border-color: var(--accent); color: var(--accent); background: #fff0ef; }
+
+/* footer tối, tiêu đề cột có gạch cam */
+.site-footer { background: var(--bg-dark); color: #a8a8a8; }
+.site-footer h3 { position: relative; padding-bottom: 12px; }
+.site-footer h3::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 32px; height: 2px; background: var(--accent); border-radius: 2px;
+}
+.footer-bottom { border-top-color: #2e2e2e; }
+.footer-areas { border-top-color: #2e2e2e; }
+.footer-areas .chips a { background: #272727; border-color: #383838; color: #b4b4b4; }
+.footer-areas .chips a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* thanh gọi cố định trên mobile */
+.callbar a { font-weight: 600; }

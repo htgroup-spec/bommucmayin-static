@@ -9,7 +9,7 @@ import { resolve, dirname, join, posix } from 'path';
 import { fileURLToPath } from 'url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SKIP_DIRS = new Set(['_build', '_data', '_includes', 'node_modules', '.git', 'docs']);
+const SKIP_DIRS = new Set(['_build', '_data', '_includes', '_template-src', 'node_modules', '.git', 'docs']);
 
 function walk(dir, out = []) {
   for (const e of readdirSync(dir)) {

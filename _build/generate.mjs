@@ -153,7 +153,10 @@ ${crumbs.map(c => c.href === null
 <meta property="og:description" content="${attr(metaDesc)}">
 <meta property="og:url" content="${canonical}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#14457f">
+<meta name="theme-color" content="#ff695f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="${p}css/style.css">
 <link rel="stylesheet" href="${p}css/responsive.css">
 ${ld}
