@@ -70,19 +70,30 @@ node _build/generate.mjs && node _build/audit.mjs
 
 ## Deploy
 
-GitHub Pages, nhánh `main`, thư mục gốc. File `CNAME` và `.nojekyll` được generate tự sinh.
+Repo: **github.com/htgroup-spec/bommucmayin-static** (public)
+GitHub Pages: nhánh `main`, thư mục gốc. `CNAME` và `.nojekyll` do generate tự sinh.
 
-DNS cho bommucmayin.net (bản ghi A trỏ về GitHub Pages):
+DNS tại AZDIGI (ns1/ns2.azdigi.com) — **đã cấu hình 02/10/2026**:
 
 ```
-A     @      185.199.108.153
-A     @      185.199.109.153
-A     @      185.199.110.153
-A     @      185.199.111.153
-CNAME www    <tài-khoản>.github.io
+A      bommucmayin.net.       185.199.108.153        TTL 3600
+A      bommucmayin.net.       185.199.109.153        TTL 3600
+A      bommucmayin.net.       185.199.110.153        TTL 3600
+A      bommucmayin.net.       185.199.111.153        TTL 3600
+CNAME  www.bommucmayin.net.   htgroup-spec.github.io TTL 3600
 ```
 
-Sau khi DNS phân giải, bật **Enforce HTTPS** trong Settings → Pages.
+> **MX vẫn trỏ về chính tên miền** (`0 bommucmayin.net`) — bản ghi còn lại từ thời chạy
+> cPanel. Apex nay là GitHub Pages nên **email @bommucmayin.net không hoạt động**. Nếu cần
+> email thì trỏ MX sang dịch vụ mail riêng; nếu không dùng thì xoá bản ghi cho sạch zone.
+
+Khi GitHub báo DNS check xong, bật **Enforce HTTPS** trong Settings → Pages.
+
+Máy này còn lưu credential của một tài khoản GitHub khác, nên remote phải ghi kèm tài khoản:
+
+```
+https://htgroup-spec@github.com/htgroup-spec/bommucmayin-static.git
+```
 
 ---
 

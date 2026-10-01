@@ -3,3 +3,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# template tải về — không đẩy lên repo site
+*.zip
+_template-src/
