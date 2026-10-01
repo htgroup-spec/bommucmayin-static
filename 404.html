@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Không tìm thấy trang — Bơm Mực Máy In HT</title>
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<main id="main-content">
+  <section class="section">
+    <div class="container container-narrow">
+      <h1>Không tìm thấy trang này</h1>
+      <p class="lead">Trang anh/chị vừa mở không còn tồn tại. Site đã được dựng lại, một số đường dẫn cũ đã thay đổi.</p>
+      <p id="redirect-note" class="muted"></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/">Về trang chủ</a>
+        <a class="btn btn-ghost" href="/khu-vuc/">Chọn khu vực</a>
+        <a class="btn btn-ghost" href="/bang-gia/">Bảng giá</a>
+      </div>
+      <h2>Trang hay dùng</h2>
+      <ul>
+        <li><a href="/nap-muc-may-in-tan-noi/">Nạp mực máy in tận nơi</a></li>
+        <li><a href="/sua-may-in/">Sửa máy in tận nơi</a></li>
+        <li><a href="/bang-gia/">Bảng giá nạp mực</a></li>
+        <li><a href="/cau-hoi-thuong-gap/">Câu hỏi thường gặp</a></li>
+        <li><a href="/lien-he/">Liên hệ — 0703 525 478</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script>
+/* Dự phòng cho đường dẫn cũ dạng /bom-muc-in-<địa-danh>.html của site trước.
+   Đây CHỈ là lớp đỡ phía client; 301 thật phải cấu hình ở Cloudflare —
+   xem docs/redirects.md. */
+(function () {
+  var p = decodeURIComponent(location.pathname);
+  if (!/^\/(bom|nap|do|thay)[-_]muc|^\/sua[-_]may[-_]in/i.test(p)) return;
+  var map = [
+    { re: /quan[-_]?8/i, to: '/khu-vuc/quan-8/' },
+    { re: /quan[-_]?7/i, to: '/khu-vuc/quan-7/' },
+    { re: /quan[-_]?6/i, to: '/khu-vuc/quan-6/' },
+    { re: /binh[-_]?chanh/i, to: '/khu-vuc/binh-chanh/' },
+    { re: /quan[-_]?4/i, to: '/khu-vuc/quan-4/' },
+    { re: /quan[-_]?5/i, to: '/khu-vuc/quan-5/' },
+    { re: /nha[-_]?be/i, to: '/khu-vuc/nha-be/' },
+  ];
+  var hit = map.find(function (m) { return m.re.test(p); });
+  var to = hit ? hit.to : (/sua[-_]may[-_]in/i.test(p) ? '/sua-may-in/' : '/nap-muc-may-in-tan-noi/');
+  var el = document.getElementById('redirect-note');
+  if (el) el.textContent = 'Đang chuyển sang trang phù hợp…';
+  location.replace(to);
+})();
+</script>
+</body>
+</html>

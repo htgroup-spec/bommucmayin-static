@@ -1,0 +1,46 @@
+<!-- footer.html — footer dùng chung. Token: {{P}} {{NAV_COLS}} {{AREA_LINKS}} {{HOTLINE}} {{TEL}} {{EMAIL}} {{STREET}} {{LEGAL}} {{TAXID}} {{YEAR}} -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="{{P}}">
+          <span class="brand-mark" aria-hidden="true">HT</span>
+          <span class="brand-text">
+            <span class="brand-name">Bơm Mực Máy In HT</span>
+            <span class="brand-sub">Khu Nam TP.HCM</span>
+          </span>
+        </a>
+        <p>Nạp mực và sửa máy in tận nơi khu Nam TP.HCM. Xem máy rồi báo giá, bảo hành tính theo số trang in.</p>
+      </div>
+
+{{NAV_COLS}}
+
+      <div class="footer-contact">
+        <h3>Liên hệ</h3>
+        <ul>
+          <li>Gọi / Zalo: <strong><a href="tel:{{TEL}}">{{HOTLINE}}</a></strong></li>
+          <li>Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li>{{STREET}}</li>
+          <li>08:00 – 19:00 · CN tới 17:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-areas">
+      <h3>Khu vực phục vụ</h3>
+      <ul class="chips">
+{{AREA_LINKS}}
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {{YEAR}} {{LEGAL}} · MST {{TAXID}}</span>
+      <span><a href="{{P}}khu-vuc/">Khu vực</a> · <a href="{{P}}bang-gia/">Bảng giá</a> · <a href="{{P}}lien-he/">Liên hệ</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:{{TEL}}">Gọi {{HOTLINE}}</a>
+  <a href="https://zalo.me/{{TELRAW}}" rel="nofollow noopener" target="_blank">Nhắn Zalo</a>
+</div>

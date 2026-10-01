@@ -1,0 +1,40 @@
+<!-- menu.html — header dùng chung.
+     Token do _build/generate.mjs thay:
+       {{P}}        prefix đường dẫn tương đối ('', '../', '../../')
+       {{NAV}}      danh sách nav sinh từ _data/site.json
+       {{HOTLINE}}  số hotline định dạng đọc được
+       {{TEL}}      số hotline dạng tel:
+       {{STREET}}   địa chỉ ngắn
+-->
+<a class="skip-link" href="#main-content">Bỏ qua, tới nội dung chính</a>
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="container">
+      <span class="topbar-addr">{{STREET}} · Làm việc 08:00 – 19:00, Chủ nhật tới 17:00</span>
+      <span>Gọi hoặc Zalo: <a href="tel:{{TEL}}">{{HOTLINE}}</a></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a class="brand" href="{{P}}">
+        <span class="brand-mark" aria-hidden="true">HT</span>
+        <span class="brand-text">
+          <span class="brand-name">Bơm Mực Máy In HT</span>
+          <span class="brand-sub">Khu Nam TP.HCM</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Mở menu">☰</button>
+
+      <ul class="nav-list" id="nav-list">
+{{NAV}}
+      </ul>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="tel:{{TEL}}">Gọi {{HOTLINE}}</a>
+      </div>
+    </nav>
+  </div>
+</header>

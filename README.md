@@ -1,0 +1,117 @@
+# bommucmayin.net — site tĩnh dịch vụ máy in khu Nam TP.HCM
+
+Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub Pages.
+
+- **Domain:** bommucmayin.net
+- **Địa bàn:** Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh, Nhà Bè (+ Phú Mỹ Hưng)
+- **Pháp nhân:** CÔNG TY TNHH TMDV TIN HỌC HI-TECH · MST 0315587367
+- **Hotline:** 0703 525 478 · Kho: 5/19 Phạm Hùng, TP.HCM
+
+---
+
+## Ba quy tắc không được phá
+
+1. **URL sạch.** Mọi trang là `<slug>/index.html`, mọi link nội bộ **không chứa `.html`**.
+   `_build/audit.mjs` sẽ báo lỗi nếu lọt.
+2. **Link tương đối.** `../`, `../../` — không dùng đường dẫn tuyệt đối bắt đầu bằng `/`,
+   để site chạy được cả khi mở local lẫn khi đổi domain.
+3. **Không bịa số liệu.** Mọi con số lượt tìm kiếm phải đến từ `_data/keywords.json`
+   (Google Ads API). Chưa đo thì ghi "chưa có số", không ước lượng.
+
+---
+
+## Cấu trúc
+
+```
+bommucmayin/
+├── index.html                  ← sinh ra, đừng sửa tay
+├── <slug>/index.html           ← 21 trang, đều sinh ra
+├── css/style.css               ← giao diện (sửa tay ở đây)
+├── css/responsive.css
+├── js/main.js                  ← vanilla JS, không thư viện
+├── _data/                      ← NGUỒN NỘI DUNG — sửa ở đây
+│   ├── site.json               NAP, nav, bảng giá, quy trình, FAQ chung
+│   ├── areas.json              8 trang khu vực, mỗi trang một góc riêng
+│   ├── pages.json              nội dung các trang lõi + 3 bài blog
+│   └── keywords.json           số liệu Google Ads (sinh ra, đừng sửa tay)
+├── _includes/                  ← khung menu + footer dùng chung
+├── _build/
+│   ├── extract-keywords.mjs    gom số thật từ các file VIP trong hub
+│   ├── generate.mjs            sinh toàn bộ trang
+│   ├── audit.mjs               kiểm trước khi đẩy
+│   └── serve.mjs               server local hiểu URL sạch
+├── docs/redirects.md           kế hoạch 301
+└── KEYWORD-PLAN-bommucmayin.md bộ từ khoá + lý do chọn
+```
+
+**Sửa nội dung thì sửa `_data/*.json` rồi chạy lại generate** — đừng sửa file HTML đã sinh,
+lần build sau sẽ ghi đè.
+
+---
+
+## Lệnh
+
+```bash
+node _build/generate.mjs     # sinh 21 trang + sitemap + robots + CNAME + 404
+node _build/audit.mjs        # kiểm: link .html sót, link gãy, H1, title trùng, JSON-LD
+node _build/serve.mjs 4321   # xem trước ở http://localhost:4321
+node _build/extract-keywords.mjs   # gom lại số liệu từ khoá từ hub
+```
+
+Quy trình chuẩn mỗi lần sửa:
+
+```bash
+node _build/generate.mjs && node _build/audit.mjs
+```
+
+`audit.mjs` thoát mã 1 nếu có lỗi — đừng commit khi còn lỗi.
+
+---
+
+## Deploy
+
+GitHub Pages, nhánh `main`, thư mục gốc. File `CNAME` và `.nojekyll` được generate tự sinh.
+
+DNS cho bommucmayin.net (bản ghi A trỏ về GitHub Pages):
+
+```
+A     @      185.199.108.153
+A     @      185.199.109.153
+A     @      185.199.110.153
+A     @      185.199.111.153
+CNAME www    <tài-khoản>.github.io
+```
+
+Sau khi DNS phân giải, bật **Enforce HTTPS** trong Settings → Pages.
+
+---
+
+## Ranh giới nội dung với các site anh em
+
+Theo `projects/phan-vung-keyword-2026-07.md` (bảng phân vùng 27/07/2026) và quyết định
+01/10/2026:
+
+| Cụm | Chủ quản |
+|---|---|
+| Dịch vụ nạp mực / sửa máy in **khu Nam** | **site này** |
+| Bán hộp mực, drum, linh kiện theo model | mucinminhtien.com |
+| Dịch vụ local **khu Đông** (Thủ Đức, Dĩ An, Biên Hoà) | tinhocnamphong.net |
+| How-to / lỗi máy in (kho blog) | tinhocnamphong.net |
+| Máy in bill / POS / giấy in nhiệt | mucinht.com |
+
+Site này **không** mở trang bán sản phẩm theo model, **không** xây kho how-to, và **không**
+viết trang quận ngoài 7 quận huyện khu Nam.
+
+Năm trang `/khu-vuc/` của mucinminhtien.com sẽ 301 về đây — xem `docs/redirects.md`,
+**chỉ bật sau khi** các trang khu vực của site này đã được Google index.
+
+---
+
+## Việc còn mở
+
+- [ ] Giao diện: chủ shop sẽ gửi template mẫu để áp vào (sửa `css/`, nội dung không đổi)
+- [ ] Ảnh thật: kỹ thuật đang làm, kho mực, bản in trước/sau — hiện site chưa có ảnh nào
+- [ ] Logo
+- [ ] Ghim Google Maps đúng vị trí rồi mới ghi phường/quận vào địa chỉ (hiện cố ý để trống)
+- [ ] Cloudflare + Bulk Redirects để 301 thật (GitHub Pages không làm được)
+- [ ] Quyết cụm "cho thuê máy photocopy Quận 7" (50 lượt/tháng) — có làm dịch vụ này không

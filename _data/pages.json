@@ -1,0 +1,284 @@
+{
+  "home": {
+    "title": "Bơm Mực Máy In Tận Nơi Khu Nam TP.HCM — HT, Từ 80.000đ",
+    "metaDesc": "Bơm mực, nạp mực, thay mực máy in tận nơi khu Nam TP.HCM: Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè. Laser A4 từ 80.000đ, báo giá trước khi tháo máy. Gọi 0703 525 478.",
+    "ogTitle": "Bơm mực máy in tận nơi khu Nam TP.HCM — báo giá trước khi tháo máy",
+    "h1": "Bơm mực, nạp mực máy in tận nơi — khu Nam TP.HCM",
+    "lead": "Kho mực và kỹ thuật đặt tại Phạm Hùng. Chúng tôi nhận Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh và Nhà Bè — xem máy rồi báo giá, anh/chị đồng ý thì mới tháo.",
+    "trust": ["Laser A4 từ 80.000đ", "Báo giá trước khi tháo máy", "Bảo hành theo số trang in", "Có hoá đơn VAT"],
+    "introTitle": "Bốn cách gọi, một việc làm",
+    "intro": [
+      "Bơm mực máy in, nạp mực máy in, đổ mực máy in, thay mực máy in — khách gọi bằng cả bốn cách và đều là cùng một việc: cho mực mới vào hộp mực đang dùng, kèm vệ sinh buồng mực. Giá như nhau. Không có chuyện \"bơm\" rẻ hơn \"nạp\", và chúng tôi không đổi tên dịch vụ để báo giá khác nhau.",
+      "Chỉ có \"thay hộp mực\" là việc khác thật: bỏ hộp cũ, lắp hộp mới nguyên bộ. Việc này đắt hơn nhưng cần thiết khi vỏ hộp đã nạp quá 4–5 lần, hoặc trống bên trong đã mòn. Kỹ thuật mở hộp xem rồi nói thẳng nên nạp tiếp hay nên đổi hộp — kể cả khi câu trả lời làm chúng tôi bán được ít hơn."
+    ],
+    "howTitle": "Khi nào nạp mực là đủ, khi nào phải sửa",
+    "how": [
+      { "h": "Bản in nhạt dần, đều cả trang", "p": "Hết mực thật. Nạp mực là xử lý xong. Trước khi gọi, anh/chị có thể tháo hộp mực lắc ngang vài lần rồi lắp lại — nhiều máy in thêm được 50–100 trang nữa." },
+      { "h": "In mờ một bên hoặc một vệt dọc nhạt", "p": "Mực phân bố không đều hoặc trục từ mòn. Vệ sinh và nạp lại thường hết; nếu còn thì thay trục từ 120.000 – 180.000đ." },
+      { "h": "Sọc đen dọc, lặp lại theo chu kỳ đều nhau", "p": "Trống đã xước. Nạp thêm mực không giải quyết được — phải thay trống 180.000 – 280.000đ." },
+      { "h": "Lem mực ở mép giấy, tay chạm vào bị bẩn", "p": "Gạt mực hở hoặc buồng mực thải đã đầy. Hút sạch mực thải và thay gạt là xử lý được trong cùng lượt đi." },
+      { "h": "Bản in nhoè như bị ẩm, chữ bôi ra được", "p": "Lô sấy không nung chảy hết mực. Đây không phải lỗi mực — cần kiểm tra lô sấy và bao lụa." },
+      { "h": "Vừa nạp mực xong máy vẫn báo hết mực", "p": "Máy khoá chip. HP đời mới, Samsung và Fuji Xerox gần như luôn phải reset hoặc thay chip sau khi nạp. Kỹ thuật mang chip theo sẵn." }
+    ],
+    "brandTitle": "Nhận nạp mực cho máy của những hãng nào",
+    "brandIntro": "Chúng tôi nhận tất cả máy in laser và phun mực phổ thông. Dưới đây là các mã hộp mực gặp nhiều nhất, để anh/chị đối chiếu nhanh với nhãn trên hộp mực nhà mình.",
+    "brands": [
+      { "n": "HP", "c": "12A (Q2612A), 35A, 85A, 49A, 05A, 80A, 17A, W1106A (107a/135w/137fnw)", "note": "Dòng 107a/135w khoá chip — nạp xong phải thay chip" },
+      { "n": "Canon", "c": "EP-26 / 303 (LBP2900), 325, 326, 329, 051 (LBP162dw), 308, 319", "note": "LBP2900 nạp rất bền, nhiều máy dùng trên mười năm" },
+      { "n": "Brother", "c": "TN-1000, TN-2130, TN-2260, TN-2365, TN-2385 · trống DR-2255 / DR-2355", "note": "Hộp mực và trống tách riêng — đừng thay trống khi chưa cần" },
+      { "n": "Samsung", "c": "MLT-D101S, D104S, D111S, D203, D205", "note": "Gần như model nào cũng phải thay chip sau khi nạp" },
+      { "n": "Fuji Xerox", "c": "CT202137, CT201610 (P225), CT202877 (P235), CWAA0747 (DP3117)", "note": "Phải kiểm tra hộp mực thải, để đầy là tràn vào máy" },
+      { "n": "Epson", "c": "Laser: S050521, S110078 · Phun mực hệ bình: mực 003, mực 664", "note": "L-series là bơm mực nước, khác hẳn laser — nói rõ model khi gọi" },
+      { "n": "Panasonic", "c": "KX-FAT410, KX-FAT411, KX-FA83 · trống KX-FAD412", "note": "Hộp khó tháo, công nạp cao hơn các hãng khác" },
+      { "n": "Ricoh", "c": "SP111 (407971), SP200 (407254), SP310 (407578), MP2014 (842135)", "note": "Hộp dung tích lớn, tính trên mỗi trang in lại rẻ" }
+    ]
+  },
+
+  "nap-muc": {
+    "title": "Nạp Mực Máy In Tận Nơi TP.HCM — Quy Trình 7 Bước, Từ 80.000đ",
+    "metaDesc": "Nạp mực máy in tận nơi, nạp mực máy in tại nhà khu Nam TP.HCM. Quy trình 7 bước, hút sạch mực thải, in thử trước khi rời đi. Từ 80.000đ — gọi 0703 525 478.",
+    "ogTitle": "Nạp mực máy in tận nơi — quy trình 7 bước, in thử trước khi rời đi",
+    "h1": "Nạp mực máy in tận nơi — làm đúng 7 bước, không chỉ là châm mực vào hộp",
+    "lead": "Nạp mực làm nhanh thì 5 phút cũng xong. Nhưng làm đủ bước thì máy in bền hơn và bản in sạch hơn — đây là bảy bước kỹ thuật của chúng tôi làm tại nhà anh/chị.",
+    "sections": [
+      { "h": "Vì sao nạp mực nhanh lại làm hỏng máy", "p": [
+        "Hộp mực laser có hai khoang: khoang mực mới và khoang mực thải. Mỗi lần in, phần mực không bám hết lên giấy bị gạt về khoang thải. Nạp mực đúng cách là phải mở hộp, hút sạch khoang thải rồi mới châm mực mới vào khoang kia.",
+        "Nạp nhanh kiểu \"khoan lỗ châm mực\" bỏ qua bước này. Khoang thải đầy dần, mực cũ trộn với mực mới và tràn ra — đó là lý do bản in bị lem dù mực mới. Nặng hơn, mực thải tràn ra bám lên trống làm trống xước, và lúc đó phải thay trống chứ không nạp thêm được nữa.",
+        "Chênh lệch giữa hai cách làm là khoảng mười phút công. Nhưng một cái giữ được vỏ hộp nạp 4–5 lần, một cái làm hỏng hộp sau 2 lần."
+      ]},
+      { "h": "Bảy bước kỹ thuật làm tại chỗ", "steps": [
+        "Xem máy và hộp mực trước, chốt giá. Nếu trống hay trục đã tới hạn, báo giá linh kiện và chờ anh/chị đồng ý.",
+        "Tháo hộp mực, trải tấm lót. Bụi mực rất mịn nên phải che chỗ làm việc trước khi mở.",
+        "Mở hộp, hút sạch khoang mực thải bằng máy hút chuyên dụng — không thổi, vì thổi làm bụi mực bay khắp phòng.",
+        "Vệ sinh trống, trục từ, trục sạc và gạt mực. Kiểm tra bề mặt trống xem có xước hay mòn cục bộ.",
+        "Châm mực mới đúng loại cho hãng máy đó. Mực Brother mịn hơn mực HP — dùng lẫn là bản in mờ.",
+        "Reset hoặc thay chip nếu máy khoá (HP đời mới, Samsung, Fuji Xerox), lắp lại hộp và đóng máy.",
+        "In thử 5–10 trang trước mặt anh/chị: kiểm độ đậm, lem mực, sọc, kẹt giấy. Ghi phiếu bảo hành theo số trang."
+      ]},
+      { "h": "Nạp mực tại nhà hay phải mang máy đi", "p": [
+        "Làm tại nhà, tại chỗ. Nạp mực chỉ cần tháo hộp mực ra khỏi máy — không tháo máy, không mang máy đi đâu. Toàn bộ mất khoảng 15–20 phút cho máy laser A4.",
+        "Chỉ ba trường hợp phải mang máy về xưởng: lỗi bo mạch, lô sấy phải thay cả cụm, hoặc máy bị rơi gãy khung. Cả ba đều được báo trước chi phí và thời gian, và anh/chị quyết định có làm hay không."
+      ]},
+      { "h": "Máy phun mực hệ bình: việc khác hẳn", "p": [
+        "Epson L3110, L3210, L3250, L1210 và Canon dòng G không dùng mực bột mà dùng mực nước đổ vào bình. Với các máy này, \"nạp mực\" là bơm mực nước — 150.000 – 200.000đ cho 4 màu, gồm kiểm tra đầu phun.",
+        "Lỗi thường gặp ở nhóm này không phải hết mực mà là nghẹt đầu phun do để lâu không in: bản in sọc ngang hoặc thiếu màu dù bình vẫn đầy. Việc cần làm là thông đầu phun, không phải bơm thêm mực. Có máy còn khoá vì bộ đếm mực thải đã tràn, phải reset mới in được.",
+        "Vì vậy khi gọi, anh/chị nói rõ model máy. Nghe \"Epson\" thôi thì chưa biết là laser hay hệ bình, và hai loại mang vật tư khác nhau."
+      ]}
+    ]
+  },
+
+  "sua-may-in": {
+    "title": "Sửa Máy In Tận Nơi Khu Nam TP.HCM — Xem Máy Rồi Mới Báo Giá",
+    "metaDesc": "Sửa máy in tận nơi, sửa máy in tại nhà khu Nam TP.HCM: Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè. Mang vật tư theo xe, xử lý trong một lượt. Gọi 0703 525 478.",
+    "ogTitle": "Sửa máy in tận nơi khu Nam TP.HCM — mang vật tư theo, xong trong một lượt",
+    "h1": "Sửa máy in tận nơi — mang vật tư theo xe, phần lớn xong trong một lượt",
+    "lead": "Gọi thợ mà thợ tới rồi hẹn mai quay lại vì thiếu linh kiện là mất hai lần thời gian. Kỹ thuật của chúng tôi mang theo trống, trục từ, gạt mực, chip và bánh kéo giấy cho các dòng máy phổ thông.",
+    "sections": [
+      { "h": "Các lỗi xử lý ngay tại chỗ", "table": [
+        { "a": "Máy in ra giấy trắng hoàn toàn", "b": "Hết mực, trục từ chai, hoặc hộp mực lắp chưa khớp", "c": "Tại chỗ" },
+        { "a": "In mờ, nhạt dần cả trang", "b": "Hết mực hoặc mực đóng bánh do để lâu không in", "c": "Tại chỗ" },
+        { "a": "Sọc đen dọc lặp lại theo chu kỳ", "b": "Trống xước — phải thay trống", "c": "Tại chỗ, có trống sẵn" },
+        { "a": "Lem mực mép giấy, chạm vào bẩn tay", "b": "Gạt mực hở hoặc khoang mực thải đầy", "c": "Tại chỗ" },
+        { "a": "Kẹt giấy liên tục", "b": "Bánh kéo giấy chai, giấy ẩm, hoặc có dị vật trong đường giấy", "c": "Tại chỗ" },
+        { "a": "Không ăn giấy, kêu rè", "b": "Bánh kéo giấy mòn cao su", "c": "Tại chỗ, có bánh sẵn" },
+        { "a": "Bản in nhoè như ẩm, chữ bôi ra", "b": "Lô sấy yếu hoặc bao lụa hỏng", "c": "Tuỳ mức — có thể phải về xưởng" },
+        { "a": "Vừa nạp mực vẫn báo hết mực", "b": "Chip hộp mực đã đếm hết", "c": "Tại chỗ, có chip sẵn" },
+        { "a": "Máy không nhận lệnh in từ máy tính", "b": "Driver, cổng USB, hoặc hàng đợi in bị treo", "c": "Tại chỗ" },
+        { "a": "Epson L-series sọc ngang, thiếu màu", "b": "Nghẹt đầu phun do để lâu không in", "c": "Tại chỗ, nặng thì về xưởng" },
+        { "a": "Máy báo mã lỗi SC (Ricoh) hoặc đèn nháy liên tục", "b": "Lỗi hệ thống — cần đọc mã cụ thể", "c": "Chẩn đoán tại chỗ" },
+        { "a": "Máy bật không lên, có mùi khét", "b": "Bo nguồn — thường do sụt điện khi đang nung lô sấy", "c": "Mang về xưởng" }
+      ]},
+      { "h": "Cách chúng tôi báo giá sửa chữa", "p": [
+        "Không có \"phí kiểm tra\" riêng. Kỹ thuật tới, xem máy, nói rõ lỗi gì và cần thay gì, kèm giá. Anh/chị đồng ý thì làm; không đồng ý thì không mất phí đi lại.",
+        "Lý do làm vậy: nghề này nhiều người bị báo giá kiểu \"để tôi mang về xem rồi báo sau\", và khi máy đã nằm ở xưởng người ta thì khách mất thế. Chúng tôi làm tại chỗ và chốt giá trước để anh/chị luôn còn quyền từ chối.",
+        "Một điều nữa chúng tôi nói thật: có những máy không nên sửa. Máy in A4 đời cũ mà phải thay cả lô sấy và bo nguồn thì tiền sửa gần bằng máy mới, và máy mới có bảo hành. Trường hợp đó kỹ thuật sẽ khuyên anh/chị đừng sửa."
+      ]},
+      { "h": "Máy đã bị người khác tháo sửa trước đó", "p": [
+        "Chúng tôi vẫn nhận, nhưng kiểm tra kỹ hơn và nói rõ phạm vi bảo hành trước khi làm. Lý do đơn giản: nếu máy đã bị tháo sai, có ốc thiếu hoặc linh kiện bị đổi, thì chúng tôi không thể bảo hành cho phần lỗi đã có sẵn.",
+        "Anh/chị cứ nói thẳng là máy đã được sửa trước đó — điều này giúp kỹ thuật chẩn đoán nhanh hơn, không phải mò lại từ đầu."
+      ]}
+    ]
+  },
+
+  "bang-gia": {
+    "title": "Bảng Giá Nạp Mực Máy In TP.HCM 2026 — Công Khai Theo Mã Hộp Mực",
+    "metaDesc": "Bảng giá nạp mực máy in và linh kiện tại TP.HCM: laser A4 từ 80.000đ, A3 từ 250.000đ, phun mực hệ bình từ 150.000đ, trống từ 180.000đ. Đã gồm công đi lại.",
+    "ogTitle": "Bảng giá nạp mực máy in TP.HCM — công khai theo mã hộp mực",
+    "h1": "Bảng giá nạp mực máy in và linh kiện",
+    "lead": "Giá dưới đây đã gồm công đi lại trong khu Nam TP.HCM và vệ sinh buồng mực. Kỹ thuật xem máy rồi chốt lại tại chỗ — phát sinh linh kiện phải được anh/chị đồng ý trước."
+  },
+
+  "quy-trinh": {
+    "title": "Quy Trình Và Chính Sách Bảo Hành — Tính Theo Số Trang In",
+    "metaDesc": "Quy trình 5 bước nạp mực máy in tận nơi và chính sách bảo hành tính theo số trang in thực tế, không theo ngày. Lỗi do mực được xử lý lại miễn phí.",
+    "ogTitle": "Quy trình và bảo hành — tính theo số trang in, không theo ngày",
+    "h1": "Quy trình làm việc và chính sách bảo hành",
+    "lead": "Chúng tôi bảo hành theo số trang in thực tế chứ không theo ngày. Máy in nhiều thì hết bảo hành nhanh, máy in ít thì dùng được lâu — đó là cách tính công bằng với cả hai bên.",
+    "sections": [
+      { "h": "Vì sao bảo hành theo số trang, không theo ngày", "p": [
+        "Bảo hành \"30 ngày\" nghe gọn nhưng không công bằng. Một văn phòng in 3.000 trang trong tháng đó và một hộ gia đình in 80 trang đều được bảo hành bằng nhau — trong khi hộp mực của người in nhiều đã dùng gần hết, còn hộp của người in ít thì gần như mới.",
+        "Vì vậy phiếu bảo hành của chúng tôi ghi số trang. Trong khoảng đó, nếu bản in mờ, lem, sọc hay có vệt do lỗi mực, chúng tôi quay lại xử lý miễn phí — kể cả phải đổi sang hộp mực khác."
+      ]},
+      { "h": "Bảo hành không bao gồm những gì", "list": [
+        "Hỏng do máy bị rơi, vào nước, hoặc có dị vật rơi trong đường giấy.",
+        "Lỗi phát sinh sau khi người khác tháo sửa máy kể từ lúc chúng tôi làm xong.",
+        "Giấy ẩm gây kẹt và nhoè — đây là vấn đề bảo quản giấy, không phải lỗi mực.",
+        "Lỗi bo mạch, lô sấy, bánh kéo giấy nếu anh/chị đã từ chối thay khi kỹ thuật khuyến nghị.",
+        "Phần lỗi đã tồn tại trước khi chúng tôi nhận máy, đã được ghi rõ trên phiếu."
+      ]},
+      { "h": "Khi cần bảo hành thì làm gì", "p": [
+        "Anh/chị gọi 0703 525 478 và đọc số phiếu bảo hành, hoặc chỉ cần nói địa chỉ và dòng máy — chúng tôi tra lại được lịch sử.",
+        "Nếu đúng lỗi do mực, kỹ thuật tới xử lý lại miễn phí, không tính công đi lại. Nếu kiểm tra ra lỗi thuộc phần không bảo hành, chúng tôi nói rõ lý do và báo giá trước, anh/chị quyết định."
+      ]}
+    ]
+  },
+
+  "ve-chung-toi": {
+    "title": "Về HT — Bơm Mực Máy In Khu Nam TP.HCM, MST 0315587367",
+    "metaDesc": "HT là dịch vụ nạp mực và sửa máy in tận nơi khu Nam TP.HCM, thuộc CÔNG TY TNHH TMDV TIN HỌC HI-TECH, MST 0315587367. Kho tại 5/19 Phạm Hùng.",
+    "ogTitle": "Về HT — bơm mực máy in khu Nam TP.HCM, có pháp nhân và hoá đơn VAT",
+    "h1": "Về chúng tôi",
+    "lead": "HT là bộ phận dịch vụ máy in tận nơi của CÔNG TY TNHH TMDV TIN HỌC HI-TECH, phục vụ khu Nam TP.HCM với kho vật tư đặt tại 5/19 Phạm Hùng.",
+    "sections": [
+      { "h": "Chúng tôi là ai", "p": [
+        "Pháp nhân: CÔNG TY TNHH TMDV TIN HỌC HI-TECH, mã số thuế 0315587367. Chúng tôi làm dịch vụ tin học văn phòng từ 2019, và bộ phận máy in tận nơi tách riêng để phục vụ nhanh theo địa bàn.",
+        "Trang này tập trung vào khu Nam: Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh và Nhà Bè. Lý do có một trang riêng cho khu Nam thay vì gộp toàn thành phố rất thực tế — kho vật tư nằm ở Phạm Hùng, nên chúng tôi tới các quận này nhanh hơn hẳn, và nhận ca gấp được."
+      ]},
+      { "h": "Ba điều chúng tôi làm khác", "list": [
+        "Báo giá trước khi tháo máy. Kỹ thuật xem máy, nói rõ lỗi và giá, anh/chị đồng ý thì mới làm. Không có chuyện mang máy về rồi báo giá sau.",
+        "Nói thẳng khi không nên sửa. Có máy tiền sửa gần bằng máy mới — chúng tôi khuyên đừng sửa, dù điều đó làm chúng tôi mất đơn.",
+        "Bảo hành theo số trang in thực tế, ghi rõ trên phiếu, thay vì mốc ngày chung cho mọi khách."
+      ]},
+      { "h": "Vật tư chúng tôi dùng", "p": [
+        "Một loại mực nhập khẩu cho máy laser A4, không chào thêm hạng rẻ hơn. Mực bột thô tiết kiệm được vài chục nghìn nhưng làm trống xước nhanh, và vài tháng sau khách phải trả tiền thay trống — tính cả chu kỳ thì đắt hơn.",
+        "Linh kiện thay thế gồm trống, trục từ, gạt mực, chip, bánh kéo giấy cho các dòng máy phổ thông, mang theo xe để xử lý trong cùng một lượt đi.",
+        "Hoá đơn VAT xuất theo yêu cầu. Chúng tôi nhận hợp đồng bảo trì tháng cho công ty, xưởng, kho và trường học trong địa bàn."
+      ]}
+    ]
+  },
+
+  "lien-he": {
+    "title": "Liên Hệ — Bơm Mực Máy In HT, 5/19 Phạm Hùng, 0703 525 478",
+    "metaDesc": "Gọi 0703 525 478 để đặt nạp mực hoặc sửa máy in tận nơi khu Nam TP.HCM. Kho tại 5/19 Phạm Hùng. Làm việc 08:00 – 19:00, Chủ nhật tới 17:00.",
+    "ogTitle": "Liên hệ HT — 0703 525 478, kho tại 5/19 Phạm Hùng",
+    "h1": "Liên hệ đặt dịch vụ",
+    "lead": "Gọi hoặc nhắn Zalo cùng số. Anh/chị cho biết dòng máy và địa chỉ, chúng tôi báo khung giá ngay trong cuộc gọi.",
+    "tips": [
+      { "h": "Nói giúp chúng tôi ba thông tin", "list": ["Dòng máy — ví dụ HP 107a, Canon LBP2900, Brother L2321d, Epson L3210. Nếu không rõ, chụp nhãn trên thân máy hoặc trên hộp mực gửi Zalo.", "Triệu chứng — hết mực, in mờ, sọc đen, kẹt giấy, in ra giấy trắng, hay máy không nhận lệnh in.", "Địa chỉ và khu vực — nếu là cao ốc hay khu công nghiệp, cho biết tên toà/công ty để chúng tôi làm thủ tục vào trước."] },
+      { "h": "Trường hợp nên nhắn Zalo thay vì gọi", "list": ["Không rõ dòng máy — chụp ảnh nhãn máy và bản in bị lỗi, nhìn ảnh chẩn đoán nhanh hơn nghe mô tả.", "Nhiều máy cần làm cùng lúc — gửi danh sách để chúng tôi mang đủ vật tư.", "Cần báo giá bằng văn bản để trình kế toán."] }
+    ]
+  },
+
+  "khu-vuc": {
+    "title": "Khu Vực Phục Vụ — Nạp Mực Máy In Gần Đây Khu Nam TP.HCM",
+    "metaDesc": "Nạp mực, sửa máy in tận nơi 7 quận huyện khu Nam TP.HCM: Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh, Nhà Bè và Phú Mỹ Hưng. Xem thời gian tới từng khu.",
+    "ogTitle": "Khu vực phục vụ — 7 quận huyện khu Nam TP.HCM",
+    "h1": "Khu vực phục vụ — tìm \"nạp mực máy in gần đây\" thì gần tới đâu?",
+    "lead": "Kho vật tư đặt tại 5/19 Phạm Hùng. Dưới đây là thời gian tới thật của từng khu — không phải con số \"30 phút\" dán cho cả thành phố.",
+    "nearTitle": "\"Gần đây\" nghĩa là gì, nói thật",
+    "near": [
+      "Rất nhiều khách tìm bằng \"nạp mực máy in gần đây\" hoặc \"sửa máy in gần đây\" — và điều họ thật sự muốn biết là: gọi thì bao lâu có người tới. Câu trả lời phụ thuộc kho vật tư nằm ở đâu, chứ không phụ thuộc trang web viết gì.",
+      "Kho của chúng tôi ở Phạm Hùng. Vì vậy Quận 8 là gần nhất, rồi tới Quận 4, Quận 5, Quận 6 — ba quận này đi cùng tuyến. Quận 7 phải qua cầu nên lâu hơn. Bình Chánh rộng, Bình Hưng thì gần mà Vĩnh Lộc thì xa. Nhà Bè xa nhất, chúng tôi hẹn theo tuyến chứ không hứa gấp.",
+      "Chúng tôi ghi rõ khung thời gian từng khu dưới đây để anh/chị chủ động công việc, thay vì chờ một lời hứa chung cho mọi nơi."
+    ]
+  },
+
+  "faq-page": {
+    "title": "Câu Hỏi Thường Gặp — Nạp Mực Và Sửa Máy In Tận Nơi",
+    "metaDesc": "Giải đáp về nạp mực máy in tận nơi: giá bao nhiêu, mất bao lâu, có làm hỏng máy không, bảo hành thế nào, khi nào nên thay hộp mực mới.",
+    "ogTitle": "Câu hỏi thường gặp về nạp mực và sửa máy in tận nơi",
+    "h1": "Câu hỏi thường gặp",
+    "lead": "Những câu khách hỏi nhiều nhất khi gọi. Nếu câu của anh/chị không có ở đây, gọi 0703 525 478 — chúng tôi trả lời trực tiếp."
+  },
+
+  "blog": {
+    "title": "Kinh Nghiệm Dùng Máy In — Tiết Kiệm Mực Và Tránh Hỏng Oan",
+    "metaDesc": "Kinh nghiệm thật từ kỹ thuật: nên nạp mực hay thay hộp mực mới, bao lâu nạp một lần, dấu hiệu phải thay trống. Viết để anh/chị khỏi mất tiền oan.",
+    "ogTitle": "Kinh nghiệm dùng máy in — viết để khách khỏi mất tiền oan",
+    "h1": "Kinh nghiệm dùng máy in",
+    "lead": "Ba bài dưới đây trả lời những câu khách hay hỏi kỹ thuật lúc đang chờ nạp mực. Viết thẳng, kể cả khi câu trả lời khiến chúng tôi bán được ít hơn.",
+    "posts": [
+      {
+        "slug": "nap-muc-hay-thay-hop-muc-moi",
+        "title": "Nạp Mực Hay Thay Hộp Mực Mới? Bốn Dấu Hiệu Để Quyết",
+        "metaDesc": "Khi nào nạp mực là đủ và khi nào phải thay hộp mực mới nguyên bộ. Bốn dấu hiệu nhìn trên bản in để quyết định, kèm chênh lệch chi phí thật.",
+        "h1": "Nạp mực hay thay hộp mực mới? Bốn dấu hiệu để quyết",
+        "excerpt": "Vỏ hộp mực nạp được 4–5 lần. Nhưng con số đó chỉ là trung bình — cách đọc chính xác hơn là nhìn bản in.",
+        "lead": "Câu này khách hỏi nhiều nhất, và câu trả lời \"nạp được 4–5 lần\" chỉ đúng một nửa. Cách chắc chắn hơn là nhìn bốn dấu hiệu trên bản in.",
+        "body": [
+          { "h": "Vì sao vỏ hộp mực có giới hạn số lần nạp", "p": [
+            "Hộp mực không chỉ là cái bình chứa. Bên trong có trống cảm quang, trục từ, trục sạc và lưỡi gạt — tất cả đều là bề mặt tiếp xúc, và tất cả đều mòn theo số trang in.",
+            "Nạp mực chỉ thay phần bột. Các bề mặt kia vẫn tiếp tục mòn. Vì vậy tới một lúc, mực mới vẫn tốt nhưng trống đã xước và bản in vẫn kém — lúc đó nạp thêm là tiền bỏ đi."
+          ]},
+          { "h": "Bốn dấu hiệu nên thay hộp mới thay vì nạp", "list": [
+            "Sọc đen dọc lặp lại đúng chu kỳ trên mỗi trang. Đây là trống xước. Thay riêng trống được (180.000 – 280.000đ) nếu các phần khác còn tốt; nếu hộp đã nạp nhiều lần thì thay cả hộp hợp lý hơn.",
+            "Lem mực dù vừa vệ sinh buồng mực. Lưỡi gạt đã hở, không gạt hết mực thừa. Thay gạt được, nhưng nếu đã thay một lần rồi lại hở thì vỏ hộp đã biến dạng.",
+            "Nền xám mờ khắp trang, chữ vẫn rõ nhưng giấy không còn trắng sạch. Trục sạc xuống cấp — phần này thường không thay lẻ, nên đổi hộp.",
+            "Vỏ hộp đã nạp từ 4–5 lần trở lên và bản in bắt đầu kém dần ngay sau mỗi lần nạp. Hộp đã hết tuổi."
+          ]},
+          { "h": "Chênh lệch chi phí thật", "p": [
+            "Nạp mực hộp laser A4 là 80.000 – 140.000đ tuỳ hãng. Hộp mực mới nguyên bộ là 320.000 – 850.000đ. Nghe thì nạp rẻ hơn nhiều, nhưng phải tính theo số trang dùng được.",
+            "Một hộp còn tốt nạp 80.000đ in được 2.000 trang — tính ra 40đ mỗi trang. Cùng hộp đó khi đã mòn, nạp 80.000đ nhưng in 600 trang là đã sọc, phải nạp lại — thành hơn 130đ mỗi trang, và anh/chị còn mất thời gian gọi kỹ thuật hai lần.",
+            "Vì vậy chúng tôi nói thẳng khi hộp đã tới hạn. Nạp cho anh/chị thêm một lần thì chúng tôi có doanh thu, nhưng hai tuần sau anh/chị gọi lại với cùng vấn đề — và lần đó thì anh/chị không tin chúng tôi nữa."
+          ]}
+        ]
+      },
+      {
+        "slug": "bao-lau-nen-nap-muc-mot-lan",
+        "title": "Nên Nạp Mực Máy In Bao Lâu Một Lần? Tính Theo Trang In",
+        "metaDesc": "Nên nạp mực máy in bao lâu một lần? Cách tính theo số trang in thực tế, và vì sao máy in ít lại hay hỏng hơn máy in nhiều.",
+        "h1": "Bao lâu nên nạp mực máy in một lần?",
+        "excerpt": "Không có mốc tháng nào đúng cho mọi máy. Nhưng có một nghịch lý đáng biết: máy in ít thường hỏng nhiều hơn máy in đều.",
+        "lead": "Câu trả lời đúng không phải \"ba tháng\" hay \"sáu tháng\" mà là theo số trang. Và có một nghịch lý: máy in ít lại hay hỏng hơn máy in nhiều.",
+        "body": [
+          { "h": "Tính theo dung lượng hộp mực", "p": [
+            "Mỗi mã hộp mực có dung lượng danh định: HP 12A khoảng 2.000 trang, 85A khoảng 1.600 trang, W1106A khoảng 1.000 trang, Brother TN-2385 khoảng 3.000 trang, Ricoh MP2014 khoảng 12.000 trang.",
+            "Con số đó tính với bản in phủ 5% mặt giấy — tức văn bản chữ thường. Nếu anh/chị in bảng biểu có viền đậm, hoá đơn có logo lớn hay ảnh, mực hết nhanh hơn, có khi chỉ còn một nửa.",
+            "Cách theo dõi đơn giản nhất: đa số máy in có mục đếm số trang trong phần cài đặt hoặc in được trang cấu hình. Biết số trang là biết còn bao lâu, không phải đoán."
+          ]},
+          { "h": "Vì sao máy in ít lại hay hỏng hơn", "p": [
+            "Mực laser là bột rất mịn. Khi máy in đều, bột được đảo liên tục và trục từ luôn có lớp mực mỏng phủ lên. Khi máy nằm nhiều tuần không in, bột lắng xuống và vón lại, còn trục từ bị chai bề mặt.",
+            "Kết quả là hộp mực còn đầy nhưng bản in trắng hoặc rất mờ — và khách tưởng hết mực. Thực tế chỉ cần vệ sinh hộp và nạp lại, không phải thay gì.",
+            "Với máy phun mực hệ bình như Epson L-series thì nghiêm trọng hơn: để lâu không in là mực khô ngay trong đầu phun, gây sọc ngang hoặc mất màu. Thông đầu phun tốn 100.000 – 250.000đ, trong khi chỉ cần in vài trang mỗi tuần là tránh được."
+          ]},
+          { "h": "Mốc thực tế theo kiểu dùng", "list": [
+            "Hộ gia đình, in dưới 50 trang mỗi tháng: in ít nhất 3–5 trang mỗi tuần để mực không khô. Nạp mực khi bản in nhạt, thường 1–2 lần mỗi năm.",
+            "Văn phòng nhỏ, 300–800 trang mỗi tháng: nạp khoảng 3–4 tháng một lần. Đây là nhóm dùng máy đúng cách nhất, ít hỏng nhất.",
+            "Cửa hàng, hộ kinh doanh, trên 1.500 trang mỗi tháng: nạp mỗi 1–2 tháng. Nên dùng hộp dung tích cao và giữ một hộp dự phòng đã nạp sẵn để không dừng việc.",
+            "Xưởng, kho nhiều bụi: nạp theo chu kỳ như trên nhưng thêm vệ sinh buồng mực mỗi quý, kể cả khi mực chưa hết."
+          ]}
+        ]
+      },
+      {
+        "slug": "dau-hieu-phai-thay-trong-may-in",
+        "title": "Dấu Hiệu Phải Thay Trống Máy In — Và Khi Nào Chưa Cần",
+        "metaDesc": "Cách nhận biết trống (drum) máy in đã hỏng qua bản in: sọc dọc lặp chu kỳ, vệt mờ hình chữ nhật, nền xám. Và những trường hợp bị khuyên thay trống oan.",
+        "h1": "Dấu hiệu phải thay trống máy in — và khi nào chưa cần",
+        "excerpt": "Trống là chi tiết bị thay oan nhiều nhất. Có một cách tự kiểm rất đơn giản: đo khoảng cách giữa các vệt lỗi trên trang.",
+        "lead": "Trống (drum) là chi tiết bị khuyên thay oan nhiều nhất trong nghề này. Có một cách tự kiểm đơn giản để anh/chị biết trước khi gọi ai.",
+        "body": [
+          { "h": "Trống làm gì trong máy in", "p": [
+            "Trống là ống kim loại phủ lớp cảm quang. Tia laser vẽ hình ảnh lên mặt trống bằng điện tích, mực bám vào phần được vẽ, rồi trống lăn qua giấy để chuyển mực sang. Lớp cảm quang này mòn dần, và khi nó xước thì mực bám sai chỗ.",
+            "Với máy Brother, trống là bộ phận riêng tháo rời được (DR-2255, DR-2355) nên thay riêng dễ. Với phần lớn máy HP và Canon, trống nằm trong cùng hộp mực."
+          ]},
+          { "h": "Cách tự kiểm: đo khoảng cách giữa các vệt lỗi", "p": [
+            "In một trang trắng hoàn toàn hoặc trang toàn chữ, rồi xem các vệt lỗi. Điều cần để ý là chúng có lặp lại cách nhau đều nhau hay không.",
+            "Nếu các vệt hoặc đốm lặp lại cách nhau khoảng 7–9cm và đều đặn trên cả trang, đó gần như chắc chắn là trống — vì đó đúng là chu vi vòng quay của trống. Mỗi vòng quay, chỗ xước lại in ra một lần.",
+            "Nếu vệt lỗi xuất hiện ngẫu nhiên, không theo chu kỳ, thì không phải trống. Thường là mực kém, gạt hở, hoặc giấy bẩn."
+          ]},
+          { "h": "Ba dấu hiệu đúng là trống", "list": [
+            "Sọc đen dọc hoặc đốm đen lặp lại đều, cách nhau khoảng 7–9cm trên cả trang.",
+            "Vệt mờ hình chữ nhật ở cùng một vị trí trên mọi trang — lớp cảm quang mòn cục bộ, thường do từng bị kẹt giấy hoặc có dị vật cà vào.",
+            "Nền xám mờ toàn trang kèm bóng mờ của hình in trước đó (gọi là bóng ma) — trống không xả hết điện tích sau mỗi vòng."
+          ]},
+          { "h": "Bốn trường hợp bị khuyên thay trống oan", "list": [
+            "In mờ đều cả trang: đây là hết mực, không phải trống. Nạp mực là hết.",
+            "Lem mực ở mép giấy: gạt mực hở hoặc khoang mực thải đầy. Hút sạch và thay gạt, rẻ hơn thay trống nhiều.",
+            "Chữ bôi ra được khi chạm tay: lô sấy yếu, không liên quan trống.",
+            "Đèn Drum trên máy Brother nháy: đây là cữ đếm tới hạn, không phải trống đã hỏng. Reset được để dùng tiếp, và chỉ nên thay khi bản in thật sự có vệt lặp chu kỳ."
+          ]}
+        ]
+      }
+    ]
+  }
+}

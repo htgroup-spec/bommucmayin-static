@@ -1,0 +1,85 @@
+/* ==========================================================================
+   responsive.css — media queries
+   Breakpoints: 1024px (tablet ngang) · 768px (tablet dọc) · 560px (mobile)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .split { grid-template-columns: 1fr; gap: 36px; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  :root { --gutter: 18px; }
+  body { font-size: 16px; }
+  .section { padding: 46px 0; }
+
+  /* nav → off-canvas dọc */
+  .nav-toggle { display: block; }
+  .nav { flex-wrap: wrap; }
+  .nav-list {
+    display: none; order: 3; width: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    border-top: 1px solid var(--line); margin-top: 12px; padding-top: 8px;
+  }
+  .nav-list.is-open { display: flex; }
+  .nav-list a { padding: 12px 4px; border-radius: 0; }
+  .has-sub > a::after { content: none; }
+  .sub {
+    position: static; opacity: 1; visibility: visible; transform: none;
+    box-shadow: none; border: 0; border-left: 2px solid var(--line);
+    border-radius: 0; margin: 0 0 6px 10px; padding: 0 0 0 8px; min-width: 0;
+  }
+  .sub a { padding: 9px 4px; font-size: .92rem; }
+  .nav-cta .btn { display: none; }
+  .nav-cta .btn-call-mobile { display: inline-flex; }
+
+  .topbar .container { flex-direction: column; gap: 2px; text-align: center; }
+  .topbar .topbar-addr { display: none; }
+
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .hero { padding: 40px 0 46px; }
+  h2 { margin-top: 1.8em; }
+
+  .link-box { padding: 18px; gap: 14px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+
+  /* thanh gọi cố định dưới màn hình */
+  .callbar {
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: fixed; inset: auto 0 0 0; z-index: 60;
+    border-top: 1px solid var(--line); background: #fff;
+    box-shadow: 0 -2px 12px rgba(16,24,40,.10);
+  }
+  .callbar a {
+    padding: 14px 8px; text-align: center; font-weight: 700; font-size: .97rem;
+    color: #fff; background: var(--accent);
+  }
+  .callbar a + a { background: var(--primary); }
+  .callbar a:hover { text-decoration: none; }
+  body { padding-bottom: 52px; }
+}
+
+@media (max-width: 560px) {
+  .steps { grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  .brand-sub { display: none; }
+  .table-wrap table { min-width: 460px; font-size: .92rem; }
+  th, td { padding: 11px 12px; }
+}
+
+/* ---------- print ---------- */
+@media print {
+  .site-header, .site-footer, .callbar, .cta-band, .btn { display: none !important; }
+  body { padding: 0; font-size: 12pt; color: #000; }
+  a::after { content: " (" attr(href) ")"; font-size: .85em; }
+}
+
+/* ---------- a11y: giảm chuyển động ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

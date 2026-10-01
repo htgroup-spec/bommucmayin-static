@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bommucmayin",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_build/serve.mjs", "4321"],
+      "port": 4321
+    }
+  ]
+}
