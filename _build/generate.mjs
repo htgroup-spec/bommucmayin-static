@@ -22,6 +22,9 @@ const S = json('_data/site.json');
 const AREAS = json('_data/areas.json').sort((a, b) => a.order - b.order);
 const P = json('_data/pages.json');
 const KW = existsSync(resolve(ROOT, '_data/keywords.json')) ? json('_data/keywords.json') : { areas: {}, generic: [] };
+const IMG = existsSync(resolve(ROOT, '_data/images.json'))
+  ? Object.fromEntries(json('_data/images.json').images.map(i => [i.name, i]))
+  : {};
 
 const MENU_TPL = read('_includes/menu.html');
 const FOOTER_TPL = read('_includes/footer.html');
@@ -41,6 +44,25 @@ const slugify = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, '
   .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const ADDR_FULL = `${S.address.street}, ${S.address.locality}`;
+
+/**
+ * Ảnh: WebP trước, JPG dự phòng cho trình duyệt cũ. Luôn có width/height để
+ * trình duyệt chừa sẵn chỗ — không có thì trang bị giật khi ảnh tải xong (CLS).
+ * `eager` chỉ dùng cho ảnh nằm ngay màn hình đầu; còn lại tải lười.
+ */
+function pic(name, depth, { eager = false, cls = '', caption = '' } = {}) {
+  const m = IMG[name];
+  if (!m) { console.error(`  ! thiếu ảnh: ${name}`); return ''; }
+  const p = pre(depth);
+  const img = `<picture>
+      <source type="image/webp" srcset="${p}images/${name}@small.webp ${m.smallW}w, ${p}images/${name}.webp ${m.w}w" sizes="(max-width: 768px) 100vw, 50vw">
+      <img src="${p}images/${name}.jpg" width="${m.w}" height="${m.h}" alt="${attr(m.alt)}"
+           loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>
+    </picture>`;
+  return caption
+    ? `<figure class="fig ${cls}">${img}<figcaption>${caption}</figcaption></figure>`
+    : `<figure class="fig ${cls}">${img}</figure>`;
+}
 
 // ---------- menu / footer ----------
 function navHtml(depth, current) {
@@ -116,7 +138,7 @@ const crumbSchema = (items, depth) => ({
 });
 
 // ---------- layout ----------
-function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '' }) {
+function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
   const crumbHtml = crumbs && crumbs.length ? `
@@ -165,7 +187,24 @@ ${ld}
 ${menu(depth, current)}
 ${crumbHtml}
 <main id="main-content">
-${h1 ? `<section class="section">
+${hero ? `<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        ${hero.eyebrow ? `<span class="eyebrow">${hero.eyebrow}</span>` : ''}
+        <h1>${h1}</h1>
+        ${lead ? `<p class="lead">${lead}</p>` : ''}
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="tel:${S.hotlineTel}">Gọi ${S.hotline}</a>
+          <a class="btn btn-ghost btn-lg" href="${pre(depth)}bang-gia/">Xem bảng giá</a>
+        </div>
+        ${hero.trust ? `<ul class="hero-trust">${hero.trust.map(t => `<li>${t}</li>`).join('')}</ul>` : ''}
+      </div>
+      <div class="hero-media">${pic(hero.img, depth, { eager: true })}</div>
+    </div>
+  </div>
+</section>`
+: h1 ? `<section class="section page-head">
   <div class="container">
     <div class="container-narrow" style="padding:0">
       <h1>${h1}</h1>
@@ -238,10 +277,15 @@ ${g.rows.map(r => `          <tr><td>${r.name}</td><td class="price">${r.price}<
 {
   const d = P.home;
   const body = `
-<section class="section" style="padding-top:0">
+<section class="section">
   <div class="container">
-    <div class="section-head"><h2>${d.introTitle}</h2></div>
-    <div class="prose">${d.intro.map(x => `<p>${x}</p>`).join('\n')}</div>
+    <div class="split">
+      <div>
+        <div class="section-head"><h2>${d.introTitle}</h2></div>
+        <div class="prose" style="max-width:none">${d.intro.map(x => `<p>${x}</p>`).join('\n')}</div>
+      </div>
+      ${pic('ve-sinh-hop-muc', 0, { caption: 'Hút sạch mực thải và vệ sinh trống – trục – gạt trước khi nạp mực mới.' })}
+    </div>
     ${linkBox(0, '💰', 'Xem bảng giá đầy đủ theo mã hộp mực', 'Laser A4 từ 80.000đ, A3 từ 250.000đ, linh kiện niêm yết rõ từng loại.', 'bang-gia/', 'Xem bảng giá')}
   </div>
 </section>
@@ -303,6 +347,7 @@ ${d.brands.map(b => `          <tr><td><strong>${b.n}</strong></td><td>${b.c}</t
     <ol class="steps">
 ${S.steps.map(s2 => `      <li class="step"><div class="step-number" aria-hidden="true">${s2.n}</div><h3>${s2.title}</h3><p>${s2.text}</p></li>`).join('\n')}
     </ol>
+    ${pic('may-in-dang-in-thu', 0, { cls: 'fig-wide', caption: 'Bước cuối: in thử 5–10 trang ngay trước mặt khách để kiểm độ đậm, vết lem và kẹt giấy.' })}
   </div>
 </section>
 
@@ -312,6 +357,7 @@ ${ctaBand(0, 'Máy in đang dừng? Gọi là có người đi ngay', `Kho ở $
   page({
     slug: '', depth: 0, current: '',
     title: d.title, metaDesc: d.metaDesc, ogTitle: d.ogTitle, h1: d.h1, lead: d.lead,
+    hero: { img: 'ky-thuat-lap-hop-muc', eyebrow: 'Có mặt 15–60 phút tuỳ khu', trust: d.trust },
     body,
     schemas: [
       { '@context': 'https://schema.org', ...localBusiness() },
@@ -323,16 +369,29 @@ ${ctaBand(0, 'Máy in đang dừng? Gọi là có người đi ngay', `Kho ở $
 // ======================= PILLAR NẠP MỰC =======================
 {
   const d = P['nap-muc'];
+  // ảnh minh hoạ cho từng mục, theo đúng nội dung mục đó
+  const secImg = ['hut-muc-thai', 'dung-cu-nap-muc', 'hop-muc-thao-roi', 'trong-va-cum-hop-muc'];
+  const secCap = [
+    'Khoang mực thải đầy — đây là chỗ cách nạp nhanh bỏ qua, và là lý do bản in bị lem.',
+    'Bộ đồ nghề mang theo: hộp mực tháo rời, chai mực đúng loại, tua vít, giấy lót.',
+    'Hộp mực tháo làm hai khoang. Chỉ khi mở ra mới hút sạch được mực thải.',
+    'Trống cảm quang (ống xanh) là bộ phận quyết định bản in có sọc hay không.',
+  ];
+
   const sec = d.sections.map((s2, i) => {
     let inner = '';
     if (s2.p) inner += s2.p.map(x => `<p>${x}</p>`).join('\n');
     if (s2.steps) inner += `<ol>\n${s2.steps.map(x => `  <li>${x}</li>`).join('\n')}\n</ol>`;
+    const im = secImg[i] ? pic(secImg[i], 1, { caption: secCap[i] }) : '';
     return `
 <section class="section${i % 2 ? ' section-alt' : ''}">
   <div class="container">
-    <div class="prose">
-      <h2 id="${slugify(s2.h)}">${s2.h}</h2>
-      ${inner}
+    <div class="split${i % 2 ? ' split-rev' : ''}">
+      <div class="prose" style="max-width:none">
+        <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+        ${inner}
+      </div>
+      ${im}
     </div>
   </div>
 </section>`;
@@ -374,13 +433,22 @@ ${s2.table.map(r => `      <tr><td>${r.a}</td><td class="card-meta">${r.b}</td><
     </tbody>
   </table>
 </div>`;
+    // bảng triệu chứng để full chiều ngang; mục chữ thì kèm ảnh bên cạnh
+    const sImg = ['', 'lo-say-thao-ra', 'cum-trong-banh-rang'][i] || '';
+    const sCap = ['', 'Lô sấy tháo ra kiểm tra khi bản in nhoè như bị ẩm — lỗi này nạp mực không hết.',
+      'Kiểm tra cụm trống và bánh răng trước khi báo giá, để không thay oan bộ phận còn tốt.'][i] || '';
+    const im = sImg ? pic(sImg, 1, { caption: sCap }) : '';
     return `
 <section class="section${i % 2 ? ' section-alt' : ''}">
   <div class="container">
-    <div class="${s2.table ? '' : 'prose'}">
-      <h2 id="${slugify(s2.h)}">${s2.h}</h2>
-      ${inner}
-    </div>
+    ${s2.table ? `<div><h2 id="${slugify(s2.h)}">${s2.h}</h2>${inner}</div>`
+      : `<div class="split${i % 2 ? ' split-rev' : ''}">
+      <div class="prose" style="max-width:none">
+        <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+        ${inner}
+      </div>
+      ${im}
+    </div>`}
   </div>
 </section>`;
   }).join('\n');
@@ -413,7 +481,13 @@ ${ctaBand(1, 'Máy in hỏng giữa giờ làm?', 'Gọi và mô tả triệu ch
     body: `
 <section class="section" style="padding-top:0">
   <div class="container">
+    <div class="grid grid-3" style="margin-bottom:40px">
+      ${pic('hop-muc-hp', 1, { caption: 'Hộp mực HP — mã in trên nhãn quyết định giá nạp.' })}
+      ${pic('hop-muc-brother-tn2385', 1, { caption: 'Brother TN-2385: hộp mực và trống tách riêng.' })}
+      ${pic('trong-cam-quang', 1, { caption: 'Trống cảm quang — thay riêng được, 180.000–280.000đ.' })}
+    </div>
 ${priceTables(1)}
+    ${pic('kho-hop-muc', 1, { cls: 'fig-wide', caption: 'Hộp mực của khách để trong kho, mỗi hộp ghi tên riêng để không lẫn giữa các ca.' })}
     <h3>Điều cần biết về giá</h3>
     <ul>
 ${S.pricingNotes.map(n => `      <li>${n}</li>`).join('\n')}
@@ -545,9 +619,12 @@ ${ctaBand(1, 'Gọi là có người bắt máy', 'Trong giờ làm việc chún
     body: `
 <section class="section" style="padding-top:0">
   <div class="container">
-    <div class="prose">
-      <h2 id="gan-day">${d.nearTitle}</h2>
-${d.near.map(x => `      <p>${x}</p>`).join('\n')}
+    <div class="split">
+      <div class="prose" style="max-width:none">
+        <h2 id="gan-day">${d.nearTitle}</h2>
+${d.near.map(x => `        <p>${x}</p>`).join('\n')}
+      </div>
+      ${pic('may-in-van-phong', 1, { caption: 'Văn phòng nhỏ in đều mỗi ngày — nhóm hợp với bảo trì theo tháng.' })}
     </div>
   </div>
 </section>
@@ -587,6 +664,7 @@ for (const a of AREAS) {
   const body = `
 <section class="section" style="padding-top:0">
   <div class="container">
+    ${pic(`kv-${a.slug}`, 2, { cls: 'fig-wide', eager: true })}
     <div class="split">
       <div class="prose" style="max-width:none">
 ${a.intro.map(x => `        <p>${x}</p>`).join('\n')}
@@ -692,7 +770,8 @@ ${ctaBand(2, `Đặt nạp mực tận nơi ${a.label}`, `Kỹ thuật tới tro
 <section class="section" style="padding-top:0">
   <div class="container">
     <div class="grid grid-3">
-${d.posts.map(po => `      <a class="card card-link" href="${po.slug}/">
+${d.posts.map((po, i) => `      <a class="card card-link card-post" href="${po.slug}/">
+        ${pic(['hop-muc-can-canh', 'hop-muc-pantum-chip', 'cam-hop-muc-hp-59a'][i], 1, { cls: 'fig-flush' })}
         <h3>${po.title}</h3>
         <p>${po.excerpt}</p>
       </a>`).join('\n')}
@@ -702,6 +781,12 @@ ${d.posts.map(po => `      <a class="card card-link" href="${po.slug}/">
 ${ctaBand(1, 'Đọc rồi vẫn không chắc?', 'Chụp ảnh bản in bị lỗi gửi Zalo — nhìn ảnh chẩn đoán nhanh hơn nghe mô tả.')}`,
     schemas: [crumbSchema([{ label: 'Trang chủ', href: '' }, { label: 'Kinh nghiệm', href: 'kinh-nghiem/' }])],
   });
+
+  const postImg = {
+    'nap-muc-hay-thay-hop-muc-moi': ['hop-muc-can-canh', 'Vỏ hộp mực nhìn cận cảnh — trống, trục từ và lưỡi gạt đều mòn theo số trang in.'],
+    'bao-lau-nen-nap-muc-mot-lan': ['hop-muc-pantum-chip', 'Chip trên hộp mực đếm số trang — máy khoá chip thì nạp xong vẫn phải thay chip.'],
+    'dau-hieu-phai-thay-trong-may-in': ['cam-hop-muc-hp-59a', 'Đọc mã trên nhãn hộp mực để biết đúng loại trống và mực cần dùng.'],
+  };
 
   for (const po of d.posts) {
     const bodyHtml = po.body.map(b => {
@@ -721,6 +806,7 @@ ${ctaBand(1, 'Đọc rồi vẫn không chắc?', 'Chụp ảnh bản in bị l�
       body: `
 <section class="section" style="padding-top:0">
   <div class="container">
+    ${pic(postImg[po.slug][0], 2, { cls: 'fig-wide', eager: true, caption: postImg[po.slug][1] })}
     <div class="prose">
       <nav class="toc" aria-label="Nội dung bài">
         <h2>Nội dung</h2>

@@ -193,6 +193,94 @@
       "sheetNo": 3
     },
     {
+      "name": "kv-quan-8",
+      "alt": "Máy in HP LaserJet Pro đặt trên bàn làm việc — dạng khách phổ biến ở Quận 8",
+      "page": "/khu-vuc/quan-8/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260409_103739.jpg",
+      "sheetNo": 66
+    },
+    {
+      "name": "kv-quan-7",
+      "alt": "Máy in đa năng HP trong văn phòng công ty — nhóm khách chính ở Quận 7",
+      "page": "/khu-vuc/quan-7/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260403_150013.jpg",
+      "sheetNo": 54
+    },
+    {
+      "name": "kv-quan-6",
+      "alt": "Máy in Brother MFC đang in tài liệu tại cửa hàng — kiểu dùng thường gặp ở Quận 6",
+      "page": "/khu-vuc/quan-6/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260413_141430.jpg",
+      "sheetNo": 75
+    },
+    {
+      "name": "kv-binh-chanh",
+      "alt": "Máy in đặt trong kho với giấy tờ xếp quanh — môi trường nhiều bụi ở Bình Chánh",
+      "page": "/khu-vuc/binh-chanh/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260410_104117.jpg",
+      "sheetNo": 72
+    },
+    {
+      "name": "kv-quan-4",
+      "alt": "Máy in đa năng trong nhà phố — khách Quận 4 phần lớn dùng máy đặt tại nhà",
+      "page": "/khu-vuc/quan-4/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260413_124941.jpg",
+      "sheetNo": 74
+    },
+    {
+      "name": "kv-quan-5",
+      "alt": "Máy in nhỏ đặt tại quầy cửa hiệu — kiểu dùng của hộ kinh doanh Quận 5",
+      "page": "/khu-vuc/quan-5/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260402_135652.jpg",
+      "sheetNo": 44
+    },
+    {
+      "name": "kv-nha-be",
+      "alt": "Máy in Brother tại văn phòng nhà máy — khách Nhà Bè chủ yếu là khu công nghiệp",
+      "page": "/khu-vuc/nha-be/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260403_105954.jpg",
+      "sheetNo": 52
+    },
+    {
+      "name": "kv-phu-my-hung",
+      "alt": "Máy in đa năng trong căn hộ, bảng điều khiển nhìn rõ — khách Phú Mỹ Hưng",
+      "page": "/khu-vuc/phu-my-hung/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260409_133758.jpg",
+      "sheetNo": 68
+    },
+    {
       "name": "hop-muc-pantum-chip",
       "alt": "Hộp mực Pantum TL-410 nhìn rõ chip và trống — hai bộ phận quyết định khi nào phải thay hộp",
       "page": "/kinh-nghiem/",

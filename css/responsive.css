@@ -83,3 +83,12 @@
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+@media (max-width: 1024px) {
+  /* trên màn hẹp thì bỏ đảo cột, ảnh luôn xuống dưới chữ */
+  .split-rev > :first-child, .split-rev > :last-child { order: 0; }
+}
+@media (max-width: 768px) {
+  .fig-wide img { max-height: 260px; }
+  .fig figcaption { font-size: .86rem; }
+}

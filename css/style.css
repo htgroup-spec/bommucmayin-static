@@ -412,3 +412,35 @@ td.price { color: var(--accent); }
 /* logo: .brand-mark nay là ảnh chữ lồng, không còn là ô vuông chữ HT */
 .brand-mark { width: auto; height: 40px; background: none; border-radius: 0; }
 .site-footer .brand-mark { height: 38px; }
+
+/* ---------- ảnh ---------- */
+.fig { margin: 0; }
+.fig picture { display: block; }
+.fig img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius); border: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+.fig figcaption {
+  margin-top: 10px; font-size: .9rem; line-height: 1.55; color: var(--muted);
+  padding-left: 12px; border-left: 3px solid var(--accent);
+}
+.fig-wide { margin: 0 0 36px; }
+.fig-wide img { max-height: 420px; object-fit: cover; }
+
+/* ảnh dán sát mép trong card bài viết */
+.card-post { padding: 0; overflow: hidden; }
+.card-post .fig-flush img { border: 0; border-radius: 0; aspect-ratio: 16/10; object-fit: cover; }
+.card-post h3, .card-post p { padding-inline: 22px; }
+.card-post h3 { margin-top: 20px; }
+.card-post p { padding-bottom: 22px; }
+
+/* hero: ảnh bên phải */
+.hero-media .fig img { box-shadow: var(--shadow-lg); border-color: transparent; }
+
+/* đảo thứ tự cột để ảnh không phải lúc nào cũng nằm bên phải */
+.split-rev > :first-child { order: 2; }
+.split-rev > :last-child { order: 1; }
+
+/* lưới 3 ảnh trong trang bảng giá */
+.grid-3 > .fig { margin: 0; }

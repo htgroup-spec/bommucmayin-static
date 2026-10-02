@@ -83,6 +83,24 @@ const PICKS = [
   { n: 3,  name: 'epson-he-binh', ratio: [4, 3], page: '/khu-vuc/',
     alt: 'Máy in phun mực Epson L3250 hệ bình — loại này bơm mực nước, khác hẳn máy laser' },
 
+  // --- mỗi trang khu vực một ảnh riêng, không dùng lại ảnh của trang khác ---
+  { n: 66, name: 'kv-quan-8', ratio: [16, 9], page: '/khu-vuc/quan-8/',
+    alt: 'Máy in HP LaserJet Pro đặt trên bàn làm việc — dạng khách phổ biến ở Quận 8' },
+  { n: 54, name: 'kv-quan-7', ratio: [16, 9], page: '/khu-vuc/quan-7/',
+    alt: 'Máy in đa năng HP trong văn phòng công ty — nhóm khách chính ở Quận 7' },
+  { n: 75, name: 'kv-quan-6', ratio: [16, 9], page: '/khu-vuc/quan-6/',
+    alt: 'Máy in Brother MFC đang in tài liệu tại cửa hàng — kiểu dùng thường gặp ở Quận 6' },
+  { n: 72, name: 'kv-binh-chanh', ratio: [16, 9], page: '/khu-vuc/binh-chanh/',
+    alt: 'Máy in đặt trong kho với giấy tờ xếp quanh — môi trường nhiều bụi ở Bình Chánh' },
+  { n: 74, name: 'kv-quan-4', ratio: [16, 9], page: '/khu-vuc/quan-4/',
+    alt: 'Máy in đa năng trong nhà phố — khách Quận 4 phần lớn dùng máy đặt tại nhà' },
+  { n: 44, name: 'kv-quan-5', ratio: [16, 9], page: '/khu-vuc/quan-5/',
+    alt: 'Máy in nhỏ đặt tại quầy cửa hiệu — kiểu dùng của hộ kinh doanh Quận 5' },
+  { n: 52, name: 'kv-nha-be', ratio: [16, 9], page: '/khu-vuc/nha-be/',
+    alt: 'Máy in Brother tại văn phòng nhà máy — khách Nhà Bè chủ yếu là khu công nghiệp' },
+  { n: 68, name: 'kv-phu-my-hung', ratio: [16, 9], page: '/khu-vuc/phu-my-hung/',
+    alt: 'Máy in đa năng trong căn hộ, bảng điều khiển nhìn rõ — khách Phú Mỹ Hưng' },
+
   // --- blog ---
   { n: 29, name: 'hop-muc-pantum-chip', ratio: [16, 9], page: '/kinh-nghiem/',
     alt: 'Hộp mực Pantum TL-410 nhìn rõ chip và trống — hai bộ phận quyết định khi nào phải thay hộp' },
