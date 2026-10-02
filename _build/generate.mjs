@@ -147,8 +147,13 @@ ${crumbs.map(c => c.href === null
 <meta property="og:title" content="${attr(ogTitle || title)}">
 <meta property="og:description" content="${attr(metaDesc)}">
 <meta property="og:url" content="${canonical}">
+<meta property="og:image" content="${S.baseUrl}/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#ff695f">
+<meta name="theme-color" content="#14457f">
+<link rel="icon" type="image/png" sizes="32x32" href="${p}images/favicon-32.png">
+<link rel="apple-touch-icon" href="${p}images/apple-touch.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">

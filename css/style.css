@@ -9,9 +9,9 @@
    Bootstrap, jQuery, Owl Carousel, Isotope hay FontAwesome của bản gốc
    (~2 MB) vì tốc độ là lợi thế xếp hạng của site dịch vụ local. */
 :root {
-  --primary:        #03a4ed;
-  --primary-dark:   #0288c4;
-  --primary-light:  #e6f6fe;
+  --primary:        #14457f;
+  --primary-dark:   #0e3360;
+  --primary-light:  #eaf1f9;
   --accent:         #ff695f;
   --accent-dark:    #ef4e43;
 
@@ -408,3 +408,7 @@ td.price { color: var(--accent); }
 
 /* thanh gọi cố định trên mobile */
 .callbar a { font-weight: 600; }
+
+/* logo: .brand-mark nay là ảnh chữ lồng, không còn là ô vuông chữ HT */
+.brand-mark { width: auto; height: 40px; background: none; border-radius: 0; }
+.site-footer .brand-mark { height: 38px; }

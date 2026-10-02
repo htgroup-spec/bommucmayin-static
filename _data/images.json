@@ -1,0 +1,229 @@
+{
+  "_meta": {
+    "generated": "2026-10-02",
+    "source": "tinhocnamphong/hình kỹ thuật (chủ shop chỉ định 02/10/2026)",
+    "note": "Đã xoá sạch EXIF/GPS. Ảnh nào dùng ở đây phải được ghi vào sổ ANH-DA-DUNG.md bên Nam Phong để không dùng lại ở site khác."
+  },
+  "images": [
+    {
+      "name": "ky-thuat-lap-hop-muc",
+      "alt": "Kỹ thuật lắp hộp mực HP CF276A vào máy in sau khi nạp mực và vệ sinh buồng mực",
+      "page": "/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260409_103731.jpg",
+      "sheetNo": 65
+    },
+    {
+      "name": "ve-sinh-hop-muc",
+      "alt": "Kỹ thuật vệ sinh hộp mực và trống trước khi nạp mực mới, trải giấy lót để không bay bụi mực",
+      "page": "/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260410_143827.jpg",
+      "sheetNo": 73
+    },
+    {
+      "name": "may-in-dang-in-thu",
+      "alt": "Máy in HP LaserJet Pro đang in thử sau khi nạp mực để kiểm tra độ đậm và vết lem",
+      "page": "/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "20260403_155316.jpg",
+      "sheetNo": 7
+    },
+    {
+      "name": "hop-muc-thao-roi",
+      "alt": "Hộp mực tháo rời thành hai khoang cùng chai mực mới, đặt trên giấy lót",
+      "page": "/nap-muc-may-in-tan-noi/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "20260328_123932.jpg",
+      "sheetNo": 2
+    },
+    {
+      "name": "hut-muc-thai",
+      "alt": "Mực thải trong hộp mực được đổ ra — phải hút sạch khoang này trước khi nạp mực mới",
+      "page": "/nap-muc-may-in-tan-noi/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260409_160901.jpg",
+      "sheetNo": 71
+    },
+    {
+      "name": "trong-va-cum-hop-muc",
+      "alt": "Trống cảm quang màu xanh và cụm hộp mực tháo rời đặt cạnh bản vẽ hướng dẫn",
+      "page": "/nap-muc-may-in-tan-noi/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260402_114107.jpg",
+      "sheetNo": 42
+    },
+    {
+      "name": "dung-cu-nap-muc",
+      "alt": "Bộ dụng cụ nạp mực: hộp mực tháo rời, chai mực, tua vít, giấy lót",
+      "page": "/nap-muc-may-in-tan-noi/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260402_144652.jpg",
+      "sheetNo": 45
+    },
+    {
+      "name": "lo-say-thao-ra",
+      "alt": "Cụm lô sấy tháo khỏi máy in để kiểm tra khi bản in bị nhoè như bị ẩm",
+      "page": "/sua-may-in/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "20260327_145647.jpg",
+      "sheetNo": 1
+    },
+    {
+      "name": "cum-trong-banh-rang",
+      "alt": "Kỹ thuật kiểm tra cụm trống và bánh răng của hộp mực",
+      "page": "/sua-may-in/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260401_090502.jpg",
+      "sheetNo": 38
+    },
+    {
+      "name": "ben-trong-may-in",
+      "alt": "Bên trong máy in Fuji Xerox, kiểm tra đường giấy khi máy báo kẹt giấy liên tục",
+      "page": "/sua-may-in/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260408_093143.jpg",
+      "sheetNo": 60
+    },
+    {
+      "name": "gat-muc-ban",
+      "alt": "Thanh gạt mực bám đầy mực cũ — nguyên nhân khiến bản in lem ở mép giấy",
+      "page": "/sua-may-in/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260409_154958.jpg",
+      "sheetNo": 70
+    },
+    {
+      "name": "hop-muc-brother-tn2385",
+      "alt": "Hai hộp mực Brother TN-2385 chuẩn bị mang đi nạp cho khách",
+      "page": "/bang-gia/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "20260423_104218.jpg",
+      "sheetNo": 26
+    },
+    {
+      "name": "hop-muc-hp",
+      "alt": "Hộp mực HP CE285A và CF283A đặt cạnh nhau để so sánh kích thước",
+      "page": "/bang-gia/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260406_105604.jpg",
+      "sheetNo": 58
+    },
+    {
+      "name": "trong-cam-quang",
+      "alt": "Trống cảm quang màu xanh bên trong hộp mực — bộ phận quyết định bản in có sọc hay không",
+      "page": "/bang-gia/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260407_083304.jpg",
+      "sheetNo": 59
+    },
+    {
+      "name": "kho-hop-muc",
+      "alt": "Hộp mực của khách xếp sẵn trong kho, mỗi hộp ghi tên để không lẫn",
+      "page": "/bang-gia/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260413_151759.jpg",
+      "sheetNo": 76
+    },
+    {
+      "name": "may-in-van-phong",
+      "alt": "Máy in đặt trong văn phòng nhỏ — nhóm khách in đều mỗi ngày nên hết mực đúng chu kỳ",
+      "page": "/khu-vuc/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "20260407_084859.jpg",
+      "sheetNo": 13
+    },
+    {
+      "name": "epson-he-binh",
+      "alt": "Máy in phun mực Epson L3250 hệ bình — loại này bơm mực nước, khác hẳn máy laser",
+      "page": "/khu-vuc/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "20260328_132139 (1).jpg",
+      "sheetNo": 3
+    },
+    {
+      "name": "hop-muc-pantum-chip",
+      "alt": "Hộp mực Pantum TL-410 nhìn rõ chip và trống — hai bộ phận quyết định khi nào phải thay hộp",
+      "page": "/kinh-nghiem/",
+      "w": 1280,
+      "h": 720,
+      "smallW": 640,
+      "smallH": 360,
+      "source": "IMG_20260326_163205 (1).jpg",
+      "sheetNo": 29
+    },
+    {
+      "name": "hop-muc-can-canh",
+      "alt": "Hộp mực laser nhìn cận cảnh phần trống và lưỡi gạt",
+      "page": "/kinh-nghiem/",
+      "w": 800,
+      "h": 600,
+      "smallW": 400,
+      "smallH": 300,
+      "source": "IMG_20260403_140754.jpg",
+      "sheetNo": 53
+    },
+    {
+      "name": "cam-hop-muc-hp-59a",
+      "alt": "Kỹ thuật cầm hộp mực HP 59A, đọc mã trên nhãn để lấy đúng loại mực",
+      "page": "/kinh-nghiem/",
+      "w": 600,
+      "h": 800,
+      "smallW": 300,
+      "smallH": 400,
+      "source": "IMG_20260409_105650.jpg",
+      "sheetNo": 67
+    }
+  ]
+}

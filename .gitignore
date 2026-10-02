@@ -7,3 +7,4 @@ Thumbs.db
 # template tải về — không đẩy lên repo site
 *.zip
 _template-src/
+_img-src/

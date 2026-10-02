@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" role="img" aria-label="HT — bơm mực máy in">
+  <defs>
+    <clipPath id="cutB">
+      <path d="M0 0 H72 V72 H0 Z M2 47 L70 39 L70 44 L2 52 Z" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#cutB)">
+    <rect x="4"  y="12" width="9"  height="48" fill="#2a2a2a"/>
+    <rect x="25" y="12" width="9"  height="48" fill="#2a2a2a"/>
+    <rect x="4"  y="31" width="30" height="9"  fill="#2a2a2a"/>
+    <rect x="38" y="12" width="30" height="9"  fill="#ff695f"/>
+    <rect x="48" y="12" width="9"  height="48" fill="#ff695f"/>
+  </g>
+  <text x="84" y="34" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#2a2a2a">Bơm Mực Máy In</text>
+  <text x="84" y="57" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#8a8a8a" letter-spacing="2.4">KHU NAM TP.HCM</text>
+</svg>
