@@ -9,12 +9,16 @@
   "hotlineRaw": "0703525478",
   "hotlineTel": "+84703525478",
 
-  "_note_address": "Theo yêu cầu 01/10/2026: KHÔNG ghi phường/quận trên web, chỉ ghi số nhà + tên đường. Google Maps sẽ ghim chính xác sau.",
+  "_note_address": "02/10/2026: Hồ sơ Google Doanh nghiệp đã xác nhận địa chỉ đầy đủ là 5/19 Đ. Phạm Hùng, Chánh Hưng, Hồ Chí Minh 700000. Địa chỉ trên web PHẢI khớp từng chữ với hồ sơ Google — lệch NAP là mất điểm tìm kiếm địa phương.",
   "address": {
     "street": "5/19 Phạm Hùng",
+    "ward": "Chánh Hưng",
     "locality": "TP. Hồ Chí Minh",
+    "postalCode": "700000",
     "country": "VN"
   },
+  "mapEmbed": "https://www.google.com/maps?q=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20Ch%C3%A1nh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed",
+  "mapLink": "https://www.google.com/maps/dir/?api=1&destination=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20Ch%C3%A1nh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh",
 
   "hours": "Thứ 2 – Chủ nhật, 08:00 – 19:00",
   "hoursSchema": ["Mo-Sa 08:00-19:00", "Su 08:00-17:00"],

@@ -43,7 +43,8 @@ const pre = d => '../'.repeat(d);
 const slugify = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd')
   .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-const ADDR_FULL = `${S.address.street}, ${S.address.locality}`;
+// Phải khớp đúng chuỗi địa chỉ trong Hồ sơ Google Doanh nghiệp.
+const ADDR_FULL = [S.address.street, S.address.ward, S.address.locality].filter(Boolean).join(', ');
 
 /**
  * Ảnh: WebP trước, JPG dự phòng cho trình duyệt cũ. Luôn có width/height để
@@ -116,7 +117,14 @@ const localBusiness = () => ({
   telephone: S.hotlineTel,
   url: S.baseUrl + '/',
   priceRange: S.priceRange,
-  address: { '@type': 'PostalAddress', streetAddress: S.address.street, addressLocality: S.address.locality, addressCountry: S.address.country },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: S.address.street,
+    addressLocality: [S.address.ward, S.address.locality].filter(Boolean).join(', '),
+    ...(S.address.postalCode ? { postalCode: S.address.postalCode } : {}),
+    addressCountry: S.address.country,
+  },
+  hasMap: S.mapLink,
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '19:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '08:00', closes: '17:00' },
@@ -584,6 +592,24 @@ ${d.tips.map(t => `        <h2>${t.h}</h2>\n        <ul>\n${t.list.map(x => `   
         <a class="btn btn-primary btn-block" href="tel:${S.hotlineTel}">Gọi ngay</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="ban-do">Kho vật tư trên bản đồ</h2>
+      <p>Kỹ thuật xuất phát từ đây, nên khu nào gần điểm này thì tới nhanh hơn.</p>
+    </div>
+    <div class="map-wrap">
+      <iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}"
+              width="100%" height="420" style="border:0" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p class="table-note">
+      ${ADDR_FULL} ·
+      <a href="${S.mapLink}" rel="noopener" target="_blank">Mở chỉ đường trên Google Maps</a>
+    </p>
   </div>
 </section>
 ${ctaBand(1, 'Gọi là có người bắt máy', 'Trong giờ làm việc chúng tôi bắt máy trực tiếp, không qua tổng đài tự động.')}`,

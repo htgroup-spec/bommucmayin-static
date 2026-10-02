@@ -92,3 +92,7 @@
   .fig-wide img { max-height: 260px; }
   .fig figcaption { font-size: .86rem; }
 }
+
+@media (max-width: 768px) {
+  .map-wrap iframe { height: 300px; }
+}

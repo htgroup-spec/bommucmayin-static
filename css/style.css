@@ -444,3 +444,10 @@ td.price { color: var(--accent); }
 
 /* lưới 3 ảnh trong trang bảng giá */
 .grid-3 > .fig { margin: 0; }
+
+/* ---------- bản đồ nhúng ---------- */
+.map-wrap {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; background: var(--bg-alt); line-height: 0;
+}
+.map-wrap iframe { display: block; width: 100%; }
