@@ -82,10 +82,8 @@ function footer(depth) {
     .replace(/{{HOTLINE}}/g, S.hotline)
     .replace(/{{TELRAW}}/g, S.hotlineRaw)
     .replace(/{{TEL}}/g, S.hotlineTel)
-    .replace(/{{EMAIL}}/g, S.email)
     .replace(/{{STREET}}/g, ADDR_FULL)
-    .replace(/{{LEGAL}}/g, S.legalName)
-    .replace(/{{TAXID}}/g, S.taxId)
+    .replace(/{{LEGAL}}/g, S.brandFull)
     .replace(/{{YEAR}}/g, YEAR);
 }
 
@@ -93,10 +91,7 @@ function footer(depth) {
 const localBusiness = () => ({
   '@type': 'LocalBusiness',
   name: `${S.brandFull} — ${S.brandSub}`,
-  legalName: S.legalName,
-  taxID: S.taxId,
   telephone: S.hotlineTel,
-  email: S.email,
   url: S.baseUrl + '/',
   priceRange: S.priceRange,
   address: { '@type': 'PostalAddress', streetAddress: S.address.street, addressLocality: S.address.locality, addressCountry: S.address.country },
@@ -504,10 +499,9 @@ ${d.tips.map(t => `        <h2>${t.h}</h2>\n        <ul>\n${t.list.map(x => `   
       <div class="card">
         <h3>Thông tin liên hệ</h3>
         <p><strong>Gọi / Zalo</strong><br><a href="tel:${S.hotlineTel}" style="font-size:1.3rem;font-weight:750">${S.hotline}</a></p>
-        <p><strong>Email</strong><br><a href="mailto:${S.email}">${S.email}</a></p>
         <p><strong>Kho vật tư</strong><br>${ADDR_FULL}</p>
         <p><strong>Giờ làm việc</strong><br>${S.hours}</p>
-        <p><strong>Pháp nhân</strong><br>${S.legalName}<br>MST ${S.taxId}</p>
+        <p><strong>Địa bàn</strong><br>Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè</p>
         <a class="btn btn-primary btn-block" href="tel:${S.hotlineTel}">Gọi ngay</a>
       </div>
     </div>
@@ -744,7 +738,7 @@ ${ctaBand(2, 'Đặt nạp mực hoặc sửa máy in', 'Khu Nam TP.HCM — xem 
           '@context': 'https://schema.org', '@type': 'Article',
           headline: plain(po.title), description: plain(po.metaDesc),
           datePublished: TODAY, dateModified: TODAY,
-          author: { '@type': 'Organization', name: S.legalName },
+          author: { '@type': 'Organization', name: S.brandFull },
           publisher: { '@type': 'Organization', name: S.brandFull },
           mainEntityOfPage: { '@type': 'WebPage', '@id': `${S.baseUrl}/kinh-nghiem/${po.slug}/` },
         },

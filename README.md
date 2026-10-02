@@ -4,7 +4,7 @@ Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub
 
 - **Domain:** bommucmayin.net
 - **Địa bàn:** Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh, Nhà Bè (+ Phú Mỹ Hưng)
-- **Pháp nhân:** CÔNG TY TNHH TMDV TIN HỌC HI-TECH · MST 0315587367
+- **Lưu ý:** site này KHÔNG thuộc pháp nhân Hi-tech. Chủ shop xác nhận 02/10/2026 — mọi nhắc tới công ty, MST, hoá đơn VAT và email đã được gỡ bỏ. Không thêm lại nếu chưa có xác nhận.
 - **Hotline:** 0703 525 478 · Kho: 5/19 Phạm Hùng, TP.HCM
 
 ---

@@ -4,13 +4,10 @@
   "brandName": "HT",
   "brandFull": "Bơm Mực Máy In HT",
   "brandSub": "Khu Nam TP.HCM",
-  "legalName": "CÔNG TY TNHH TMDV TIN HỌC HI-TECH",
-  "taxId": "0315587367",
 
   "hotline": "0703 525 478",
   "hotlineRaw": "0703525478",
   "hotlineTel": "+84703525478",
-  "email": "computer.hitech52@gmail.com",
 
   "_note_address": "Theo yêu cầu 01/10/2026: KHÔNG ghi phường/quận trên web, chỉ ghi số nhà + tên đường. Google Maps sẽ ghim chính xác sau.",
   "address": {
@@ -77,7 +74,7 @@
     "Giá đã gồm công đi lại trong địa bàn khu Nam và vệ sinh buồng mực — không phát sinh phí ẩn.",
     "Kỹ thuật xem máy, báo giá tại chỗ. Anh/chị đồng ý thì mới tháo máy.",
     "Máy sau khi nạp được in thử 5–10 trang để kiểm độ đậm, lem, kẹt giấy trước khi kỹ thuật rời đi.",
-    "Hoá đơn VAT xuất theo yêu cầu — pháp nhân CÔNG TY TNHH TMDV TIN HỌC HI-TECH, MST 0315587367.",
+    "Cần báo giá trước bằng văn bản để trình kế toán thì nhắn Zalo danh sách máy, chúng tôi gửi lại.",
     "Máy đã bị người khác tháo sửa trước đó: kỹ thuật kiểm tra rồi mới nhận, để không bảo hành chồng lỗi cũ."
   ],
 
@@ -94,7 +91,7 @@
     { "icon": "🧾", "title": "Báo giá trước khi tháo máy", "text": "Khung giá nói trong cuộc gọi, chốt lại tại chỗ sau khi xem máy. Phát sinh linh kiện phải được anh/chị đồng ý." },
     { "icon": "🛡", "title": "Bảo hành theo số trang in", "text": "Tính theo số trang thực tế chứ không theo ngày — công bằng cho cả máy in nhiều và máy in ít." },
     { "icon": "🔧", "title": "Mang đủ vật tư theo xe", "text": "Trống, trục từ, gạt mực, chip, bánh kéo giấy. Phần lớn ca xử lý xong trong một lượt, không hẹn lại lần hai." },
-    { "icon": "🏢", "title": "Pháp nhân rõ ràng, có hoá đơn", "text": "CÔNG TY TNHH TMDV TIN HỌC HI-TECH, MST 0315587367. Nhận hợp đồng bảo trì tháng cho công ty, xưởng, trường học." },
+    { "icon": "🏢", "title": "Nhận bảo trì theo tháng", "text": "Công ty, xưởng, kho và trường học trong khu Nam có thể ký bảo trì tháng: chúng tôi theo dõi số trang và chủ động xử lý trước khi máy dừng giữa giờ làm." },
     { "icon": "📄", "title": "In thử trước khi rời đi", "text": "Kiểm độ đậm, lem mực, kẹt giấy. Máy chạy ổn mới tính là xong việc." }
   ],
 
@@ -105,7 +102,7 @@
     { "q": "Nạp mực có làm hỏng máy in không?", "a": "Không, nếu làm đúng cách. Rủi ro thật nằm ở nạp sai loại mực hoặc không hút hết mực thải — khiến bản in lem và trống nhanh xước. Chúng tôi hút sạch mực thải, vệ sinh trống – trục – gạt rồi mới nạp, và in thử trước khi rời đi." },
     { "q": "Bảo hành như thế nào?", "a": "Bảo hành theo số trang in thực tế, ghi trên phiếu. Nếu trong thời gian đó bản in mờ, lem hay sọc do lỗi mực, chúng tôi quay lại xử lý miễn phí — kể cả phải đổi hộp mực khác." },
     { "q": "Khi nào nên thay hộp mực mới thay vì nạp lại?", "a": "Khi vỏ hộp đã nạp quá 4–5 lần, trống mòn gây sọc đen lặp lại theo chu kỳ, hoặc gạt mực hở làm lem dù vừa vệ sinh. Lúc đó nạp thêm chỉ tốn tiền mà bản in vẫn kém — kỹ thuật sẽ nói thẳng để anh/chị chọn." },
-    { "q": "Có nhận máy in của công ty, xuất hoá đơn VAT không?", "a": "Có. Pháp nhân là CÔNG TY TNHH TMDV TIN HỌC HI-TECH, mã số thuế 0315587367, xuất hoá đơn VAT đầy đủ. Chúng tôi nhận hợp đồng bảo trì tháng cho công ty, xưởng và trường học trong khu Nam." },
+    { "q": "Có nhận máy in của công ty, của xưởng không?", "a": "Có. Chúng tôi nhận cả máy lẻ lẫn hợp đồng bảo trì tháng cho công ty, xưởng, kho và trường học trong khu Nam. Anh/chị cần báo giá trước bằng văn bản để trình kế toán thì gửi danh sách máy qua Zalo, chúng tôi gửi lại trước khi hẹn lịch." },
     { "q": "Máy in kẹt giấy, in ra giấy trắng thì xử lý luôn được không?", "a": "Phần lớn là được. Kỹ thuật mang theo vật tư nên các lỗi thường gặp — kẹt giấy, in trắng, in mờ một bên, sọc dọc, không ăn giấy — xử lý ngay trong cùng lượt đi. Nếu máy phải mang về xưởng, chúng tôi báo trước chi phí và thời gian." },
     { "q": "Ngoài giờ hoặc Chủ nhật có nhận không?", "a": "Chủ nhật làm tới 17:00. Ngoài giờ hành chính thì nhận theo hẹn trước, ưu tiên khách có hợp đồng bảo trì và các ca gấp ở chợ đầu mối — nơi máy in phiếu không chạy là không bán được hàng." }
   ],
