@@ -585,9 +585,8 @@ ${d.tips.map(t => `        <h2>${t.h}</h2>\n        <ul>\n${t.list.map(x => `   
       </div>
       <div class="card">
         <h3>Thông tin liên hệ</h3>
-        <p><strong>Gọi / Zalo</strong><br><a href="tel:${S.hotlineTel}" style="font-size:1.3rem;font-weight:750">${S.hotline}</a></p>
-${S.hotlineOld ? `        <p><strong>Số cũ (vẫn nhận máy)</strong><br><a href="tel:${S.hotlineOldTel}">${S.hotlineOld}</a></p>
-` : ''}        <p><strong>Kho vật tư</strong><br>${ADDR_FULL}</p>
+        <p><strong>Gọi / Zalo</strong><br><a href="tel:${S.hotlineTel}" style="font-size:1.3rem;font-weight:750">${S.hotline}</a>${S.hotlineOld ? `<br><a href="tel:${S.hotlineOldTel}">${S.hotlineOld}</a>` : ''}</p>
+        <p><strong>Kho vật tư</strong><br>${ADDR_FULL}</p>
         <p><strong>Giờ làm việc</strong><br>${S.hours}</p>
         <p><strong>Địa bàn</strong><br>Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè</p>
         <a class="btn btn-primary btn-block" href="tel:${S.hotlineTel}">Gọi ngay</a>
