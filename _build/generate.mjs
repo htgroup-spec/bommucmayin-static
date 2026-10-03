@@ -328,7 +328,7 @@ ${S.whyUs.map(w => `      <div class="card"><div class="card-icon" aria-hidden="
   <div class="container">
     <div class="section-head">
       <h2>Khu vực phục vụ và thời gian tới thật</h2>
-      <p>Kho vật tư đặt tại ${S.address.street}. Thời gian dưới đây là khung thật theo khoảng cách, không phải một con số dán cho cả thành phố.</p>
+      <p>Cửa hàng đặt tại ${S.address.street}. Thời gian dưới đây là khung thật theo khoảng cách, không phải một con số dán cho cả thành phố.</p>
     </div>
     <div class="grid grid-4">
 ${AREAS.map(a => `      <a class="card card-link" href="khu-vuc/${a.slug}/">
@@ -365,7 +365,7 @@ ${S.steps.map(s2 => `      <li class="step"><div class="step-number" aria-hidden
 </section>
 
 ${faqBlock(S.faq.slice(0, 6))}
-${ctaBand(0, 'Máy in đang dừng? Gọi là có người đi ngay', `Kho ở ${S.address.street} — Quận 8, Quận 4, Quận 5, Quận 6 thường 15–40 phút. Xem máy rồi báo giá, anh/chị đồng ý mới tháo.`)}`;
+${ctaBand(0, 'Máy in đang dừng? Gọi là có người đi ngay', `Cửa hàng ở ${S.address.street} — Quận 8, Quận 4, Quận 5, Quận 6 thường 15–40 phút. Xem máy rồi báo giá, anh/chị đồng ý mới tháo.`)}`;
 
   page({
     slug: '', depth: 0, current: '',
@@ -500,7 +500,7 @@ ${ctaBand(1, 'Máy in hỏng giữa giờ làm?', 'Gọi và mô tả triệu ch
       ${pic('trong-cam-quang', 1, { caption: 'Trống cảm quang — thay riêng được, 180.000–280.000đ.' })}
     </div>
 ${priceTables(1)}
-    ${pic('kho-hop-muc', 1, { cls: 'fig-wide', caption: 'Hộp mực của khách để trong kho, mỗi hộp ghi tên riêng để không lẫn giữa các ca.' })}
+    ${pic('kho-hop-muc', 1, { cls: 'fig-wide', caption: 'Hộp mực của khách để tại cửa hàng, mỗi hộp ghi tên riêng để không lẫn giữa các ca.' })}
     <h3>Điều cần biết về giá</h3>
     <ul>
 ${S.pricingNotes.map(n => `      <li>${n}</li>`).join('\n')}
@@ -591,7 +591,7 @@ ${d.tips.map(t => `        <h2>${t.h}</h2>\n        <ul>\n${t.list.map(x => `   
       <div class="card">
         <h3>Thông tin liên hệ</h3>
         <p><strong>Gọi / Zalo</strong><br><a href="tel:${S.hotlineTel}" style="font-size:1.3rem;font-weight:750">${S.hotline}</a>${S.hotlineOld ? `<br><a href="tel:${S.hotlineOldTel}">${S.hotlineOld}</a>` : ''}</p>
-        <p><strong>${S.addressLabel || 'Kho vật tư'}</strong><br>${ADDR_FULL}</p>
+        <p><strong>${S.addressLabel || 'Cửa hàng'}</strong><br>${ADDR_FULL}</p>
 ${ADDR2 ? `        <p><strong>${ADDR2.label}</strong><br>${ADDR2_FULL}</p>
 ` : ''}        <p><strong>Giờ làm việc</strong><br>${S.hours}</p>
         <p><strong>Địa bàn</strong><br>Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè</p>
@@ -604,7 +604,7 @@ ${ADDR2 ? `        <p><strong>${ADDR2.label}</strong><br>${ADDR2_FULL}</p>
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <h2 id="ban-do">Kho vật tư trên bản đồ</h2>
+      <h2 id="ban-do">Cửa hàng trên bản đồ</h2>
       <p>Kỹ thuật xuất phát từ đây, nên khu nào gần điểm này thì tới nhanh hơn.</p>
     </div>
     <div class="map-wrap">
@@ -772,7 +772,7 @@ ${ctaBand(2, `Đặt nạp mực tận nơi ${a.label}`, `Kỹ thuật tới tro
   page({
     slug: `khu-vuc/${a.slug}`, depth: 2, current: 'khu-vuc/',
     title: a.title, metaDesc: a.metaDesc, ogTitle: a.ogTitle, h1: a.h1,
-    lead: `Kho vật tư đặt tại ${S.address.street}. Kỹ thuật tới ${a.label} trong <strong>${a.eta}</strong> — xem máy rồi báo giá, anh/chị đồng ý thì mới tháo.`,
+    lead: `Cửa hàng đặt tại ${S.address.street}. Kỹ thuật tới ${a.label} trong <strong>${a.eta}</strong> — xem máy rồi báo giá, anh/chị đồng ý thì mới tháo.`,
     crumbs, body,
     schemas: [
       {

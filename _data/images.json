@@ -161,7 +161,7 @@
     },
     {
       "name": "kho-hop-muc",
-      "alt": "Hộp mực của khách xếp sẵn trong kho, mỗi hộp ghi tên để không lẫn",
+      "alt": "Hộp mực của khách xếp sẵn tại cửa hàng, mỗi hộp ghi tên để không lẫn",
       "page": "/bang-gia/",
       "w": 1280,
       "h": 720,
