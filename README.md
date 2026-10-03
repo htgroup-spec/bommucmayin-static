@@ -5,7 +5,7 @@ Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub
 - **Domain:** bommucmayin.net
 - **Địa bàn:** Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh, Nhà Bè (+ Phú Mỹ Hưng)
 - **Lưu ý:** site này KHÔNG thuộc pháp nhân Hi-tech. Chủ shop xác nhận 02/10/2026 — mọi nhắc tới công ty, MST, hoá đơn VAT và email đã được gỡ bỏ. Không thêm lại nếu chưa có xác nhận.
-- **Hotline:** 0703 525 478 · Kho: 5/19 Phạm Hùng, TP.HCM
+- **Hotline:** 0986 704 260 (số chính, dùng cho cả Zalo) · Số cũ 0703 525 478 vẫn nhận máy · Kho: 5/19 Phạm Hùng, TP.HCM
 
 ---
 
@@ -56,6 +56,7 @@ node _build/generate.mjs     # sinh 21 trang + sitemap + robots + CNAME + 404
 node _build/audit.mjs        # kiểm: link .html sót, link gãy, H1, title trùng, JSON-LD
 node _build/serve.mjs 4321   # xem trước ở http://localhost:4321
 node _build/extract-keywords.mjs   # gom lại số liệu từ khoá từ hub
+node _build/export-logo.mjs   # dựng lại logo, favicon, apple-touch, ảnh OG từ _img-src/logo-moi-2026.png
 ```
 
 Quy trình chuẩn mỗi lần sửa:
@@ -122,7 +123,7 @@ Năm trang `/khu-vuc/` của mucinminhtien.com sẽ 301 về đây — xem `docs
 
 - [ ] Giao diện: chủ shop sẽ gửi template mẫu để áp vào (sửa `css/`, nội dung không đổi)
 - [ ] Ảnh thật: kỹ thuật đang làm, kho mực, bản in trước/sau — hiện site chưa có ảnh nào
-- [ ] Logo
+- [x] Logo — chủ shop gửi bản chính thức 03/10/2026, bộ nhận diện sinh từ `_build/export-logo.mjs`
 - [ ] Ghim Google Maps đúng vị trí rồi mới ghi phường/quận vào địa chỉ (hiện cố ý để trống)
 - [ ] Cloudflare + Bulk Redirects để 301 thật (GitHub Pages không làm được)
 - [ ] Quyết cụm "cho thuê máy photocopy Quận 7" (50 lượt/tháng) — có làm dịch vụ này không

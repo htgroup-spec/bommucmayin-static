@@ -7,4 +7,6 @@ Thumbs.db
 # template tải về — không đẩy lên repo site
 *.zip
 _template-src/
-_img-src/
+_img-src/*
+# trừ logo gốc của chủ shop — _build/export-logo.mjs cần file này để dựng lại bộ nhận diện
+!_img-src/logo-moi-2026.png

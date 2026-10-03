@@ -409,9 +409,12 @@ td.price { color: var(--accent); }
 /* thanh gọi cố định trên mobile */
 .callbar a { font-weight: 600; }
 
-/* logo: .brand-mark nay là ảnh chữ lồng, không còn là ô vuông chữ HT */
+/* logo: .brand-mark nay là ảnh logo HT, không còn là ô vuông chữ HT */
 .brand-mark { width: auto; height: 40px; background: none; border-radius: 0; }
-.site-footer .brand-mark { height: 38px; }
+/* bỏ ô nền cam phía sau logo footer (quy tắc .footer-brand .brand-mark ở trên
+   có độ ưu tiên cao hơn nên phải viết đủ hai lớp mới ghi đè được) */
+.site-footer .brand-mark,
+.footer-brand .brand-mark { height: 38px; background: none; border-radius: 0; }
 
 /* ---------- ảnh ---------- */
 .fig { margin: 0; }

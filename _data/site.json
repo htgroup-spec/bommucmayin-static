@@ -5,9 +5,13 @@
   "brandFull": "Bơm Mực Máy In HT",
   "brandSub": "Khu Nam TP.HCM",
 
-  "hotline": "0703 525 478",
-  "hotlineRaw": "0703525478",
-  "hotlineTel": "+84703525478",
+  "hotline": "0986 704 260",
+  "hotlineRaw": "0986704260",
+  "hotlineTel": "+84986704260",
+
+  "_note_hotline": "03/10/2026: Chủ shop đổi số chính sang 0986 704 260 (hotline + Zalo). Số cũ 0703 525 478 vẫn dùng được, giữ làm số phụ ở trang Liên hệ và trong schema để khách gọi số cũ không bị lạc.",
+  "hotlineOld": "0703 525 478",
+  "hotlineOldTel": "+84703525478",
 
   "_note_address": "02/10/2026: Chủ shop xác nhận kho thuộc XÃ BÌNH HƯNG (không phải phường Chánh Hưng như Hồ sơ Google đang ghi — cần sửa bên đó cho khớp). Từ 01/07/2025 TP.HCM bỏ cấp quận/huyện nên địa chỉ chỉ ghi: số nhà, đường, xã/phường, thành phố. Tên quận cũ VẪN giữ trong nội dung bài vì khách tìm kiếm theo tên cũ.",
   "address": {
