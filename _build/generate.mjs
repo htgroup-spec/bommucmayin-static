@@ -855,7 +855,10 @@ ${ctaBand(2, 'Đặt nạp mực hoặc sửa máy in', 'Khu Nam TP.HCM — xem 
         {
           '@context': 'https://schema.org', '@type': 'Article',
           headline: plain(po.title), description: plain(po.metaDesc),
-          datePublished: TODAY, dateModified: TODAY,
+          // ngày chốt trong _data/pages.json, KHÔNG lấy ngày build:
+          // để TODAY thì mỗi lần sinh lại bài tự "trẻ lại" một ngày, Google đọc là đăng mới
+          datePublished: po.datePublished || TODAY,
+          dateModified: po.dateModified || po.datePublished || TODAY,
           author: { '@type': 'Organization', name: S.brandFull },
           publisher: { '@type': 'Organization', name: S.brandFull },
           mainEntityOfPage: { '@type': 'WebPage', '@id': `${S.baseUrl}/kinh-nghiem/${po.slug}/` },
