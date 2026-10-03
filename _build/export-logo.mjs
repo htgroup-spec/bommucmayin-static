@@ -31,7 +31,7 @@ for (const p of ['minhtiengithub', 'audit-mucinht', 'chotot']) {
 }
 if (!sharp) { console.error('thiếu sharp'); process.exit(1); }
 
-const NAVY = '#14457f', CORAL = '#ff695f', INK = '#2a2a2a';
+const NAVY = '#14457f', ACCENT = '#0b57b8', INK = '#2a2a2a';   // ACCENT: xanh royal lấy từ logo, khớp --accent trong css
 const HOTLINE = '0986 704 260';
 const SRC = join(ROOT, '_img-src', 'logo-moi-2026.png');
 
@@ -144,10 +144,10 @@ await sharp(lite).resize({ height: 96 }).png({ compressionLevel: 9 }).toFile(joi
   const mm = await sharp(mark).metadata();
   const bg = Buffer.from(`<svg width="1200" height="630">
     <rect width="1200" height="630" fill="#ffffff"/>
-    <rect y="596" width="1200" height="34" fill="${CORAL}"/>
+    <rect y="596" width="1200" height="34" fill="${ACCENT}"/>
     <text x="100" y="360" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="62" font-weight="700" fill="${INK}">Bơm mực máy in tận nơi</text>
     <text x="100" y="436" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="40" font-weight="600" fill="${NAVY}">Quận 8 · 7 · 6 · 5 · 4 · Bình Chánh · Nhà Bè</text>
-    <text x="100" y="510" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="34" font-weight="600" fill="${CORAL}">Laser A4 từ 80.000đ · Gọi ${HOTLINE}</text>
+    <text x="100" y="510" font-family="Poppins,Segoe UI,Arial,sans-serif" font-size="34" font-weight="600" fill="${ACCENT}">Laser A4 từ 80.000đ · Gọi ${HOTLINE}</text>
   </svg>`);
   await sharp(bg).composite([{ input: mark, left: 100, top: 90 }])
     .png({ compressionLevel: 9 }).toFile(join(OUT, 'og-default.png'));

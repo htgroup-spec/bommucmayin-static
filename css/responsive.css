@@ -58,7 +58,9 @@
     padding: 14px 8px; text-align: center; font-weight: 700; font-size: .97rem;
     color: #fff; background: var(--accent);
   }
-  .callbar a + a { background: var(--primary); }
+  /* nền đậm hơn hẳn + vạch ngăn: từ khi bảng màu chuyển sang xanh, hai nút
+     cạnh nhau cùng sắc xanh sẽ dính thành một khối nếu không tách giá trị sáng tối */
+  .callbar a + a { background: var(--primary-dark); box-shadow: inset 1px 0 0 rgba(255,255,255,.22); }
   .callbar a:hover { text-decoration: none; }
   body { padding-bottom: 52px; }
 }
