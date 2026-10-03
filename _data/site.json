@@ -21,6 +21,16 @@
     "postalCode": "700000",
     "country": "VN"
   },
+  "_note_address2": "03/10/2026: Thêm cửa hàng thứ hai ở Quận 10. Chủ shop ban đầu ghi phường Diên Hồng, tra lại thì sai: Google đặt 77 Cửu Long ở Cư xá Bắc Hải, và theo nghị quyết sáp nhập thì Cư xá Bắc Hải (P15 Quận 10 cũ) nay thuộc phường HÒA HƯNG, còn Diên Hồng là P6 + P8 + một phần P14. Chủ shop đã xác nhận chọn Hòa Hưng. Địa chỉ này CHỈ hiển thị, không đưa vào schema và không đổi bản đồ — xem _note_schema_address.",
+  "addressLabel": "Cửa hàng khu Nam",
+  "address2": {
+    "label": "Cửa hàng Quận 10",
+    "street": "77 Cửu Long",
+    "ward": "Phường Hòa Hưng",
+    "locality": "TP. Hồ Chí Minh"
+  },
+  "_note_schema_address": "Schema LocalBusiness chỉ khai địa chỉ Phạm Hùng vì đó là địa chỉ duy nhất đã xác minh trên Hồ sơ Google. Khai hai địa chỉ trong schema mà Google chỉ có một hồ sơ là tín hiệu lệch NAP, hại nhiều hơn lợi. Muốn cửa hàng Quận 10 có sức nặng trong tìm kiếm thì phải mở hồ sơ Google riêng cho nó.",
+
   "mapEmbed": "https://www.google.com/maps?q=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20X%C3%A3%20B%C3%ACnh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed",
   "mapLink": "https://www.google.com/maps/dir/?api=1&destination=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20X%C3%A3%20B%C3%ACnh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh",
 

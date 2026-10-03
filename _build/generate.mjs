@@ -45,6 +45,10 @@ const slugify = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, '
 
 // Phải khớp đúng chuỗi địa chỉ trong Hồ sơ Google Doanh nghiệp.
 const ADDR_FULL = [S.address.street, S.address.ward, S.address.locality].filter(Boolean).join(', ');
+// cửa hàng thứ hai: chỉ hiện ra cho khách đọc, KHÔNG vào schema và không đổi bản đồ
+// (lý do ở _note_schema_address trong _data/site.json)
+const ADDR2 = S.address2 || null;
+const ADDR2_FULL = ADDR2 ? [ADDR2.street, ADDR2.ward, ADDR2.locality].filter(Boolean).join(', ') : '';
 
 /**
  * Ảnh: WebP trước, JPG dự phòng cho trình duyệt cũ. Luôn có width/height để
@@ -106,6 +110,7 @@ function footer(depth) {
     .replace(/{{TELRAW}}/g, S.hotlineRaw)
     .replace(/{{TEL}}/g, S.hotlineTel)
     .replace(/{{STREET}}/g, ADDR_FULL)
+    .replace(/{{STREET2}}/g, ADDR2_FULL ? `          <li>${ADDR2_FULL}</li>` : '')
     .replace(/{{LEGAL}}/g, S.brandFull)
     .replace(/{{YEAR}}/g, YEAR);
 }
@@ -586,8 +591,9 @@ ${d.tips.map(t => `        <h2>${t.h}</h2>\n        <ul>\n${t.list.map(x => `   
       <div class="card">
         <h3>Thông tin liên hệ</h3>
         <p><strong>Gọi / Zalo</strong><br><a href="tel:${S.hotlineTel}" style="font-size:1.3rem;font-weight:750">${S.hotline}</a>${S.hotlineOld ? `<br><a href="tel:${S.hotlineOldTel}">${S.hotlineOld}</a>` : ''}</p>
-        <p><strong>Kho vật tư</strong><br>${ADDR_FULL}</p>
-        <p><strong>Giờ làm việc</strong><br>${S.hours}</p>
+        <p><strong>${S.addressLabel || 'Kho vật tư'}</strong><br>${ADDR_FULL}</p>
+${ADDR2 ? `        <p><strong>${ADDR2.label}</strong><br>${ADDR2_FULL}</p>
+` : ''}        <p><strong>Giờ làm việc</strong><br>${S.hours}</p>
         <p><strong>Địa bàn</strong><br>Quận 8, 7, 6, 5, 4, Bình Chánh, Nhà Bè</p>
         <a class="btn btn-primary btn-block" href="tel:${S.hotlineTel}">Gọi ngay</a>
       </div>
