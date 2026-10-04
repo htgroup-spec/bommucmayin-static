@@ -170,35 +170,64 @@ các hồ sơ còn lại.
 chiến dịch có *tài sản vị trí*. Tài sản đó lấy từ Hồ sơ doanh nghiệp đã liên kết — ghim
 anh kéo trên hồ sơ **không** tự chảy sang Google Ads.
 
-**Tình trạng 04/10/2026:** tài khoản Ads `569-369-5868` đã liên kết sẵn một tài khoản Hồ
-sơ doanh nghiệp, nhưng tài khoản đó chỉ có 10 địa điểm của các cơ sở khác (Nam Phong,
-Hi-tech Quận 10, Bình Chánh…). **Hồ sơ "Mực in HT" không nằm trong đó** — nó do
-`dongocvu@gmail.com` quản. Đã đối chiếu bằng CID lấy từ URL Maps:
-`2898525234951475199`, không khớp địa điểm nào đang đồng bộ.
+**Tình trạng 04/10/2026** — kiểm trực tiếp trong cả Google Ads lẫn Trang doanh nghiệp:
 
-**Đường đi** — theo tài liệu Google *About location assets* (answer/2404182), kiểm ngày
-04/10/2026. Chỗ này **không** nằm ở trang "Tài khoản được liên kết"; Google đã dời nó vào
-Trình quản lý vị trí. Nếu không thấy menu, gõ **"Trình quản lý vị trí"** vào ô tìm kiếm
-trên cùng của Google Ads.
+| | Hồ sơ doanh nghiệp | Liên kết tới tài khoản Ads |
+|---|---|---|
+| `vivianha2000@gmail.com` | 13 địa điểm, *đã chọn tất cả vị trí* | **569-369-5868** ← nơi có 3 chiến dịch HTquan8 |
+| `dongocvu@gmail.com` | có **Mực in HT** thật | 284-659-8280, từ 14/9/2022 |
 
-Đăng nhập Google Ads bằng tài khoản `vivianha2000`, rồi:
+**Hồ sơ "Mực in HT" thật nằm bên `dongocvu`**, không phải bên `vivianha2000`:
 
-1. **Công cụ** → **Thư viện dùng chung** → **Trình quản lý vị trí**
-2. Bấm nút **+** → chọn **Vị trí của chúng tôi** → **Tiếp tục**
-3. Ở cửa sổ *Chọn vị trí cho tài khoản của bạn* → chọn **Google Business Profile**
-4. Rẽ một trong hai nhánh:
-   - Nếu `vivianha2000` đã có quyền trên tài khoản quản lý hồ sơ đó: chọn **Chọn một tài
-     khoản trình quản lý Hồ sơ doanh nghiệp**, chọn trong danh sách thả xuống →
-     **Tiếp tục** → đặt **bộ lọc theo tên doanh nghiệp** là *Mực in HT* → **Lưu**
-   - Nếu không có quyền: chọn **Yêu cầu quyền truy cập vào tài khoản trình quản lý Hồ sơ
-     doanh nghiệp khác**, nhập `dongocvu@gmail.com` → **Tiếp tục**. Yêu cầu được gửi tới
-     email đó; mở hộp thư bằng chính tài khoản đó và duyệt.
-5. Chờ Google đồng bộ, thường vài giờ tới một ngày
-6. Báo lại để chạy `adsgoogle/scripts/actions/attach_location_htquan8.js`
+- Trong Trang doanh nghiệp của `dongocvu`, hồ sơ Mực in HT có
+  `fid=2898525234951475199` — **đúng bằng CID đọc từ URL Google Maps**, địa chỉ 5/19
+  Phạm Hùng. Đây là hồ sơ đang hoạt động.
+- Bên `vivianha2000` **cũng có một mục tên "Mực in HT"** nhưng ghi địa chỉ *77 Cửu Long,
+  phường 15, quận 10*. Đó là **hồ sơ cũ chưa được duyệt** — chủ shop xác nhận. Vì chưa
+  duyệt nên nó không bao giờ đồng bộ sang Ads, và đó là lý do bảng địa điểm bên
+  569-369-5868 chỉ có 10 dòng, không có Mực in HT.
 
-> Bộ lọc tên doanh nghiệp ở bước 4 lọc ngay lúc liên kết. Script ở bước 6 lọc thêm một lần
-> nữa theo listing id ở cấp chiến dịch — hai lớp, để chắc chắn quảng cáo HT không bao giờ
-> hiện địa chỉ của site anh em.
+Nói cách khác: hồ sơ HT đang chảy sang tài khoản Ads **284-659-8280**, trong khi chiến
+dịch lại nằm ở **569-369-5868**.
+
+**Hai cách nối, chủ shop chọn:**
+
+- **Cách A — thêm `vivianha2000@gmail.com` làm người quản lý hồ sơ Mực in HT** (làm bên
+  Trang doanh nghiệp của `dongocvu`). Hồ sơ sẽ xuất hiện trong tài khoản
+  `vivianha2000`, và vì nguồn vị trí của Ads 569-369-5868 đang để *tất cả vị trí*, nó tự
+  đồng bộ sang. **Không đụng gì tới 10 địa điểm hiện có.** Đây là cách nên chọn.
+- **Cách B — đổi nguồn vị trí của Ads 569-369-5868 sang `dongocvu`.** Google Ads chỉ
+  nhận **một** tài khoản Trang doanh nghiệp làm nguồn, nên đổi là **mất 10 địa điểm
+  đang dùng cho quảng cáo của các site anh em**. Không nên.
+
+> Hai lần ghi chú trước ở mục này đều sai và đã bị thay: lần đầu nói phải liên kết
+> `dongocvu` mà không biết vì sao, lần sau nói không cần liên kết gì. Bản này dựa trên
+> việc mở cả hai tài khoản ra đối chiếu bằng fid.
+
+**Việc cần làm — theo thứ tự (cách A):**
+
+1. Mở Trang doanh nghiệp bằng tài khoản **`dongocvu@gmail.com`** →
+   `business.google.com/locations` → chọn hồ sơ **Mực in HT**.
+2. Vào phần người dùng của hồ sơ đó, **thêm `vivianha2000@gmail.com`** làm *Người quản lý*
+   (hoặc *Chủ sở hữu* nếu muốn chuyển hẳn).
+3. **Kiểm hồ sơ đã đồng bộ sang Ads chưa:** đăng nhập Google Ads bằng `vivianha2000` →
+   Công cụ → Thư viện chia sẻ → Trình quản lý địa điểm → tab *địa điểm của doanh nghiệp*.
+   Khi nào thấy dòng "Mực in HT" trong bảng đó là xong. Thường vài giờ tới một ngày.
+4. **Báo lại để chạy** `adsgoogle/scripts/actions/attach_location_htquan8.js`. Script tìm
+   hồ sơ theo listing id `2898525234951475199`, tạo bộ lọc chỉ chứa đúng một địa điểm,
+   rồi gắn vào 3 chiến dịch HTquan8.
+
+> Bước 2 làm trong giao diện Trang doanh nghiệp. Giao diện này Google đang đổi dần sang
+> bản nhúng trong kết quả tìm kiếm, nên vị trí mục người dùng thay đổi tuỳ hồ sơ — tìm
+> theo chữ *Người dùng* hoặc *Thêm người quản lý*, đừng dò theo đường dẫn URL
+> (`/managers` đã 404).
+
+> **Không bấm Lưu trong hộp thoại "Chọn địa điểm cho tài khoản của bạn"** nếu chỉ định
+> xem. Hộp thoại đó điều khiển việc đồng bộ cho *cả tài khoản* — đụng vào là ảnh hưởng
+> các chiến dịch của site anh em, không riêng HTquan8.
+>
+> Việc chỉ gắn đúng một địa điểm cho chiến dịch HT được xử lý ở cấp chiến dịch bằng
+> script bước 4, không phải bằng cách đổi cài đặt đồng bộ chung.
 
 Script đó **lọc đúng một hồ sơ** rồi mới gắn. Không được gắn nguyên bộ đồng bộ vào chiến
 dịch HTquan8: làm vậy thì quảng cáo của HT sẽ hiện địa chỉ Nam Phong hay Hi-tech Quận 10,
