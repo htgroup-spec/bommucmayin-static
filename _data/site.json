@@ -172,6 +172,16 @@
           "name": "Reset bộ đếm mực thải (maintenance box)",
           "price": "100.000 – 150.000đ",
           "note": "Máy khoá không in thì phải reset"
+        },
+        {
+          "name": "Ngâm đầu in qua đêm (khi thông đầu phun không hết)",
+          "price": "450.000đ",
+          "note": "Phải tháo đầu in mang về nên mất một đêm. Ngâm không ăn vẫn tính 150.000đ tiền dung dịch — nói rõ trước khi nhận máy"
+        },
+        {
+          "name": "Thay đầu in cũ — máy Epson 4 số (L1300, L1800, 1390)",
+          "price": "từ 950.000đ",
+          "note": "Tuỳ model. Kỹ thuật so với giá máy mới cùng dòng trước khi khuyên thay"
         }
       ]
     },
