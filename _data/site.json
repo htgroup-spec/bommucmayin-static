@@ -165,8 +165,8 @@
         },
         {
           "name": "Thông đầu phun (nghẹt do để lâu không in)",
-          "price": "100.000 – 250.000đ",
-          "note": "Tuỳ mức nghẹt, báo trước khi làm"
+          "price": "Gọi báo giá",
+          "note": "Tuỳ mức nghẹt. Kỹ thuật xem máy rồi báo, anh/chị đồng ý mới làm"
         },
         {
           "name": "Reset bộ đếm mực thải (maintenance box)",
@@ -175,13 +175,13 @@
         },
         {
           "name": "Ngâm đầu in qua đêm (khi thông đầu phun không hết)",
-          "price": "450.000đ",
-          "note": "Phải tháo đầu in mang về nên mất một đêm. Ngâm không ăn vẫn tính 150.000đ tiền dung dịch — nói rõ trước khi nhận máy"
+          "price": "Gọi báo giá",
+          "note": "Giá thay đổi theo nguồn hàng nên báo qua điện thoại. Phải tháo đầu in mang về, mất một đêm; ngâm không ăn thì vẫn tính tiền dung dịch, kỹ thuật nói rõ mức đó trước khi nhận máy"
         },
         {
           "name": "Thay đầu in cũ — máy Epson 4 số (L1300, L1800, 1390)",
-          "price": "từ 950.000đ",
-          "note": "Tuỳ model. Kỹ thuật so với giá máy mới cùng dòng trước khi khuyên thay"
+          "price": "Gọi báo giá",
+          "note": "Giá đầu in thay đổi theo nguồn hàng và chênh rất xa giữa các model. Kỹ thuật luôn so với giá máy mới cùng dòng trước khi khuyên thay"
         }
       ]
     },
