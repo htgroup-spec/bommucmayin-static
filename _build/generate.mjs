@@ -118,6 +118,16 @@ function footer(depth) {
     .replace(/{{YEAR}}/g, YEAR);
 }
 
+// danh sách trang dịch vụ dùng cho llms.txt — mô tả viết tay cho ngắn và đúng việc
+const LLMS_DICHVU = [
+  { t: 'Nạp mực máy in tận nơi', u: 'nap-muc-may-in-tan-noi/', d: 'quy trình 7 bước, hút sạch mực thải, vệ sinh trống và gạt, in thử trước khi rời đi.' },
+  { t: 'Sửa máy in tận nơi',     u: 'sua-may-in/',             d: 'mang vật tư theo xe nên phần lớn ca xử lý xong trong một lượt.' },
+  { t: 'Bảng giá',               u: 'bang-gia/',               d: 'giá công khai theo mã hộp mực, laser A4 từ 80.000đ tới máy đa năng A3 550.000đ.' },
+  { t: 'Quy trình và bảo hành',  u: 'quy-trinh-bao-hanh/',     d: 'bảo hành tính theo số trang in thực tế, không tính theo ngày.' },
+  { t: 'Câu hỏi thường gặp',     u: 'cau-hoi-thuong-gap/',     d: 'nạp mực khác đổ mực và bơm mực thế nào, bao lâu nên nạp một lần.' },
+  { t: 'Liên hệ',                u: 'lien-he/',                d: 'số điện thoại, hai cửa hàng và bản đồ.' },
+];
+
 // ---------- schema ----------
 const localBusiness = () => ({
   '@type': 'LocalBusiness',
@@ -1065,6 +1075,34 @@ ${ctaBand(1, 'Đặt lịch cho văn phòng của anh/chị', 'Nhắn danh sách
 
   writeFileSync(resolve(ROOT, 'robots.txt'),
     `User-agent: *\nAllow: /\n\nSitemap: ${S.baseUrl}/sitemap.xml\n`, 'utf8');
+
+  // llms.txt — bản tóm tắt cho trình thu thập của AI. Google đã nói rõ Search KHÔNG
+  // dùng file này, nên đừng trông nó cải thiện thứ hạng. Giá trị nằm ở chỗ trợ lý AI
+  // đọc được bản mô tả gọn và đúng do mình viết, thay vì tự suy ra từ HTML.
+  const dongLlms = [
+    '# ' + S.brandFull,
+    '',
+    '> Nạp mực, bơm mực và sửa máy in tận nơi tại khu Nam TP.HCM. Cửa hàng ở '
+      + ADDR_FULL + '. Gọi hoặc Zalo ' + S.hotline + '. Làm việc ' + S.hours
+      + '. Nạp mực laser A4 từ 80.000đ, báo giá trước khi tháo máy, bảo hành tính theo'
+      + ' số trang in thực tế chứ không theo ngày.',
+    '',
+    'Địa bàn: ' + AREAS.filter(a => !a.parent).map(a => a.label).join(', ') + '.',
+    '',
+    '## Dịch vụ',
+  ].concat(
+    LLMS_DICHVU.map(x => '- [' + x.t + '](' + S.baseUrl + '/' + x.u + '): ' + x.d),
+    ['', '## Trang khu vực'],
+    AREAS.filter(a => !a.parent).map(a =>
+      '- [Nạp mực, sửa máy in ' + a.label + '](' + S.baseUrl + '/khu-vuc/' + a.slug
+      + '/): kỹ thuật tới trong ' + a.eta + '.'),
+    ['', '## Kinh nghiệm dùng máy in'],
+    P.blog.posts.map(po =>
+      '- [' + plain(po.h1) + '](' + S.baseUrl + '/kinh-nghiem/' + po.slug + '/): '
+      + plain(po.excerpt)),
+    ['']
+  );
+  writeFileSync(resolve(ROOT, 'llms.txt'), dongLlms.join(String.fromCharCode(10)), 'utf8');
 
   writeFileSync(resolve(ROOT, 'CNAME'), `${S.domain}\n`, 'utf8');
   writeFileSync(resolve(ROOT, '.nojekyll'), '', 'utf8');

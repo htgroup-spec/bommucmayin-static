@@ -4,7 +4,8 @@ Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub
 
 - **Domain:** bommucmayin.net
 - **Địa bàn:** Quận 8, Quận 7, Quận 6, Quận 5, Quận 4, Bình Chánh, Nhà Bè (+ Phú Mỹ Hưng)
-- **Lưu ý:** site này KHÔNG thuộc pháp nhân Hi-tech. Chủ shop xác nhận 02/10/2026 — mọi nhắc tới công ty, MST, hoá đơn VAT và email đã được gỡ bỏ. Không thêm lại nếu chưa có xác nhận.
+- **Lưu ý pháp nhân:** site này KHÔNG thuộc pháp nhân Hi-tech. Chủ shop xác nhận 02/10/2026 — mọi nhắc tới tên công ty, MST và email đã được gỡ bỏ.
+- **Hoá đơn VAT — cập nhật 04/10/2026:** chủ shop xác nhận **có xuất hoá đơn VAT**, pháp nhân là công ty Hưng Thịnh. Nhưng **cố ý không nêu tên công ty trên site**: các site anh em dùng chung pháp nhân, lộ tên ra thì khách thấy chúng giống nhau và không gọi. Vì vậy chỉ được ghi *"có xuất hoá đơn VAT"* — **tuyệt đối không** ghi tên công ty, mã số thuế hay địa chỉ pháp nhân. Phần này hiện chỉ có trên hai trang đích quảng cáo; muốn đưa vào 21 trang SEO thì hỏi chủ shop trước.
 - **Hotline:** 0986 704 260 (số chính, dùng cho cả Zalo) · Số cũ 0703 525 478 vẫn nhận máy · Kho: 5/19 Phạm Hùng, TP.HCM
 
 ---
