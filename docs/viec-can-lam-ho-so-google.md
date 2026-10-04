@@ -176,13 +176,29 @@ Hi-tech Quận 10, Bình Chánh…). **Hồ sơ "Mực in HT" không nằm trong
 `dongocvu@gmail.com` quản. Đã đối chiếu bằng CID lấy từ URL Maps:
 `2898525234951475199`, không khớp địa điểm nào đang đồng bộ.
 
-**Đường đi:**
+**Đường đi** — theo tài liệu Google *About location assets* (answer/2404182), kiểm ngày
+04/10/2026. Chỗ này **không** nằm ở trang "Tài khoản được liên kết"; Google đã dời nó vào
+Trình quản lý vị trí. Nếu không thấy menu, gõ **"Trình quản lý vị trí"** vào ô tìm kiếm
+trên cùng của Google Ads.
 
-1. Google Ads → **Công cụ** → **Tài khoản được liên kết** → **Hồ sơ doanh nghiệp**
-2. Liên kết tài khoản đang quản *Mực in HT* (`dongocvu@gmail.com`)
-3. Mở Hồ sơ doanh nghiệp bằng **chính tài khoản đó** → bấm **Chấp nhận lời mời**
-4. Chờ Google đồng bộ, thường vài giờ tới một ngày
-5. Báo lại để chạy `adsgoogle/scripts/actions/attach_location_htquan8.js`
+Đăng nhập Google Ads bằng tài khoản `vivianha2000`, rồi:
+
+1. **Công cụ** → **Thư viện dùng chung** → **Trình quản lý vị trí**
+2. Bấm nút **+** → chọn **Vị trí của chúng tôi** → **Tiếp tục**
+3. Ở cửa sổ *Chọn vị trí cho tài khoản của bạn* → chọn **Google Business Profile**
+4. Rẽ một trong hai nhánh:
+   - Nếu `vivianha2000` đã có quyền trên tài khoản quản lý hồ sơ đó: chọn **Chọn một tài
+     khoản trình quản lý Hồ sơ doanh nghiệp**, chọn trong danh sách thả xuống →
+     **Tiếp tục** → đặt **bộ lọc theo tên doanh nghiệp** là *Mực in HT* → **Lưu**
+   - Nếu không có quyền: chọn **Yêu cầu quyền truy cập vào tài khoản trình quản lý Hồ sơ
+     doanh nghiệp khác**, nhập `dongocvu@gmail.com` → **Tiếp tục**. Yêu cầu được gửi tới
+     email đó; mở hộp thư bằng chính tài khoản đó và duyệt.
+5. Chờ Google đồng bộ, thường vài giờ tới một ngày
+6. Báo lại để chạy `adsgoogle/scripts/actions/attach_location_htquan8.js`
+
+> Bộ lọc tên doanh nghiệp ở bước 4 lọc ngay lúc liên kết. Script ở bước 6 lọc thêm một lần
+> nữa theo listing id ở cấp chiến dịch — hai lớp, để chắc chắn quảng cáo HT không bao giờ
+> hiện địa chỉ của site anh em.
 
 Script đó **lọc đúng một hồ sơ** rồi mới gắn. Không được gắn nguyên bộ đồng bộ vào chiến
 dịch HTquan8: làm vậy thì quảng cáo của HT sẽ hiện địa chỉ Nam Phong hay Hi-tech Quận 10,
