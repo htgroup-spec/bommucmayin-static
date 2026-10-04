@@ -33,6 +33,7 @@ bommucmayin/
 │   ├── site.json               NAP, nav, bảng giá, quy trình, FAQ chung
 │   ├── areas.json              8 trang khu vực, mỗi trang một góc riêng
 │   ├── pages.json              nội dung các trang lõi + 3 bài blog
+│   ├── ads-pages.json          2 trang đích Google Ads (B2B, noindex) — đọc mục bên dưới
 │   └── keywords.json           số liệu Google Ads (sinh ra, đừng sửa tay)
 ├── _includes/                  ← khung menu + footer dùng chung
 ├── _build/
@@ -95,6 +96,27 @@ Máy này còn lưu credential của một tài khoản GitHub khác, nên remot
 ```
 https://htgroup-spec@github.com/htgroup-spec/bommucmayin-static.git
 ```
+
+---
+
+## Hai trang đích Google Ads — quy tắc riêng, đừng phá
+
+`nap-muc-may-in-van-phong/` và `sua-may-in-van-phong/` **không phải trang SEO**. Chúng chỉ
+để chiến dịch `HTquan8` đổ về. Nguồn nội dung: `_data/ads-pages.json`.
+
+| Quy tắc | Vì sao |
+|---|---|
+| Không có chữ "tại nhà", "hộ gia đình", "hẻm nhỏ" | Google chặn quảng cáo dịch vụ kỹ thuật nhắm **người dùng cá nhân** bằng chính sách `THIRD_PARTY_CONSUMER_TECHNICAL_SUPPORT`. Chính nó làm tài khoản ngừng hiển thị từ 8/2026. Chạy cho doanh nghiệp thì không thuộc diện đó. |
+| `noindex, follow`, không vào `sitemap.xml` | Để index thì chúng cạnh tranh với 21 trang SEO đang nhắm đúng cụm "tại nhà" (420 lượt/tháng). |
+| 21 trang SEO **giữ nguyên** chữ "tại nhà" | Đó là organic miễn phí, không đụng tới. Tách trang là để quảng cáo và SEO không giẫm chân nhau. |
+| Không hứa hoá đơn VAT, không hứa bảo hành linh kiện | Chủ shop chưa xác nhận hai thứ này — xem `_note_facts` trong `ads-pages.json`. |
+
+Google đã tự xác nhận ranh giới khi duyệt từ khoá: cụm trần trụi **"sửa máy in"** và
+**"sửa máy in tận nơi"** bị chặn thẳng, còn "sửa máy in gần đây", "sửa máy in canon",
+"sửa máy in bình chánh" thì cho qua. Đừng thêm lại hai cụm bị chặn.
+
+Kế hoạch chiến dịch và script dựng nằm ở `AUTOMATION/adsgoogle/`:
+`_config/plan_htquan8.js`, `scripts/actions/validate_htquan8.js`, `scripts/actions/build_htquan8.js`.
 
 ---
 
