@@ -129,6 +129,17 @@ const LLMS_DICHVU = [
   { t: 'Liên hệ',                u: 'lien-he/',                d: 'số điện thoại, hai cửa hàng và bản đồ.' },
 ];
 
+// bảng 3 cột dùng chung cho các mục dạng bảng trong trang dịch vụ
+const bang3 = (rows, th) => `
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>${th[0]}</th><th>${th[1]}</th><th>${th[2]}</th></tr></thead>
+    <tbody>
+${rows.map(r => `      <tr><td><strong>${r.a}</strong></td><td>${r.b}</td><td class="card-meta">${r.c}</td></tr>`).join(NL)}
+    </tbody>
+  </table>
+</div>`;
+
 // ---------- schema ----------
 const localBusiness = () => ({
   '@type': 'LocalBusiness',
@@ -452,19 +463,25 @@ ${ctaBand(0, 'Máy in đang dừng? Gọi là có người đi ngay', `Cửa hà
 
   const sec = d.sections.map((s2, i) => {
     let inner = '';
-    if (s2.p) inner += s2.p.map(x => `<p>${x}</p>`).join('\n');
-    if (s2.steps) inner += `<ol>\n${s2.steps.map(x => `  <li>${x}</li>`).join('\n')}\n</ol>`;
+    if (s2.p) inner += s2.p.map(x => `<p>${x}</p>`).join(NL);
+    if (s2.steps) inner += `<ol>${NL}${s2.steps.map(x => `  <li>${x}</li>`).join(NL)}${NL}</ol>`;
+    if (s2.list) inner += `<ul>${NL}${s2.list.map(x => `  <li>${x}</li>`).join(NL)}${NL}</ul>`;
+    if (s2.table) inner += bang3(s2.table, s2.thead);
     const im = secImg[i] ? pic(secImg[i], 1, { caption: secCap[i] }) : '';
+    // mục có bảng thì trải hết chiều ngang, nhét vào nửa cột sẽ vỡ trên điện thoại
     return `
 <section class="section${i % 2 ? ' section-alt' : ''}">
   <div class="container">
-    <div class="split${i % 2 ? ' split-rev' : ''}">
+    ${s2.table ? `<div class="prose" style="max-width:none">
+        <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+        ${inner}
+      </div>` : `<div class="split${i % 2 ? ' split-rev' : ''}">
       <div class="prose" style="max-width:none">
         <h2 id="${slugify(s2.h)}">${s2.h}</h2>
         ${inner}
       </div>
       ${im}
-    </div>
+    </div>`}
   </div>
 </section>`;
   }).join('\n');
@@ -535,9 +552,11 @@ ${s2.table.map(r => `      <tr><td>${r.a}</td><td class="card-meta">${r.b}</td><
     ${linkBox(1, '🖨', 'Chỉ cần nạp mực thôi?', 'Nếu bản in chỉ nhạt dần đều cả trang thì đó là hết mực — xem quy trình nạp mực 7 bước.', 'nap-muc-may-in-tan-noi/', 'Xem quy trình')}
   </div>
 </section>
+${d.faq ? faqBlock(d.faq, 'Câu hỏi thường gặp khi sửa máy in') : ''}
 ${ctaBand(1, 'Máy in hỏng giữa giờ làm?', 'Gọi và mô tả triệu chứng. Kỹ thuật mang vật tư theo để xử lý trong cùng một lượt đi.')}`,
     schemas: [
       { '@context': 'https://schema.org', '@type': 'Service', name: 'Sửa máy in tận nơi', serviceType: 'Sửa chữa máy in tại nhà, tại công ty', description: plain(d.metaDesc), provider: localBusiness() },
+      ...(d.faq ? [faqSchema(d.faq)] : []),
       crumbSchema([{ label: 'Trang chủ', href: '' }, { label: 'Sửa máy in tận nơi', href: 'sua-may-in/' }]),
     ],
   });
@@ -567,10 +586,26 @@ ${S.pricingNotes.map(n => `      <li>${n}</li>`).join('\n')}
     ${linkBox(1, '📍', 'Giá có khác nhau theo quận không?', 'Không. Giá như nhau cho cả bảy quận huyện — chỉ thời gian tới là khác, do khoảng cách.', 'khu-vuc/', 'Xem khu vực')}
   </div>
 </section>
-${faqBlock([S.faq[1], S.faq[2], S.faq[5]])}
+${!d.sections ? '' : d.sections.map((s2, i) => {
+  let inner = '';
+  if (s2.p) inner += s2.p.map(x => `<p>${x}</p>`).join(NL);
+  if (s2.list) inner += `<ul>${NL}${s2.list.map(x => `  <li>${x}</li>`).join(NL)}${NL}</ul>`;
+  if (s2.table) inner += bang3(s2.table, s2.thead);
+  return `
+<section class="section${i % 2 === 0 ? ' section-alt' : ''}">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+      ${inner}
+    </div>
+  </div>
+</section>`;
+}).join(NL)}
+${faqBlock(d.faq || [S.faq[1], S.faq[2], S.faq[5]])}
 ${ctaBand(1, 'Cần báo giá cho đúng máy của anh/chị?', 'Đọc dòng máy qua điện thoại hoặc chụp nhãn hộp mực gửi Zalo — chúng tôi báo con số cụ thể.')}`,
     schemas: [
       { '@context': 'https://schema.org', ...localBusiness() },
+      faqSchema(d.faq || [S.faq[1], S.faq[2], S.faq[5]]),
       crumbSchema([{ label: 'Trang chủ', href: '' }, { label: 'Bảng giá', href: 'bang-gia/' }]),
     ],
   });
