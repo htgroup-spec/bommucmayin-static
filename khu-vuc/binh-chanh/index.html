@@ -156,6 +156,30 @@ gtag('config', 'AW-16732602636');
         "@type": "Answer",
         "text": "Có, và với môi trường nhiều bụi thì chúng tôi khuyến nghị. Lịch thường theo quý: vệ sinh buồng mực, kiểm tra trống và bánh kéo giấy, thay trước những gì sắp hỏng thay vì chờ máy dừng giữa lúc cần in."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Ở Vĩnh Lộc gọi thì bao giờ có người tới?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thường 50 – 75 phút và chúng tôi hẹn khung giờ chứ không hứa gấp. Nói thẳng vậy để anh/chị sắp xếp công việc, thay vì ngồi chờ một lời hứa 30 phút không có thật."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Nạp mực máy in Bình Chánh giá bao nhiêu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Giá như nhau cho cả bảy khu: laser A4 từ 80.000đ, Brother và Samsung 120.000đ, máy A3 từ 250.000đ. Đi xa không tính thêm phí — chỉ thời gian tới là khác."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Có xuất hoá đơn VAT cho công ty không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn."
+      }
     }
   ]
 }
@@ -336,10 +360,65 @@ gtag('config', 'AW-16732602636');
 <!-- ba khối dưới chỉ hiện khi trang khu vực đó đã có dữ liệu trong areas.json,
      nên có thể viết dần từng khu mà không làm vỡ các khu chưa viết -->
 
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="thoi-gian">Tới trong bao lâu, tính theo từng khu của Bình Chánh</h2>
+      <p>Số dưới đây là thời gian thật từ lúc anh/chị gác máy tới lúc kỹ thuật có mặt, đo trong giờ hành chính ngày thường.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Khu</th><th>Thời gian tới</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Bình Hưng, Trung Sơn</strong></td><td class="price">10 – 20 phút</td><td class="card-meta">Cửa hàng nằm ngay trong xã này, nhanh nhất cả bảy khu.</td></tr>
+          <tr><td><strong>Phong Phú, An Phú Tây</strong></td><td class="price">20 – 35 phút</td><td class="card-meta">Theo Nguyễn Văn Linh và Quốc lộ 50.</td></tr>
+          <tr><td><strong>Đa Phước, Hưng Long, Quy Đức</strong></td><td class="price">35 – 55 phút</td><td class="card-meta">Đường dài, nên hẹn khung giờ thay vì gọi gấp.</td></tr>
+          <tr><td><strong>Tân Kiên, Tân Quý Tây</strong></td><td class="price">35 – 50 phút</td><td class="card-meta">Qua tỉnh lộ, kẹt vào giờ xe tải ra vào.</td></tr>
+          <tr><td><strong>Tân Nhựt</strong></td><td class="price">45 – 60 phút</td><td class="card-meta">Đường nhỏ đoạn cuối, đi xe máy vào được.</td></tr>
+          <tr><td><strong>Vĩnh Lộc A, Vĩnh Lộc B</strong></td><td class="price">50 – 75 phút</td><td class="card-meta">Xa nhất địa bàn. Gộp nhiều máy một chuyến là hợp lý.</td></tr>
+          <tr><td><strong>KCN Vĩnh Lộc, KCN Lê Minh Xuân</strong></td><td class="price">hẹn theo khung giờ</td><td class="card-meta">Phải khai báo cổng trước, không nhận gấp.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Giờ cao điểm sáng 7–8h và chiều 17–18h cộng thêm khoảng 10 phút. Ca đặt trước thì đúng khung giờ hẹn.</p>
+  </div>
+</section>
 
 
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="loi-hay-gap">Bụi, nhiệt và điện: máy in ở xưởng Bình Chánh hỏng kiểu gì</h2>
+      <p>Những lỗi dưới đây kỹ thuật mang sẵn vật tư nên xử lý xong ngay trong một lượt, không phải hẹn lại.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bản in bị gì</th><th>Thường là do</th><th>Xử lý tại chỗ</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sọc đen dọc trang chỉ sau vài tháng</strong></td><td>Bụi xưởng lọt vào buồng mực, bám lên trống rồi bị trục sạc miết vào.</td><td class="card-meta">Thay trống 180.000 – 280.000đ. Giải pháp lâu dài là che máy, không phải nạp mực dày hơn.</td></tr>
+          <tr><td><strong>Mực vón cục, bản in lem từng mảng</strong></td><td>Nhà xưởng mái tôn buổi trưa rất nóng, mực trong hộp mềm ra.</td><td class="card-meta">Vệ sinh buồng mực và nạp lại; nên chuyển máy sang chỗ mát nhất trong xưởng.</td></tr>
+          <tr><td><strong>Máy chết hẳn, không lên nguồn</strong></td><td>Sụt điện lúc máy đang nung lô sấy — nguyên nhân hàng đầu làm cháy bo nguồn ở xưởng.</td><td class="card-meta">Kiểm tra bo tại chỗ; hỏng nặng phải mang về. Một bộ ổn áp nhỏ rẻ hơn thay bo nhiều.</td></tr>
+          <tr><td><strong>Kẹt giấy liên tục dù giấy mới</strong></td><td>Giấy hút ẩm trong kho, mép giấy cong nên vào lệch.</td><td class="card-meta">Vệ sinh đường giấy và bánh kéo; bảo quản giấy trong bao kín là hết.</td></tr>
+          <tr><td><strong>Bản in nhoè, sấy không ăn</strong></td><td>Lô sấy chai vì chạy quá tải liên tục nhiều ca.</td><td class="card-meta">Thay bao lụa hoặc lô sấy 250.000 – 650.000đ.</td></tr>
+          <tr><td><strong>Máy báo hết mực dù hộp còn mực</strong></td><td>Chip đếm hết số trang, thường gặp ở máy dùng chung cho cả xưởng.</td><td class="card-meta">Thay chip 80.000 – 150.000đ.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2 id="chuan-bi">Nói giúp mấy thứ này lúc gọi, đỡ mất một lượt đi lại</h2></div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Xã nào trong Bình Chánh</h3><p>Địa bàn này rộng gấp nhiều lần một quận nội thành. Biết đúng xã là chúng tôi báo được khung giờ thật — Bình Hưng 10–20 phút nhưng Vĩnh Lộc có thể hơn một tiếng.</p></div>
+      <div class="card"><h3>Thủ tục cổng nếu ở khu công nghiệp</h3><p>KCN Vĩnh Lộc và Lê Minh Xuân duyệt người và phương tiện trước. Gửi thông tin sớm một buổi thì vào được trong ngày.</p></div>
+      <div class="card"><h3>Danh sách máy trong xưởng</h3><p>Xưởng thường có nhiều máy khác hãng. Gửi trước danh sách hoặc chụp nhãn hộp mực để kỹ thuật mang đủ mực, chip và trống, đi một lượt là xong.</p></div>
+      <div class="card"><h3>Máy đang đặt ở chỗ nào</h3><p>Đặt cạnh cửa xưởng hay dưới mái tôn là hai môi trường khác hẳn nhau. Biết trước thì kỹ thuật tư vấn luôn chỗ kê máy, đỡ hỏng lại sau vài tháng.</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
@@ -378,6 +457,18 @@ gtag('config', 'AW-16732602636');
       <details>
         <summary>Có nhận bảo trì định kỳ cho kho và xưởng không?</summary>
         <div class="faq-body"><p>Có, và với môi trường nhiều bụi thì chúng tôi khuyến nghị. Lịch thường theo quý: vệ sinh buồng mực, kiểm tra trống và bánh kéo giấy, thay trước những gì sắp hỏng thay vì chờ máy dừng giữa lúc cần in.</p></div>
+      </details>
+      <details>
+        <summary>Ở Vĩnh Lộc gọi thì bao giờ có người tới?</summary>
+        <div class="faq-body"><p>Thường 50 – 75 phút và chúng tôi hẹn khung giờ chứ không hứa gấp. Nói thẳng vậy để anh/chị sắp xếp công việc, thay vì ngồi chờ một lời hứa 30 phút không có thật.</p></div>
+      </details>
+      <details>
+        <summary>Nạp mực máy in Bình Chánh giá bao nhiêu?</summary>
+        <div class="faq-body"><p>Giá như nhau cho cả bảy khu: laser A4 từ 80.000đ, Brother và Samsung 120.000đ, máy A3 từ 250.000đ. Đi xa không tính thêm phí — chỉ thời gian tới là khác.</p></div>
+      </details>
+      <details>
+        <summary>Có xuất hoá đơn VAT cho công ty không?</summary>
+        <div class="faq-body"><p>Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn.</p></div>
       </details>
     </div>
   </div>

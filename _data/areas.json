@@ -59,7 +59,7 @@
       { "q": "Nạp mực máy in Quận 8 giá bao nhiêu?", "a": "Laser A4 phổ thông như HP 12A, 35A, 85A hay Canon 303, 325 là 80.000 – 100.000đ, đã gồm công đi lại trong Quận 8 và vệ sinh buồng mực. Brother và Samsung 120.000đ. Máy A3 từ 250.000đ. Khung giá nói ngay trong cuộc gọi, chốt lại tại chỗ sau khi kỹ thuật xem máy — phát sinh linh kiện phải được anh/chị đồng ý trước." },
       { "q": "Máy in hỏng giữa ca làm, có nhận gấp không?", "a": "Có. Khu Phạm Hùng, Cao Lỗ và Chánh Hưng thường có kỹ thuật trong 10 – 25 phút nên ca gấp nhận được ngay. Các khu xa hơn trong quận thì chúng tôi nói thẳng khung giờ sớm nhất chứ không hứa suông rồi để anh/chị ngồi chờ." },
       { "q": "Có nhận bảo trì theo tháng cho công ty ở Quận 8 không?", "a": "Có. Văn phòng, phòng khám, trường học và vựa trong quận ký bảo trì tháng thì chúng tôi theo dõi số trang in và chủ động xử lý trước khi máy dừng giữa giờ làm. Cần báo giá bằng văn bản để trình kế toán thì gửi danh sách máy qua Zalo, chúng tôi gửi lại trước khi hẹn lịch." },
-      { "q": "Có xuất hoá đơn VAT không?", "a": "Có. Anh/chị báo lúc đặt lịch và gửi thông tin xuất hoá đơn qua Zalo, chúng tôi chuẩn bị sẵn để kế toán không phải đi đòi sau." }
+      { "q": "Khách Quận 8 lấy hoá đơn VAT được không?", "a": "Được. Anh/chị báo lúc đặt lịch và gửi thông tin xuất hoá đơn qua Zalo, chúng tôi chuẩn bị sẵn để kế toán không phải đi đòi sau." }
     ]
   },
   {
@@ -91,11 +91,38 @@
       { "h": "Khu chế xuất Tân Thuận", "p": "Cần khai báo người và phương tiện trước, nên ca trong KCX chúng tôi hẹn theo khung giờ chứ không nhận gấp trong 30 phút. Bù lại, nhà máy thường có nhiều máy một lúc — đi một chuyến làm gộp, chi phí trên mỗi máy giảm." },
       { "h": "Shop và hộ gia đình Tân Quy, Tân Phong", "p": "Đi lại thuận, tới nhanh nhất trong Quận 7. Máy ở nhóm này thường là HP 107a, Canon LBP2900, Brother L2321d — vật tư chúng tôi luôn có sẵn trên xe." }
     ],
+    "etaDetail": [
+      { "khu": "Tân Quy, Tân Kiểng, Tân Hưng", "phut": "25 – 35 phút", "note": "Qua cầu Kênh Tẻ, gần nhất trong Quận 7." },
+      { "khu": "Nguyễn Thị Thập, Him Lam", "phut": "30 – 40 phút", "note": "Đường lớn, kẹt vào giờ tan ca." },
+      { "khu": "Tân Thuận Đông, Tân Thuận Tây, Bình Thuận", "phut": "30 – 45 phút", "note": "Nhiều hẻm, nhắn thêm một mốc dễ nhận ra." },
+      { "khu": "Phú Thuận, Phú Mỹ — tuyến Huỳnh Tấn Phát", "phut": "40 – 55 phút", "note": "Đường dài, hay có công trình chắn làn." },
+      { "khu": "Phú Mỹ Hưng — Cảnh Viên, Hưng Vượng, Mỹ Khánh", "phut": "40 – 60 phút", "note": "Đã gồm thời gian làm thẻ khách ở lễ tân." },
+      { "khu": "Tân Phong, Sky Garden", "phut": "40 – 55 phút", "note": "Toà nào cần cư dân xuống xác nhận thì cộng thêm." },
+      { "khu": "Khu chế xuất Tân Thuận", "phut": "hẹn theo khung giờ", "note": "Phải khai báo người và xe trước, không nhận gấp." }
+    ],
+    "loiHayGapTitle": "Lỗi hay gặp ở máy in văn phòng Quận 7 và cách xử lý tại chỗ",
+    "loiHayGap": [
+      { "trieuChung": "In mờ hẳn một bên trang", "nguyenNhan": "Trục từ chai hoặc mực phân bố lệch — máy văn phòng in đều mỗi ngày hay bị sau 2–3 lần nạp.", "xuLy": "Thay trục từ 120.000 – 180.000đ, làm xong in thử ngay tại chỗ." },
+      { "trieuChung": "Máy báo thay hộp mực dù vừa nạp xong", "nguyenNhan": "Chip trên hộp đã đếm hết số trang. HP 107a, 135w và dòng Samsung khoá kiểu này.", "xuLy": "Thay chip 80.000 – 150.000đ, kỹ thuật mang sẵn chip phổ thông." },
+      { "trieuChung": "Kẹt giấy liên tục ở khay nạp", "nguyenNhan": "Bánh kéo giấy chai, hoặc giấy hút ẩm từ phòng máy lạnh chạy cả ngày.", "xuLy": "Vệ sinh bánh kéo; chai hẳn thì thay 120.000 – 200.000đ." },
+      { "trieuChung": "Có vệt mờ lặp lại phía dưới chữ", "nguyenNhan": "Gạt mực không gạt sạch nên mực thừa bám lại trống ở vòng quay sau.", "xuLy": "Thay gạt mực 100.000 – 150.000đ kèm hút sạch mực thải." },
+      { "trieuChung": "In ra trang trắng hoàn toàn", "nguyenNhan": "Máy để qua kỳ nghỉ dài, mực đóng bánh và trục từ không ăn mực.", "xuLy": "Vệ sinh buồng mực và nạp lại, 80.000 – 100.000đ." },
+      { "trieuChung": "Bản in có chấm đen rải rác", "nguyenNhan": "Mực thải tràn trong hộp — dấu hiệu hộp đã nạp quá nhiều lần.", "xuLy": "Hút mực thải; vỏ hộp quá hạn thì thay hộp mới 320.000 – 850.000đ." }
+    ],
+    "chuanBi": [
+      { "h": "Tên toà nhà và số phòng", "p": "Quận 7 nửa khách nằm trong cao ốc. Biết tên toà và số phòng thì chúng tôi gọi lễ tân trước, kỹ thuật lên đúng lần đầu thay vì mất nửa tiếng ở sảnh." },
+      { "h": "Toà yêu cầu thủ tục gì", "p": "Có toà chỉ cần đăng ký thẻ khách, có toà bắt nhân viên công ty xuống xác nhận, có toà giới hạn giờ cho khách kỹ thuật. Anh/chị nói trước là chúng tôi chuẩn bị đúng." },
+      { "h": "Số máy cần làm trong lượt này", "p": "Công ty có nhiều máy thì gộp một chuyến rẻ hơn và đỡ phiền lễ tân. Gửi danh sách dòng máy qua Zalo để kỹ thuật mang đủ vật tư." },
+      { "h": "Khu chế xuất thì gửi thông tin sớm", "p": "KCX Tân Thuận duyệt người và phương tiện trước. Gửi trước buổi sáng thì chiều vào được, gọi lúc cần gấp thì không kịp thủ tục." }
+    ],
     "faq": [
       { "q": "Kỹ thuật vào được cao ốc Phú Mỹ Hưng không?", "a": "Được. Chúng tôi làm quen thủ tục thẻ khách của các toà trong Phú Mỹ Hưng. Anh/chị cho biết tên toà và số căn, nếu toà yêu cầu cư dân xác nhận thì nhắn trước giúp chúng tôi — kỹ thuật sẽ lên đúng lần đầu." },
       { "q": "Nạp mực máy in Quận 7 mất bao lâu kỹ thuật tới?", "a": "Khoảng 30–50 phút, vì cửa hàng nằm phía Quận 8 và phải qua cầu. Nếu anh/chị ở Tân Quy, Tân Phong thì thường nhanh hơn; vào KCX Tân Thuận thì hẹn theo khung giờ do phải khai báo cổng." },
       { "q": "Công ty trong KCX cần giấy tờ để thanh toán thì sao?", "a": "Chúng tôi gửi báo giá bằng văn bản trước khi làm, và sau khi làm có phiếu bảo hành ghi rõ dòng máy cùng số trang — đủ để bộ phận kế toán đối chiếu. Anh/chị cần thêm giấy tờ gì thì nói trước để chúng tôi chuẩn bị." },
-      { "q": "Công ty có nhiều máy, làm một lần được không?", "a": "Được và nên làm vậy. Đi một chuyến xử lý nhiều máy thì tiết kiệm cho cả hai bên. Anh/chị gửi danh sách dòng máy trước, chúng tôi mang đủ mực và vật tư cho từng loại." }
+      { "q": "Công ty có nhiều máy, làm một lần được không?", "a": "Được và nên làm vậy. Đi một chuyến xử lý nhiều máy thì tiết kiệm cho cả hai bên. Anh/chị gửi danh sách dòng máy trước, chúng tôi mang đủ mực và vật tư cho từng loại." },
+      { "q": "Nạp mực máy in Quận 7 giá bao nhiêu?", "a": "Laser A4 phổ thông 80.000 – 100.000đ, đã gồm công đi lại và vệ sinh buồng mực. HP 107a và dòng có chip 100.000 – 150.000đ. Brother, Samsung 120.000đ. Máy A3 từ 250.000đ. Giá trong cao ốc không tính thêm — thủ tục vào toà là việc của chúng tôi, không phải phí của anh/chị." },
+      { "q": "Công ty cần làm ngoài giờ hành chính thì sao?", "a": "Nhận theo hẹn. Văn phòng không muốn kỹ thuật vào lúc đang họp hoặc đang tiếp khách thì chọn đầu giờ sáng, giờ nghỉ trưa hoặc sau 17h. Cuối tuần cũng nhận, báo trước một ngày." },
+      { "q": "Công ty trong cao ốc cần hoá đơn VAT, có xuất không?", "a": "Có. Anh/chị gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch, chúng tôi chuẩn bị sẵn để kế toán không phải đi đòi sau khi kỹ thuật đã về." }
     ]
   },
   {
@@ -126,11 +153,37 @@
       { "h": "Máy không ăn giấy, kêu rè rồi báo kẹt", "p": "Bánh kéo giấy chai cao su — rất phổ biến với máy in giấy mỏng số lượng lớn. Thay bánh kéo giấy 120.000 – 200.000đ là chạy lại bình thường, không cần đổi máy." },
       { "h": "Hết mực nhanh hơn trước", "p": "Có thể là gạt mực hở làm mực rơi ra ngoài thay vì bám lên trống, hoặc hộp đã nạp quá nhiều lần nên giữ mực kém. Kỹ thuật mở hộp xem là biết, và nói rõ nên nạp tiếp hay nên đổi hộp." }
     ],
+    "etaDetail": [
+      { "khu": "Bình Tiên, Phú Lâm", "phut": "20 – 30 phút", "note": "Gần nhất trong Quận 6, đi theo Kinh Dương Vương." },
+      { "khu": "Chợ Bình Tây — Tháp Mười, Lê Tấn Kế, Trần Bình", "phut": "25 – 35 phút", "note": "Quanh chợ cấm xe theo giờ, kỹ thuật đi xe máy." },
+      { "khu": "Khu Bình Phú, Hậu Giang", "phut": "25 – 35 phút", "note": "Đường trong khu dân cư, dễ tìm." },
+      { "khu": "Cư xá Phú Lâm A, B, C, D", "phut": "25 – 40 phút", "note": "Nhiều lô trùng tên, cho thêm số lô và tầng." },
+      { "khu": "Bà Hom, Hồng Bàng, Minh Phụng", "phut": "30 – 40 phút", "note": "Kẹt vào giờ tan tầm quanh vòng xoay Phú Lâm." },
+      { "khu": "Chợ Lớn, Nguyễn Văn Luông", "phut": "30 – 40 phút", "note": "Đông xe buổi sáng, chiều đi nhanh hơn." }
+    ],
+    "loiHayGapTitle": "Máy in quá tải ở Quận 6: lỗi và cách xử lý ngay trong một lượt",
+    "loiHayGap": [
+      { "trieuChung": "Bản in nhoè như bị ẩm, chữ bôi ra được", "nguyenNhan": "Lô sấy không nung chảy hết mực vì máy chạy liên tục nhiều giờ. Nạp thêm mực vẫn nhoè.", "xuLy": "Thay bao lụa hoặc lô sấy 250.000 – 650.000đ tuỳ dòng máy." },
+      { "trieuChung": "Máy không ăn giấy, kêu rè rồi báo kẹt", "nguyenNhan": "Bánh kéo giấy chai cao su — rất nhanh với máy chạy giấy mỏng số lượng lớn.", "xuLy": "Thay bánh kéo giấy 120.000 – 200.000đ, không cần đụng tới hộp mực." },
+      { "trieuChung": "Hết mực nhanh hơn trước rõ rệt", "nguyenNhan": "Gạt mực hở làm mực rơi ra ngoài thay vì bám lên trống, hoặc vỏ hộp đã nạp quá nhiều lần.", "xuLy": "Thay gạt 100.000 – 150.000đ; vỏ hộp quá hạn thì thay hộp mới." },
+      { "trieuChung": "Sọc đen dọc trang, lặp đều", "nguyenNhan": "Trống xước vì bụi chợ lọt vào buồng mực.", "xuLy": "Thay trống 180.000 – 280.000đ, mang sẵn theo xe." },
+      { "trieuChung": "In chậm hẳn, máy nóng ran", "nguyenNhan": "Máy in phổ thông bị dùng quá công suất thiết kế trong giờ cao điểm.", "xuLy": "Vệ sinh toàn máy và tư vấn giãn tải; không phải lỗi phải thay linh kiện." },
+      { "trieuChung": "Chữ nhạt dần trong một đợt in dài", "nguyenNhan": "Hộp sắp hết nhưng chưa báo. Kiểu in từng đợt dày làm chu kỳ hết mực không đều.", "xuLy": "Nạp mực tại chỗ 80.000 – 120.000đ, nên giữ sẵn một hộp dự phòng." }
+    ],
+    "chuanBi": [
+      { "h": "Giờ vắng khách của sạp", "p": "Chúng tôi làm theo giờ của anh/chị chứ không theo giờ hành chính. Sạp chợ Bình Tây hẹn giờ trưa hoặc sau khi dọn hàng là hợp lý nhất." },
+      { "h": "Số sạp, số quầy và lối vào", "p": "Trong chợ nhiều quầy không có số rõ. Cho thêm tên cửa hàng hoặc mặt hàng đang bán là kỹ thuật tìm ra nhanh." },
+      { "h": "Dòng máy đang dùng", "p": "Chụp nhãn trên thân máy hoặc hộp mực cũ gửi Zalo. Máy ở Quận 6 phần lớn là HP, Canon và Brother — vật tư luôn có sẵn trên xe." },
+      { "h": "Nói trước nếu máy đang không dừng được", "p": "Có hộp mực dự phòng thì chúng tôi thay hộp trước cho máy chạy tiếp, rồi mang hộp cũ về nạp và giao lại sau — không phải dừng bán." }
+    ],
     "faq": [
       { "q": "Nạp mực máy in Quận 6 giá bao nhiêu?", "a": "Laser A4 của HP và Canon 80.000 – 100.000đ, Brother và Samsung 120.000đ, Panasonic 140.000đ — đã gồm công đi lại và vệ sinh buồng mực. Máy A3 từ 250.000đ. Nếu cần thay trống hay bánh kéo giấy, kỹ thuật báo giá trước khi làm." },
       { "q": "Sửa máy in Quận 6 có nhận không, hay chỉ nạp mực?", "a": "Nhận cả hai. Phần lớn ca ở Quận 6 là máy quá tải nên ngoài nạp mực còn phải xem lô sấy, bánh kéo giấy, gạt mực. Kỹ thuật mang vật tư theo xe để xử lý trong cùng một lượt." },
       { "q": "Sạp ở chợ Bình Tây, chỉ rảnh buổi trưa thì sao?", "a": "Anh/chị hẹn khung giờ, chúng tôi xếp lịch theo. Khu chợ Bình Tây và Bình Phú chúng tôi đi theo tuyến nên dễ ghép giờ, không bắt anh/chị chờ cả buổi." },
-      { "q": "Máy in nhiều, có gói bảo trì tháng không?", "a": "Có. Với hộ kinh doanh in trên 1.500 trang mỗi tháng, hợp đồng bảo trì thường rẻ hơn gọi lẻ: chúng tôi theo dõi số trang, chủ động thay mực trước khi máy hết giữa lúc đang bán hàng." }
+      { "q": "Máy in nhiều, có gói bảo trì tháng không?", "a": "Có. Với hộ kinh doanh in trên 1.500 trang mỗi tháng, hợp đồng bảo trì thường rẻ hơn gọi lẻ: chúng tôi theo dõi số trang, chủ động thay mực trước khi máy hết giữa lúc đang bán hàng." },
+      { "q": "Máy đang in dở giữa giờ bán thì xử lý sao?", "a": "Nếu anh/chị có hộp mực dự phòng, kỹ thuật lắp hộp đó vào cho máy chạy tiếp rồi mang hộp cũ về nạp, hôm sau giao lại. Không có hộp dự phòng thì nạp tại chỗ mất khoảng 20 – 30 phút." },
+      { "q": "Có nhận sạp trong chợ Bình Tây không, xe vào được không?", "a": "Có. Kỹ thuật đi xe máy kèm thùng vật tư nên các tuyến cấm xe theo giờ quanh chợ không phải vấn đề. Anh/chị cho tên sạp và mặt hàng là tìm ra." },
+      { "q": "Sạp và cửa hàng lấy hoá đơn VAT được không?", "a": "Được. Báo lúc đặt lịch và gửi thông tin xuất hoá đơn qua Zalo, chúng tôi mang theo luôn trong lượt đó." }
     ]
   },
   {
@@ -161,11 +214,38 @@
       { "h": "Nhiệt", "p": "Nhà xưởng mái tôn buổi trưa rất nóng. Mực trong hộp mềm ra, dễ vón và lem. Nếu được, chuyển máy sang chỗ mát nhất trong xưởng — thay đổi nhỏ này giảm hỏng đáng kể." },
       { "h": "Điện không ổn định", "p": "Sụt điện khi máy đang nung lô sấy là nguyên nhân hàng đầu làm cháy bo nguồn. Một bộ ổn áp hoặc UPS nhỏ rẻ hơn nhiều so với thay bo mạch. Chúng tôi nói điều này kể cả khi nó làm chúng tôi mất một đơn sửa chữa." }
     ],
+    "etaDetail": [
+      { "khu": "Bình Hưng, Trung Sơn", "phut": "10 – 20 phút", "note": "Cửa hàng nằm ngay trong xã này, nhanh nhất cả bảy khu." },
+      { "khu": "Phong Phú, An Phú Tây", "phut": "20 – 35 phút", "note": "Theo Nguyễn Văn Linh và Quốc lộ 50." },
+      { "khu": "Đa Phước, Hưng Long, Quy Đức", "phut": "35 – 55 phút", "note": "Đường dài, nên hẹn khung giờ thay vì gọi gấp." },
+      { "khu": "Tân Kiên, Tân Quý Tây", "phut": "35 – 50 phút", "note": "Qua tỉnh lộ, kẹt vào giờ xe tải ra vào." },
+      { "khu": "Tân Nhựt", "phut": "45 – 60 phút", "note": "Đường nhỏ đoạn cuối, đi xe máy vào được." },
+      { "khu": "Vĩnh Lộc A, Vĩnh Lộc B", "phut": "50 – 75 phút", "note": "Xa nhất địa bàn. Gộp nhiều máy một chuyến là hợp lý." },
+      { "khu": "KCN Vĩnh Lộc, KCN Lê Minh Xuân", "phut": "hẹn theo khung giờ", "note": "Phải khai báo cổng trước, không nhận gấp." }
+    ],
+    "loiHayGapTitle": "Bụi, nhiệt và điện: máy in ở xưởng Bình Chánh hỏng kiểu gì",
+    "loiHayGap": [
+      { "trieuChung": "Sọc đen dọc trang chỉ sau vài tháng", "nguyenNhan": "Bụi xưởng lọt vào buồng mực, bám lên trống rồi bị trục sạc miết vào.", "xuLy": "Thay trống 180.000 – 280.000đ. Giải pháp lâu dài là che máy, không phải nạp mực dày hơn." },
+      { "trieuChung": "Mực vón cục, bản in lem từng mảng", "nguyenNhan": "Nhà xưởng mái tôn buổi trưa rất nóng, mực trong hộp mềm ra.", "xuLy": "Vệ sinh buồng mực và nạp lại; nên chuyển máy sang chỗ mát nhất trong xưởng." },
+      { "trieuChung": "Máy chết hẳn, không lên nguồn", "nguyenNhan": "Sụt điện lúc máy đang nung lô sấy — nguyên nhân hàng đầu làm cháy bo nguồn ở xưởng.", "xuLy": "Kiểm tra bo tại chỗ; hỏng nặng phải mang về. Một bộ ổn áp nhỏ rẻ hơn thay bo nhiều." },
+      { "trieuChung": "Kẹt giấy liên tục dù giấy mới", "nguyenNhan": "Giấy hút ẩm trong kho, mép giấy cong nên vào lệch.", "xuLy": "Vệ sinh đường giấy và bánh kéo; bảo quản giấy trong bao kín là hết." },
+      { "trieuChung": "Bản in nhoè, sấy không ăn", "nguyenNhan": "Lô sấy chai vì chạy quá tải liên tục nhiều ca.", "xuLy": "Thay bao lụa hoặc lô sấy 250.000 – 650.000đ." },
+      { "trieuChung": "Máy báo hết mực dù hộp còn mực", "nguyenNhan": "Chip đếm hết số trang, thường gặp ở máy dùng chung cho cả xưởng.", "xuLy": "Thay chip 80.000 – 150.000đ." }
+    ],
+    "chuanBi": [
+      { "h": "Xã nào trong Bình Chánh", "p": "Địa bàn này rộng gấp nhiều lần một quận nội thành. Biết đúng xã là chúng tôi báo được khung giờ thật — Bình Hưng 10–20 phút nhưng Vĩnh Lộc có thể hơn một tiếng." },
+      { "h": "Thủ tục cổng nếu ở khu công nghiệp", "p": "KCN Vĩnh Lộc và Lê Minh Xuân duyệt người và phương tiện trước. Gửi thông tin sớm một buổi thì vào được trong ngày." },
+      { "h": "Danh sách máy trong xưởng", "p": "Xưởng thường có nhiều máy khác hãng. Gửi trước danh sách hoặc chụp nhãn hộp mực để kỹ thuật mang đủ mực, chip và trống, đi một lượt là xong." },
+      { "h": "Máy đang đặt ở chỗ nào", "p": "Đặt cạnh cửa xưởng hay dưới mái tôn là hai môi trường khác hẳn nhau. Biết trước thì kỹ thuật tư vấn luôn chỗ kê máy, đỡ hỏng lại sau vài tháng." }
+    ],
     "faq": [
       { "q": "Sửa máy in Bình Chánh có đi tới Vĩnh Lộc, Tân Nhựt không?", "a": "Có, nhận toàn địa bàn. Nhưng các xã xa như Vĩnh Lộc, Tân Nhựt, Quy Đức thì chúng tôi hẹn khung giờ thay vì hứa 30 phút — đường xa, nói thật để anh/chị chủ động công việc." },
       { "q": "Phí đi lại xa có tính thêm không?", "a": "Giá niêm yết đã gồm công đi lại trong địa bàn khu Nam. Với các xã xa nhất của Bình Chánh, nếu chỉ một máy và cần đi gấp riêng một chuyến, kỹ thuật sẽ nói rõ phụ phí trong cuộc gọi — trước khi lên đường, không phải lúc đã tới." },
       { "q": "Xưởng có 5–6 máy, làm được trong một buổi không?", "a": "Được. Anh/chị gửi trước danh sách dòng máy, chúng tôi mang đủ mực và vật tư cho từng loại rồi làm gọn trong một buổi. Cách này tiết kiệm hơn gọi lẻ từng máy." },
-      { "q": "Có nhận bảo trì định kỳ cho kho và xưởng không?", "a": "Có, và với môi trường nhiều bụi thì chúng tôi khuyến nghị. Lịch thường theo quý: vệ sinh buồng mực, kiểm tra trống và bánh kéo giấy, thay trước những gì sắp hỏng thay vì chờ máy dừng giữa lúc cần in." }
+      { "q": "Có nhận bảo trì định kỳ cho kho và xưởng không?", "a": "Có, và với môi trường nhiều bụi thì chúng tôi khuyến nghị. Lịch thường theo quý: vệ sinh buồng mực, kiểm tra trống và bánh kéo giấy, thay trước những gì sắp hỏng thay vì chờ máy dừng giữa lúc cần in." },
+      { "q": "Ở Vĩnh Lộc gọi thì bao giờ có người tới?", "a": "Thường 50 – 75 phút và chúng tôi hẹn khung giờ chứ không hứa gấp. Nói thẳng vậy để anh/chị sắp xếp công việc, thay vì ngồi chờ một lời hứa 30 phút không có thật." },
+      { "q": "Nạp mực máy in Bình Chánh giá bao nhiêu?", "a": "Giá như nhau cho cả bảy khu: laser A4 từ 80.000đ, Brother và Samsung 120.000đ, máy A3 từ 250.000đ. Đi xa không tính thêm phí — chỉ thời gian tới là khác." },
+      { "q": "Có xuất hoá đơn VAT cho công ty không?", "a": "Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn." }
     ]
   },
   {
@@ -196,11 +276,37 @@
       { "h": "Máy in phun Epson L-series bị sọc ngang, thiếu màu", "p": "Nhà phố hay dùng Epson L3110, L3210 để in cả tài liệu và ảnh. Để vài tuần không in là đầu phun nghẹt. Việc cần làm là thông đầu phun rồi in kiểm tra, không phải bơm thêm mực — bình vẫn còn đầy mực." },
       { "h": "Chung cư có quy định ra vào", "p": "Các cao ốc dọc Bến Vân Đồn thường yêu cầu đăng ký khách ở lễ tân. Anh/chị nhắn tên toà và số căn, chúng tôi liên hệ trước để kỹ thuật lên đúng lần đầu." }
     ],
+    "etaDetail": [
+      { "khu": "Khánh Hội, Bến Vân Đồn", "phut": "20 – 30 phút", "note": "Qua cầu Kênh Tẻ hoặc cầu Ông Lãnh." },
+      { "khu": "Vĩnh Hội, Xóm Chiếu", "phut": "25 – 35 phút", "note": "Nhiều hẻm nhỏ, cho thêm số hẻm." },
+      { "khu": "Đoàn Văn Bơ, Hoàng Diệu", "phut": "25 – 35 phút", "note": "Đường một chiều vài đoạn." },
+      { "khu": "Tôn Đản, Nguyễn Thần Hiến, Lê Quốc Hưng", "phut": "25 – 40 phút", "note": "Hẻm trùng số nhiều, nhắn thêm một mốc." },
+      { "khu": "Nguyễn Tất Thành", "phut": "30 – 40 phút", "note": "Xe container đông, kẹt vào giờ cao điểm." },
+      { "khu": "Chung cư và cao ốc dọc Bến Vân Đồn", "phut": "30 – 45 phút", "note": "Đã gồm thời gian đăng ký khách ở lễ tân." }
+    ],
+    "loiHayGapTitle": "Hai kiểu máy ở nhà phố Quận 4 và lỗi thường gặp",
+    "loiHayGap": [
+      { "trieuChung": "In ra giấy trắng hoặc rất mờ sau thời gian không dùng", "nguyenNhan": "Mực đóng bánh, trục từ chai vì máy vài tuần mới in một lần.", "xuLy": "Vệ sinh buồng mực và nạp lại 80.000 – 100.000đ, hiếm khi phải thay gì." },
+      { "trieuChung": "Máy phun Epson in bị sọc ngang, thiếu màu", "nguyenNhan": "Đầu phun nghẹt do để lâu không in — L3110, L3210 rất hay gặp.", "xuLy": "Thông đầu phun 100.000 – 250.000đ tuỳ mức nghẹt, báo trước khi làm." },
+      { "trieuChung": "Epson báo mực thải đầy, không cho in", "nguyenNhan": "Bộ đếm mực thải đã đạt ngưỡng, máy tự khoá dù vẫn in tốt.", "xuLy": "Reset bộ đếm 100.000 – 150.000đ, làm tại chỗ trong ít phút." },
+      { "trieuChung": "Mực lem, sờ vào nhoè tay", "nguyenNhan": "Gạt mực mòn sau nhiều lần nạp.", "xuLy": "Thay gạt mực 100.000 – 150.000đ kèm hút sạch mực thải." },
+      { "trieuChung": "Kẹt giấy dù giấy mới mua", "nguyenNhan": "Nhà phố ẩm, giấy hút ẩm nên mép cong và vào lệch.", "xuLy": "Vệ sinh đường giấy; nên để giấy trong bao kín thay vì để hở." },
+      { "trieuChung": "Sọc đen dọc trang, lặp theo chu kỳ", "nguyenNhan": "Trống xước. Đo khoảng cách giữa hai vệt là biết lỗi ở trống hay trục từ.", "xuLy": "Thay trống 180.000 – 280.000đ." }
+    ],
+    "chuanBi": [
+      { "h": "Số hẻm và một mốc dễ nhận ra", "p": "Quận 4 hẻm nhiều và trùng số, nhất là quanh Tôn Đản và Xóm Chiếu. Cho thêm tiệm tạp hoá hay quán cà phê gần nhà là kỹ thuật tới thẳng." },
+      { "h": "Máy laser hay máy phun", "p": "Hai loại xử lý khác hẳn nhau và vật tư cũng khác. Chụp cái máy gửi Zalo là đủ, không cần biết tên dòng." },
+      { "h": "Chung cư thì báo tên toà và số căn", "p": "Các cao ốc dọc Bến Vân Đồn yêu cầu đăng ký khách ở lễ tân. Báo trước để chúng tôi liên hệ, kỹ thuật lên đúng lần đầu." },
+      { "h": "Chỗ đặt máy trong nhà", "p": "Kỹ thuật mang tấm lót trải trước khi mở hộp mực. Nhà chật hoặc sàn gỗ thì nói trước để chuẩn bị kỹ hơn, bụi mực rất mịn." }
+    ],
     "faq": [
       { "q": "Nạp mực máy in Quận 4 có làm tại nhà không?", "a": "Có, làm tại nhà và tại chỗ. Kỹ thuật chỉ tháo hộp mực, không tháo máy, không mang máy đi. Toàn bộ mất khoảng 15–20 phút cho máy laser A4, có in thử trước khi rời đi." },
       { "q": "Nhà trong hẻm nhỏ, kỹ thuật vào được không?", "a": "Được. Chúng tôi đi xe máy kèm thùng vật tư. Anh/chị chỉ cần cho số hẻm và một điểm dễ nhận ra gần đó." },
       { "q": "Nạp mực giá rẻ có làm hỏng máy không?", "a": "Phụ thuộc loại mực. Mực bột thô làm trống xước nhanh, vài tháng sau bản in có sọc và phải thay trống — đắt hơn số tiền đã tiết kiệm. Chúng tôi dùng một loại mực nhập khẩu cho máy A4 và nói rõ giá từ đầu, không chào thêm hạng rẻ hơn." },
-      { "q": "Máy Epson L3110 nhà tôi in bị sọc, có phải hết mực?", "a": "Thường không. Nếu bình mực còn thì đó là nghẹt đầu phun do để lâu không in. Cần thông đầu phun chứ không phải bơm thêm mực. Kỹ thuật kiểm tra rồi báo giá trước khi làm." }
+      { "q": "Máy Epson L3110 nhà tôi in bị sọc, có phải hết mực?", "a": "Thường không. Nếu bình mực còn thì đó là nghẹt đầu phun do để lâu không in. Cần thông đầu phun chứ không phải bơm thêm mực. Kỹ thuật kiểm tra rồi báo giá trước khi làm." },
+      { "q": "Nạp mực máy in Quận 4 giá bao nhiêu?", "a": "Laser A4 phổ thông 80.000 – 100.000đ đã gồm công đi lại và vệ sinh buồng mực. Brother, Samsung 120.000đ. Bơm mực nước Epson L-series 150.000 – 200.000đ. Khung giá nói ngay trong cuộc gọi." },
+      { "q": "Nhà chỉ có một máy in nhỏ, có nhận không?", "a": "Có. Chúng tôi nhận cả máy lẻ của hộ gia đình, không đặt mức tối thiểu. Phần lớn khách Quận 4 đúng là nhà phố một máy." },
+      { "q": "Bao lâu thì nên nạp một lần?", "a": "Không có mốc tháng cố định — tính theo số trang in thực tế. Máy in ít lại hay hỏng hơn máy in đều, vì mực đọng lâu trong hộp sẽ đóng bánh. Chi tiết có trong bài kinh nghiệm trên web." }
     ]
   },
   {
@@ -231,11 +337,37 @@
       { "h": "Phòng khám, nhà thuốc quanh Nguyễn Chí Thanh", "p": "In đơn thuốc, kết quả — số lượng vừa nhưng yêu cầu bản in rõ ràng, không được mờ hay lem vì liên quan tới liều dùng. Nhóm này chúng tôi dùng mực chuẩn và in thử kỹ hơn, kiểm cả chữ nhỏ." },
       { "h": "Tiệm photo và nhà sách", "p": "Máy chạy khối lượng lớn liên tục, thường là máy A3 hoặc photocopy mini. Nạp mực loại này 350.000 – 550.000đ nhưng hộp dung tích lớn nên tính trên mỗi trang lại rẻ. Chúng tôi kiểm tra cả lô sấy vì máy chạy nóng lâu." }
     ],
+    "etaDetail": [
+      { "khu": "An Dương Vương, Trần Bình Trọng", "phut": "20 – 30 phút", "note": "Gần ranh Quận 8, đi nhanh nhất trong quận." },
+      { "khu": "Chợ An Đông và quanh chợ", "phut": "25 – 35 phút", "note": "Đông xe buổi sáng, trưa đi thoáng hơn." },
+      { "khu": "Nguyễn Trãi, Trần Hưng Đạo", "phut": "25 – 35 phút", "note": "Đường một chiều, kỹ thuật đi xe máy." },
+      { "khu": "Nguyễn Chí Thanh, Hùng Vương", "phut": "25 – 35 phút", "note": "Khu bệnh viện, khó đậu xe nên đi xe máy." },
+      { "khu": "Hải Thượng Lãn Ông, Lương Nhữ Học", "phut": "30 – 40 phút", "note": "Phố thuốc, xe đông và hay chắn lối bốc hàng." },
+      { "khu": "Chợ Lớn, Châu Văn Liêm, Trang Tử", "phut": "30 – 40 phút", "note": "Nhiều hẻm nhỏ thông nhau, cho thêm tên cửa hàng." }
+    ],
+    "loiHayGapTitle": "In từng đợt dày: lỗi hay gặp ở cửa hàng sỉ và phòng khám Quận 5",
+    "loiHayGap": [
+      { "trieuChung": "Hết mực giữa đợt in gấp cho khách", "nguyenNhan": "Kiểu in từng đợt dày làm chu kỳ hết mực không đều, máy báo khi đã muộn.", "xuLy": "Nạp tại chỗ 80.000 – 120.000đ; nên giữ sẵn một hộp dự phòng để không dừng bán." },
+      { "trieuChung": "Bản in mờ, chữ số trên đơn khó đọc", "nguyenNhan": "Trục từ chai hoặc mực kém chất lượng — với đơn thuốc thì đây là lỗi không chấp nhận được.", "xuLy": "Thay trục từ 120.000 – 180.000đ và dùng mực chuẩn, in thử trước khi rời đi." },
+      { "trieuChung": "Máy photocopy mini in nhoè, bẩn mép", "nguyenNhan": "Trống và gạt của máy A3 mòn nhanh vì khối lượng in lớn.", "xuLy": "Nạp mực máy A3 hoặc photocopy 350.000 – 550.000đ, gồm vệ sinh cụm trống." },
+      { "trieuChung": "Kẹt giấy liên tục khi in bảng kê dài", "nguyenNhan": "Bánh kéo giấy chai vì chạy giấy mỏng số lượng lớn.", "xuLy": "Thay bánh kéo giấy 120.000 – 200.000đ." },
+      { "trieuChung": "Mực lem lên bảng kê vừa in", "nguyenNhan": "Gạt mực mòn, hoặc giấy hút ẩm trong cửa hàng mở cửa cả ngày.", "xuLy": "Thay gạt mực 100.000 – 150.000đ kèm hút sạch mực thải." },
+      { "trieuChung": "Máy báo hết mực dù hộp còn mực", "nguyenNhan": "Chip đã đếm hết số trang — Samsung và Fuji Xerox hay khoá.", "xuLy": "Thay chip 80.000 – 150.000đ." }
+    ],
+    "chuanBi": [
+      { "h": "Giờ vắng khách của cửa hàng", "p": "Chúng tôi hẹn theo giờ bán của anh/chị. Cửa hàng sỉ quanh An Đông thường chọn giờ trưa hoặc cuối buổi chiều." },
+      { "h": "Tên cửa hàng và mặt hàng", "p": "Khu Chợ Lớn và phố thuốc nhiều địa chỉ trùng số. Tên tiệm và mặt hàng đang bán giúp tìm nhanh hơn cả số nhà." },
+      { "h": "Máy in thường hay máy photocopy", "p": "Hai loại khác nhau về vật tư và về giá. Chụp cái máy gửi Zalo là chúng tôi báo đúng khung giá ngay trong cuộc gọi." },
+      { "h": "Có cần hộp dự phòng không", "p": "Cửa hàng không dừng máy được thì nên có một hộp dự phòng. Kỹ thuật thay hộp cho máy chạy tiếp, mang hộp cũ về nạp rồi giao lại." }
+    ],
     "faq": [
       { "q": "Nạp mực máy in Quận 5 bao lâu thì tới?", "a": "Khoảng 25–40 phút. Quận 5 liền kề Quận 6 và Quận 8 nơi đặt cửa hàng, nên đi cùng tuyến và thường tới nhanh. Giờ cao điểm quanh chợ An Đông thì cộng thêm ít phút vì đường đông." },
       { "q": "Cửa hàng tôi không thể dừng máy giữa giờ bán, có cách nào?", "a": "Có. Chúng tôi khuyên giữ một hộp mực dự phòng đã nạp sẵn: hết mực là đổi hộp trong một phút, hộp cũ chúng tôi nạp lại ở lượt ghé sau. Cách này phù hợp với cửa hàng in trên 1.000 trang mỗi tháng." },
       { "q": "Máy photocopy ở tiệm photo có nạp được không?", "a": "Được. Máy photocopy mini và máy đa năng A3 nạp 350.000 – 550.000đ tuỳ model, chốt giá sau khi xem máy. Hộp dung tích lớn nên tính trên mỗi trang in rẻ hơn máy A4." },
-      { "q": "Phòng khám cần bản in rõ, không mờ — có bảo đảm không?", "a": "Có. Với phòng khám và nhà thuốc, kỹ thuật in thử kỹ hơn và kiểm cả phần chữ nhỏ trước khi rời đi. Nếu trong thời gian bảo hành bản in mờ hay lem do mực, chúng tôi quay lại xử lý miễn phí." }
+      { "q": "Phòng khám cần bản in rõ, không mờ — có bảo đảm không?", "a": "Có. Với phòng khám và nhà thuốc, kỹ thuật in thử kỹ hơn và kiểm cả phần chữ nhỏ trước khi rời đi. Nếu trong thời gian bảo hành bản in mờ hay lem do mực, chúng tôi quay lại xử lý miễn phí." },
+      { "q": "Nạp mực máy in Quận 5 giá bao nhiêu?", "a": "Laser A4 phổ thông 80.000 – 100.000đ, Brother và Samsung 120.000đ, máy A3 từ 250.000đ, photocopy mini và đa năng A3 350.000 – 550.000đ. Giá đã gồm công đi lại và vệ sinh buồng mực." },
+      { "q": "Nhà thuốc cần in đơn rõ ràng, mực nào bảo đảm?", "a": "Chúng tôi dùng mực nhập cho nhóm in đơn thuốc và kết quả, và in thử 5 – 10 trang trước khi rời đi để kiểm độ đậm. Bản in mờ hay lem trên đơn thuốc là chuyện liên quan tới liều dùng, không phải chuyện thẩm mỹ." },
+      { "q": "Nhà thuốc và phòng khám cần hoá đơn VAT thì sao?", "a": "Có xuất. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn cùng phiếu bảo hành." }
     ]
   },
   {
@@ -266,11 +398,37 @@
       { "h": "Danh sách máy và mã hộp mực", "p": "Nhà máy thường có nhiều máy khác hãng. Anh/chị gửi trước danh sách dòng máy, hoặc chụp nhãn hộp mực — chúng tôi mang đúng loại mực và chip, không phải quay về lấy." },
       { "h": "Môi trường ẩm và mặn", "p": "Nhà Bè gần sông, độ ẩm cao. Giấy hút ẩm gây kẹt và làm bản in nhoè, bo mạch cũng dễ ăn mòn hơn nơi khác. Cách đơn giản và hiệu quả nhất: bảo quản giấy trong túi kín, không để ram giấy mở trên sàn hay cạnh tường." }
     ],
+    "etaDetail": [
+      { "khu": "Phước Kiển", "phut": "35 – 50 phút", "note": "Gần nhất trong Nhà Bè, theo Nguyễn Hữu Thọ." },
+      { "khu": "Phú Xuân, Nhà Bè Center", "phut": "45 – 60 phút", "note": "Khu dân cư, dễ tìm." },
+      { "khu": "Phước Lộc, Nhơn Đức", "phut": "50 – 65 phút", "note": "Đường dài, nên hẹn khung giờ." },
+      { "khu": "Long Thới", "phut": "55 – 70 phút", "note": "Đoạn cuối đường nhỏ." },
+      { "khu": "Kho bãi dọc Nguyễn Văn Tạo", "phut": "55 – 70 phút", "note": "Xe tải đông, tránh giờ bốc hàng." },
+      { "khu": "Hiệp Phước và Khu công nghiệp Hiệp Phước", "phut": "60 – 75 phút", "note": "Phải khai báo cổng trước, hẹn theo khung giờ." }
+    ],
+    "loiHayGapTitle": "Gần sông, độ ẩm cao: máy in Nhà Bè hỏng kiểu riêng",
+    "loiHayGap": [
+      { "trieuChung": "Kẹt giấy liên tục dù giấy mới", "nguyenNhan": "Giấy hút ẩm nên mép cong, vào khay bị lệch. Đây là lỗi số một ở Nhà Bè.", "xuLy": "Vệ sinh đường giấy; giữ giấy trong bao kín là giảm hẳn, không tốn gì." },
+      { "trieuChung": "Bản in nhoè như bị ướt", "nguyenNhan": "Giấy ẩm đi qua lô sấy không khô đều, cộng thêm lô sấy chai nếu máy chạy nhiều ca.", "xuLy": "Thay bao lụa hoặc lô sấy 250.000 – 650.000đ nếu đúng là lô sấy." },
+      { "trieuChung": "Máy chập chờn, có lúc không nhận lệnh", "nguyenNhan": "Hơi ẩm và hơi mặn làm chân tiếp xúc và bo mạch ăn mòn dần — gần sông thì nhanh hơn nơi khác.", "xuLy": "Vệ sinh chân tiếp xúc tại chỗ, phần lớn ca hết ngay. Bo đã ăn mòn sâu thì phải mang về, báo giá trước." },
+      { "trieuChung": "Sọc đen dọc trang ở máy đặt trong nhà máy", "nguyenNhan": "Bụi nhà xưởng bám lên trống.", "xuLy": "Thay trống 180.000 – 280.000đ; nên che máy khi không dùng." },
+      { "trieuChung": "Hết mực nhanh bất thường", "nguyenNhan": "Máy dùng chung cho cả chuyền, số trang thực tế cao hơn chủ máy nghĩ.", "xuLy": "Nạp mực và đề xuất theo dõi số trang để chủ động thay trước khi dừng việc." },
+      { "trieuChung": "Máy báo hết mực dù hộp còn mực", "nguyenNhan": "Chip đếm hết số trang.", "xuLy": "Thay chip 80.000 – 150.000đ, mang sẵn chip phổ thông." }
+    ],
+    "chuanBi": [
+      { "h": "Khai báo cổng nếu ở khu công nghiệp", "p": "KCN Hiệp Phước duyệt người và phương tiện trước. Gửi thông tin sớm một buổi thì vào được trong ngày; gọi lúc cần gấp thì không kịp." },
+      { "h": "Danh sách máy và mã hộp mực", "p": "Nhà máy thường nhiều máy khác hãng. Gửi trước danh sách dòng máy hoặc chụp nhãn hộp mực để kỹ thuật mang đúng loại, đi một lần là xong." },
+      { "h": "Gộp nhiều việc trong một chuyến", "p": "Nhà Bè xa nên đi một chuyến làm nhiều máy là hợp lý nhất cho cả hai bên. Có máy nào đang chập chờn thì báo luôn, đừng để chuyến sau." },
+      { "h": "Chỗ bảo quản giấy", "p": "Nói cho chúng tôi biết giấy đang để ở đâu. Rất nhiều ca ở Nhà Bè gọi là kẹt giấy nhưng gốc là giấy hút ẩm, sửa máy không hết." }
+    ],
     "faq": [
       { "q": "Sửa máy in Nhà Bè có nhận gấp không?", "a": "Nhà Bè xa nên thời gian tới thường 60–90 phút, chúng tôi hẹn khung giờ thay vì hứa gấp. Nếu anh/chị cần gấp thật, nói rõ trong cuộc gọi để chúng tôi xếp lại tuyến và báo lại khung giờ sớm nhất có thể." },
       { "q": "Nhà máy trong KCN Hiệp Phước có vào được không?", "a": "Được, nhưng cần khai báo cổng trước. Anh/chị gửi thông tin kỹ thuật và phương tiện cho bộ phận an ninh duyệt trước ngày hẹn — tránh trường hợp tới cổng rồi không vào được." },
       { "q": "Có lịch bảo trì định kỳ cho nhà máy không?", "a": "Có, và với Nhà Bè thì đây là cách hợp lý nhất. Lịch theo tháng hoặc theo quý: chúng tôi nắm danh sách máy, chuẩn bị sẵn vật tư, kiểm tra và thay trước những gì sắp hỏng. Anh/chị không phải gọi gấp mỗi lần máy dừng." },
-      { "q": "Nhà tôi ở khu dân cư Phú Xuân, chỉ một máy thì có nhận không?", "a": "Có. Một máy vẫn nhận, chỉ là chúng tôi xếp vào tuyến đi Nhà Bè gần nhất nên anh/chị chờ lâu hơn một chút. Nếu cần đi riêng ngay, kỹ thuật sẽ nói rõ phụ phí trước khi lên đường." }
+      { "q": "Nhà tôi ở khu dân cư Phú Xuân, chỉ một máy thì có nhận không?", "a": "Có. Một máy vẫn nhận, chỉ là chúng tôi xếp vào tuyến đi Nhà Bè gần nhất nên anh/chị chờ lâu hơn một chút. Nếu cần đi riêng ngay, kỹ thuật sẽ nói rõ phụ phí trước khi lên đường." },
+      { "q": "Nhà Bè xa, có tính thêm phí đi lại không?", "a": "Không. Giá như nhau cho cả bảy khu, đi xa là việc của chúng tôi. Chỉ thời gian tới là khác, và chúng tôi nói thẳng con số thật ngay từ cuộc gọi." },
+      { "q": "Khu dân cư Phú Xuân chỉ có một máy, có nhận không?", "a": "Có. Chúng tôi vẫn nhận máy lẻ, chỉ là hẹn theo tuyến đang đi qua khu đó thay vì chạy riêng một chuyến — nên anh/chị sẽ được báo khung giờ chứ không phải trong 30 phút." },
+      { "q": "Có xuất hoá đơn VAT cho nhà máy không?", "a": "Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn cùng phiếu bảo hành." }
     ]
   },
   {
@@ -302,11 +460,38 @@
       { "h": "Không gian hẹp, sợ bụi mực", "p": "Mở hộp mực trong căn hộ sàn gỗ hoặc có máy lạnh kín là chuyện phải cẩn thận. Kỹ thuật trải tấm lót, hút mực thải bằng máy hút chuyên dụng thay vì thổi — không làm bụi bay trong phòng." },
       { "h": "Văn phòng cần hồ sơ để thanh toán", "p": "Các công ty thuê văn phòng trong khu thường cần báo giá trước bằng văn bản để trình kế toán, và phiếu bảo hành sau khi làm. Chúng tôi gửi cả hai — anh/chị gửi danh sách dòng máy trước là được." }
     ],
+    "etaDetail": [
+      { "khu": "Khu văn phòng Nguyễn Đức Cảnh, Tôn Dật Tiên", "phut": "40 – 50 phút", "note": "Thủ tục lễ tân nhanh hơn khu căn hộ." },
+      { "khu": "Cảnh Viên 1, 2, 3", "phut": "40 – 55 phút", "note": "Đã gồm thời gian làm thẻ khách." },
+      { "khu": "Hưng Vượng 1, 2, 3", "phut": "40 – 55 phút", "note": "Một số block cần cư dân xuống xác nhận." },
+      { "khu": "Mỹ Khánh 1 → 4", "phut": "45 – 60 phút", "note": "Nhiều block, cho đúng số block và số căn." },
+      { "khu": "Sky Garden 1, 2, 3", "phut": "45 – 60 phút", "note": "Lễ tân giữ giấy tờ, kỹ thuật mang theo CCCD." },
+      { "khu": "Riverside Residence, Garden Court", "phut": "45 – 60 phút", "note": "Có toà giới hạn giờ cho khách kỹ thuật vào." },
+      { "khu": "Nam Long, Mỹ Phúc, Mỹ Đức, Mỹ Giang", "phut": "45 – 60 phút", "note": "Nhà phố khép kín, báo trước cổng khu." }
+    ],
+    "loiHayGapTitle": "Máy in trong căn hộ và văn phòng cao ốc: lỗi hay gặp",
+    "loiHayGap": [
+      { "trieuChung": "In ra giấy trắng hoặc rất mờ", "nguyenNhan": "Mực đóng bánh và trục từ chai vì căn hộ in rất ít, có khi vài tuần một lần.", "xuLy": "Vệ sinh buồng mực và nạp lại 80.000 – 100.000đ." },
+      { "trieuChung": "Máy phun Epson sọc ngang, thiếu màu", "nguyenNhan": "Đầu phun nghẹt do để lâu không in.", "xuLy": "Thông đầu phun 100.000 – 250.000đ tuỳ mức nghẹt, báo giá trước khi làm." },
+      { "trieuChung": "Máy báo thay hộp dù mới nạp", "nguyenNhan": "Chip đã đếm hết số trang — HP đời mới và Samsung hay khoá.", "xuLy": "Thay chip 80.000 – 150.000đ." },
+      { "trieuChung": "In mờ một bên trang", "nguyenNhan": "Trục từ chai sau vài lần nạp.", "xuLy": "Thay trục từ 120.000 – 180.000đ, in thử ngay tại chỗ." },
+      { "trieuChung": "Mực lem lên bản in", "nguyenNhan": "Gạt mực mòn.", "xuLy": "Thay gạt 100.000 – 150.000đ kèm hút sạch mực thải bằng máy hút chuyên dụng." },
+      { "trieuChung": "Sọc đen dọc trang lặp theo chu kỳ", "nguyenNhan": "Trống xước.", "xuLy": "Thay trống 180.000 – 280.000đ." }
+    ],
+    "chuanBi": [
+      { "h": "Tên toà và số căn hoặc số phòng", "p": "Mỗi toà trong khu một quy định. Biết đúng toà là chúng tôi gọi lễ tân trước và chuẩn bị đúng giấy tờ." },
+      { "h": "Ai sẽ xác nhận ở lễ tân", "p": "Có toà bắt buộc cư dân hoặc nhân viên công ty xuống xác nhận mới cho lên. Hẹn trước ai sẽ ra là đỡ mất nửa tiếng chờ." },
+      { "h": "Giờ toà cho khách kỹ thuật vào", "p": "Vài toà giới hạn khung giờ. Anh/chị báo trước thì chúng tôi xếp lịch vào đúng khung đó ngay từ đầu." },
+      { "h": "Máy đặt ở đâu trong căn hộ", "p": "Sàn gỗ hoặc phòng máy lạnh kín thì kỹ thuật trải tấm lót và hút mực thải bằng máy hút thay vì thổi. Nói trước để chuẩn bị." }
+    ],
     "faq": [
       { "q": "Kỹ thuật có vào được các toà trong Phú Mỹ Hưng không?", "a": "Được. Chúng tôi làm quen thủ tục thẻ khách của các toà ở đây. Anh/chị cho biết tên toà và số căn; nếu toà yêu cầu cư dân xác nhận thì nhắn trước giúp — kỹ thuật mặc đồng phục, mang thẻ nhân viên và lên đúng lần đầu." },
       { "q": "Nạp mực trong căn hộ có làm bẩn nhà không?", "a": "Không. Kỹ thuật trải tấm lót trước khi mở hộp mực và hút mực thải bằng máy hút chuyên dụng thay vì thổi. Làm xong dọn sạch chỗ làm việc trước khi rời đi." },
       { "q": "Nạp mực máy in Phú Mỹ Hưng giá bao nhiêu?", "a": "Giá giống toàn hệ thống, không tính thêm vì ở khu cao cấp: laser A4 HP và Canon 80.000 – 100.000đ, Brother và Samsung 120.000đ. Phát sinh linh kiện thì báo giá trước và chờ anh/chị đồng ý." },
-      { "q": "Công ty trong khu cần báo giá trước bằng văn bản, có gửi không?", "a": "Có. Anh/chị gửi danh sách dòng máy, chúng tôi gửi lại báo giá bằng văn bản để trình kế toán, rồi mới hẹn lịch. Sau khi làm có phiếu bảo hành ghi rõ dòng máy và số trang." }
+      { "q": "Công ty trong khu cần báo giá trước bằng văn bản, có gửi không?", "a": "Có. Anh/chị gửi danh sách dòng máy, chúng tôi gửi lại báo giá bằng văn bản để trình kế toán, rồi mới hẹn lịch. Sau khi làm có phiếu bảo hành ghi rõ dòng máy và số trang." },
+      { "q": "Kỹ thuật mất bao lâu để lên được căn hộ?", "a": "Thời gian trong bảng trên đã gồm khâu làm thẻ khách. Toà nào chỉ cần đăng ký lễ tân thì nhanh; toà bắt cư dân xuống xác nhận thì phụ thuộc anh/chị có mặt hay không — nên chúng tôi gọi trước khi tới." },
+      { "q": "Có nhận văn phòng công ty trong khu không?", "a": "Có, và nhóm này chúng tôi gửi báo giá bằng văn bản trước để kế toán duyệt, kèm phiếu bảo hành sau khi làm. Công ty nhiều máy thì gộp một lượt." },
+      { "q": "Văn phòng trong khu cần hoá đơn VAT, có xuất không?", "a": "Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch, chúng tôi chuẩn bị sẵn cùng báo giá bằng văn bản cho kế toán." }
     ]
   }
 ]

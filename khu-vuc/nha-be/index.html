@@ -156,6 +156,30 @@ gtag('config', 'AW-16732602636');
         "@type": "Answer",
         "text": "Có. Một máy vẫn nhận, chỉ là chúng tôi xếp vào tuyến đi Nhà Bè gần nhất nên anh/chị chờ lâu hơn một chút. Nếu cần đi riêng ngay, kỹ thuật sẽ nói rõ phụ phí trước khi lên đường."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Nhà Bè xa, có tính thêm phí đi lại không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Không. Giá như nhau cho cả bảy khu, đi xa là việc của chúng tôi. Chỉ thời gian tới là khác, và chúng tôi nói thẳng con số thật ngay từ cuộc gọi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Khu dân cư Phú Xuân chỉ có một máy, có nhận không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Chúng tôi vẫn nhận máy lẻ, chỉ là hẹn theo tuyến đang đi qua khu đó thay vì chạy riêng một chuyến — nên anh/chị sẽ được báo khung giờ chứ không phải trong 30 phút."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Có xuất hoá đơn VAT cho nhà máy không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn cùng phiếu bảo hành."
+      }
     }
   ]
 }
@@ -336,10 +360,64 @@ gtag('config', 'AW-16732602636');
 <!-- ba khối dưới chỉ hiện khi trang khu vực đó đã có dữ liệu trong areas.json,
      nên có thể viết dần từng khu mà không làm vỡ các khu chưa viết -->
 
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="thoi-gian">Tới trong bao lâu, tính theo từng khu của Nhà Bè</h2>
+      <p>Số dưới đây là thời gian thật từ lúc anh/chị gác máy tới lúc kỹ thuật có mặt, đo trong giờ hành chính ngày thường.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Khu</th><th>Thời gian tới</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Phước Kiển</strong></td><td class="price">35 – 50 phút</td><td class="card-meta">Gần nhất trong Nhà Bè, theo Nguyễn Hữu Thọ.</td></tr>
+          <tr><td><strong>Phú Xuân, Nhà Bè Center</strong></td><td class="price">45 – 60 phút</td><td class="card-meta">Khu dân cư, dễ tìm.</td></tr>
+          <tr><td><strong>Phước Lộc, Nhơn Đức</strong></td><td class="price">50 – 65 phút</td><td class="card-meta">Đường dài, nên hẹn khung giờ.</td></tr>
+          <tr><td><strong>Long Thới</strong></td><td class="price">55 – 70 phút</td><td class="card-meta">Đoạn cuối đường nhỏ.</td></tr>
+          <tr><td><strong>Kho bãi dọc Nguyễn Văn Tạo</strong></td><td class="price">55 – 70 phút</td><td class="card-meta">Xe tải đông, tránh giờ bốc hàng.</td></tr>
+          <tr><td><strong>Hiệp Phước và Khu công nghiệp Hiệp Phước</strong></td><td class="price">60 – 75 phút</td><td class="card-meta">Phải khai báo cổng trước, hẹn theo khung giờ.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Giờ cao điểm sáng 7–8h và chiều 17–18h cộng thêm khoảng 10 phút. Ca đặt trước thì đúng khung giờ hẹn.</p>
+  </div>
+</section>
 
 
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="loi-hay-gap">Gần sông, độ ẩm cao: máy in Nhà Bè hỏng kiểu riêng</h2>
+      <p>Những lỗi dưới đây kỹ thuật mang sẵn vật tư nên xử lý xong ngay trong một lượt, không phải hẹn lại.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bản in bị gì</th><th>Thường là do</th><th>Xử lý tại chỗ</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Kẹt giấy liên tục dù giấy mới</strong></td><td>Giấy hút ẩm nên mép cong, vào khay bị lệch. Đây là lỗi số một ở Nhà Bè.</td><td class="card-meta">Vệ sinh đường giấy; giữ giấy trong bao kín là giảm hẳn, không tốn gì.</td></tr>
+          <tr><td><strong>Bản in nhoè như bị ướt</strong></td><td>Giấy ẩm đi qua lô sấy không khô đều, cộng thêm lô sấy chai nếu máy chạy nhiều ca.</td><td class="card-meta">Thay bao lụa hoặc lô sấy 250.000 – 650.000đ nếu đúng là lô sấy.</td></tr>
+          <tr><td><strong>Máy chập chờn, có lúc không nhận lệnh</strong></td><td>Hơi ẩm và hơi mặn làm chân tiếp xúc và bo mạch ăn mòn dần — gần sông thì nhanh hơn nơi khác.</td><td class="card-meta">Vệ sinh chân tiếp xúc tại chỗ, phần lớn ca hết ngay. Bo đã ăn mòn sâu thì phải mang về, báo giá trước.</td></tr>
+          <tr><td><strong>Sọc đen dọc trang ở máy đặt trong nhà máy</strong></td><td>Bụi nhà xưởng bám lên trống.</td><td class="card-meta">Thay trống 180.000 – 280.000đ; nên che máy khi không dùng.</td></tr>
+          <tr><td><strong>Hết mực nhanh bất thường</strong></td><td>Máy dùng chung cho cả chuyền, số trang thực tế cao hơn chủ máy nghĩ.</td><td class="card-meta">Nạp mực và đề xuất theo dõi số trang để chủ động thay trước khi dừng việc.</td></tr>
+          <tr><td><strong>Máy báo hết mực dù hộp còn mực</strong></td><td>Chip đếm hết số trang.</td><td class="card-meta">Thay chip 80.000 – 150.000đ, mang sẵn chip phổ thông.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2 id="chuan-bi">Nói giúp mấy thứ này lúc gọi, đỡ mất một lượt đi lại</h2></div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Khai báo cổng nếu ở khu công nghiệp</h3><p>KCN Hiệp Phước duyệt người và phương tiện trước. Gửi thông tin sớm một buổi thì vào được trong ngày; gọi lúc cần gấp thì không kịp.</p></div>
+      <div class="card"><h3>Danh sách máy và mã hộp mực</h3><p>Nhà máy thường nhiều máy khác hãng. Gửi trước danh sách dòng máy hoặc chụp nhãn hộp mực để kỹ thuật mang đúng loại, đi một lần là xong.</p></div>
+      <div class="card"><h3>Gộp nhiều việc trong một chuyến</h3><p>Nhà Bè xa nên đi một chuyến làm nhiều máy là hợp lý nhất cho cả hai bên. Có máy nào đang chập chờn thì báo luôn, đừng để chuyến sau.</p></div>
+      <div class="card"><h3>Chỗ bảo quản giấy</h3><p>Nói cho chúng tôi biết giấy đang để ở đâu. Rất nhiều ca ở Nhà Bè gọi là kẹt giấy nhưng gốc là giấy hút ẩm, sửa máy không hết.</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
@@ -378,6 +456,18 @@ gtag('config', 'AW-16732602636');
       <details>
         <summary>Nhà tôi ở khu dân cư Phú Xuân, chỉ một máy thì có nhận không?</summary>
         <div class="faq-body"><p>Có. Một máy vẫn nhận, chỉ là chúng tôi xếp vào tuyến đi Nhà Bè gần nhất nên anh/chị chờ lâu hơn một chút. Nếu cần đi riêng ngay, kỹ thuật sẽ nói rõ phụ phí trước khi lên đường.</p></div>
+      </details>
+      <details>
+        <summary>Nhà Bè xa, có tính thêm phí đi lại không?</summary>
+        <div class="faq-body"><p>Không. Giá như nhau cho cả bảy khu, đi xa là việc của chúng tôi. Chỉ thời gian tới là khác, và chúng tôi nói thẳng con số thật ngay từ cuộc gọi.</p></div>
+      </details>
+      <details>
+        <summary>Khu dân cư Phú Xuân chỉ có một máy, có nhận không?</summary>
+        <div class="faq-body"><p>Có. Chúng tôi vẫn nhận máy lẻ, chỉ là hẹn theo tuyến đang đi qua khu đó thay vì chạy riêng một chuyến — nên anh/chị sẽ được báo khung giờ chứ không phải trong 30 phút.</p></div>
+      </details>
+      <details>
+        <summary>Có xuất hoá đơn VAT cho nhà máy không?</summary>
+        <div class="faq-body"><p>Có. Gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch là chúng tôi chuẩn bị sẵn cùng phiếu bảo hành.</p></div>
       </details>
     </div>
   </div>
