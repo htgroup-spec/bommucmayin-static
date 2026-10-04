@@ -6,6 +6,13 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["_build/serve.mjs", "4321"],
       "port": 4321
+    },
+    {
+      "_comment": "Bản xem trước phụ: không ghim cổng, dùng được khi 4321 đã có người chiếm. serve.mjs đọc cổng từ biến môi trường PORT.",
+      "name": "bommucmayin-auto",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_build/serve.mjs"],
+      "autoPort": true
     }
   ]
 }

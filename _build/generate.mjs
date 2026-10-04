@@ -22,6 +22,9 @@ const S = json('_data/site.json');
 const AREAS = json('_data/areas.json').sort((a, b) => a.order - b.order);
 const P = json('_data/pages.json');
 const KW = existsSync(resolve(ROOT, '_data/keywords.json')) ? json('_data/keywords.json') : { areas: {}, generic: [] };
+// Trang đích riêng cho Google Ads — viết cho khách doanh nghiệp, để noindex, không vào
+// sitemap và không có trong menu. Xem _note trong file đó để biết vì sao phải tách ra.
+const ADS = existsSync(resolve(ROOT, '_data/ads-pages.json')) ? json('_data/ads-pages.json') : null;
 const IMG = existsSync(resolve(ROOT, '_data/images.json'))
   ? Object.fromEntries(json('_data/images.json').images.map(i => [i.name, i]))
   : {};
@@ -151,7 +154,7 @@ const crumbSchema = (items, depth) => ({
 });
 
 // ---------- layout ----------
-function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null }) {
+function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
   const crumbHtml = crumbs && crumbs.length ? `
@@ -174,7 +177,7 @@ ${crumbs.map(c => c.href === null
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${attr(title)}</title>
 <meta name="description" content="${attr(metaDesc)}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
@@ -235,7 +238,7 @@ ${footer(depth)}
   const dir = slug ? resolve(ROOT, slug) : ROOT;
   mkdirSync(dir, { recursive: true });
   writeFileSync(resolve(dir, 'index.html'), html, 'utf8');
-  built.push({ url: '/' + (slug ? slug + '/' : ''), bytes: html.length });
+  built.push({ url: '/' + (slug ? slug + '/' : ''), bytes: html.length, noindex });
 }
 
 // ---------- blocks ----------
@@ -933,9 +936,81 @@ ${oldMap}
   writeFileSync(resolve(ROOT, '404.html'), html, 'utf8');
 }
 
+// ======================= TRANG ĐÍCH GOOGLE ADS (noindex) =======================
+// Hai trang này chỉ để quảng cáo HTquan8 đổ về. Chúng nói với khách doanh nghiệp —
+// văn phòng, cửa hàng, xưởng, kho — và cố ý KHÔNG chứa chữ "tại nhà", vì chính sách
+// third-party consumer technical support của Google chặn quảng cáo dịch vụ kỹ thuật
+// nhắm người dùng cá nhân. 21 trang SEO giữ nguyên chữ đó để ăn organic.
+if (ADS) {
+  const cov = ADS.coverage;
+  const covHtml = `
+<section class="section section-alt">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="khu-vuc-nhan">${cov.h}</h2>
+      <table class="price-table">
+        <thead><tr><th>Khu vực</th><th>Kỹ thuật tới</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+${cov.rows.map(r => `          <tr id="${r.id}"><td><strong>${r.label}</strong></td><td>${r.eta}</td><td>${r.note}</td></tr>`).join('\n')}
+        </tbody>
+      </table>
+      <p>${cov.note}</p>
+    </div>
+  </div>
+</section>`;
+
+  for (const [key, d] of Object.entries(ADS.pages)) {
+    const sec = d.sections.map((s2, i) => {
+      let inner = '';
+      if (s2.p) inner += s2.p.map(x => `<p>${x}</p>`).join('\n');
+      if (s2.list) inner += `<ul>\n${s2.list.map(x => `  <li>${x}</li>`).join('\n')}\n</ul>`;
+      if (s2.steps) inner += `<ol>\n${s2.steps.map(x => `  <li>${x}</li>`).join('\n')}\n</ol>`;
+      return `
+<section class="section${i % 2 ? ' section-alt' : ''}">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+      ${inner}
+    </div>
+  </div>
+</section>`;
+    }).join('\n');
+
+    page({
+      slug: d.slug, depth: 1, noindex: true, current: '',
+      title: d.title, metaDesc: d.metaDesc, ogTitle: d.ogTitle, h1: d.h1, lead: d.lead,
+      crumbs: [{ label: 'Trang chủ', href: '' }, { label: d.h1, href: null }],
+      body: sec + covHtml + `
+<section class="section">
+  <div class="container">
+    ${linkBox(1, '💰', 'Bảng giá theo mã hộp mực', 'Giá công khai cho từng mã hộp mực, đã gồm công đi lại và vệ sinh buồng mực.', 'bang-gia/', 'Xem bảng giá')}
+    ${linkBox(1, '🛡', 'Quy trình và chính sách bảo hành', 'Bảo hành tính theo số trang in thực tế, không tính theo ngày.', 'quy-trinh-bao-hanh/', 'Xem chi tiết')}
+  </div>
+</section>
+${faqBlock(d.faq)}
+${ctaBand(1, 'Đặt lịch cho văn phòng của anh/chị', 'Nhắn danh sách dòng máy và số lượng, chúng tôi gửi lại khung giá trước khi tới.')}`,
+      schemas: [
+        {
+          '@context': 'https://schema.org', '@type': 'Service',
+          name: plain(d.h1),
+          serviceType: key === 'ads-sua-may-in' ? 'Sửa máy in tận nơi cho doanh nghiệp' : 'Nạp mực máy in tận nơi cho doanh nghiệp',
+          description: plain(d.metaDesc),
+          provider: localBusiness(),
+          audience: { '@type': 'BusinessAudience', name: 'Văn phòng, cửa hàng, xưởng và kho' },
+          areaServed: AREAS.filter(a => !a.parent).map(a => ({ '@type': 'AdministrativeArea', name: a.label + ', TP.HCM' })),
+        },
+        faqSchema(d.faq),
+        crumbSchema([{ label: 'Trang chủ', href: '' }, { label: plain(d.h1), href: d.slug + '/' }]),
+      ],
+    });
+  }
+}
+
 // ======================= sitemap / robots / hạ tầng =======================
 {
-  const urls = built.map(b => {
+  // Trang noindex (trang đích Google Ads) KHÔNG vào sitemap — khai báo trong sitemap
+  // rồi lại chặn index là tín hiệu ngược nhau, và chúng cũng không nhắm organic.
+  const urls = built.filter(b => !b.noindex).map(b => {
     const priority = b.url === '/' ? '1.0' : b.url.startsWith('/khu-vuc/') && b.url !== '/khu-vuc/' ? '0.8'
       : /^\/(nap-muc-may-in-tan-noi|sua-may-in|bang-gia|khu-vuc)\/$/.test(b.url) ? '0.9' : '0.6';
     return `  <url>\n    <loc>${S.baseUrl}${b.url}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;

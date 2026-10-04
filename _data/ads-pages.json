@@ -1,0 +1,192 @@
+{
+  "_note": "Trang đích CHỈ dùng cho Google Ads (chiến dịch HTquan8). Viết cho khách doanh nghiệp — văn phòng, cửa hàng, xưởng, kho — vì chính sách 'third-party consumer technical support' của Google chặn quảng cáo dịch vụ kỹ thuật nhắm người dùng cá nhân. Vì vậy TUYỆT ĐỐI không đưa chữ 'tại nhà', 'hộ gia đình', 'hẻm nhỏ' vào hai trang này.",
+  "_note_noindex": "Cả hai trang để noindex, follow và KHÔNG vào sitemap.xml — nếu để index thì chúng cạnh tranh với 21 trang SEO đang nhắm đúng các từ đó. Trang SEO giữ nguyên chữ 'tại nhà' để ăn organic cụm 420 lượt/tháng.",
+  "_note_facts": "Mọi con số và lời hứa trong file này đều lấy từ _data/site.json (pricing, steps, whyUs, pricingNotes, faq, hours) và _data/pages.json (quy-trinh). Không thêm cam kết mới: KHÔNG hứa hoá đơn VAT, không hứa bảo hành linh kiện, không hứa sửa miễn phí nếu không sửa được — những thứ đó chủ shop chưa xác nhận.",
+
+  "coverage": {
+    "h": "Khung thời gian kỹ thuật tới từng khu",
+    "note": "Thao tác nạp mực và vệ sinh buồng mực mất thêm khoảng 15–20 phút cho mỗi máy A4. Nhiều máy cùng địa chỉ thì làm liền tay, không nhân thời gian lên theo số máy.",
+    "rows": [
+      { "id": "quan-8", "label": "Quận 8 và xã Bình Hưng", "eta": "15–30 phút", "note": "Cửa hàng ngay Phạm Hùng nên đây là khu tới nhanh nhất." },
+      { "id": "quan-4", "label": "Quận 4", "eta": "25–40 phút", "note": "Qua cầu Nguyễn Văn Cừ hoặc Khánh Hội." },
+      { "id": "quan-5", "label": "Quận 5 — An Đông, Chợ Lớn", "eta": "25–40 phút", "note": "Khu phố thuốc và chợ An Đông, nơi máy in phiếu chạy cả ngày." },
+      { "id": "quan-6", "label": "Quận 6 — chợ Bình Tây, Bình Phú", "eta": "25–40 phút", "note": "Nhận cả các tuyến Hậu Giang, Minh Phụng." },
+      { "id": "quan-7", "label": "Quận 7 — KCX Tân Thuận", "eta": "30–50 phút", "note": "Kỹ thuật quen thủ tục cổng khu chế xuất." },
+      { "id": "phu-my-hung", "label": "Phú Mỹ Hưng", "eta": "30–50 phút", "note": "Quen thủ tục thẻ khách từng toà, lễ tân gọi lên là vào được." },
+      { "id": "binh-chanh", "label": "Bình Chánh", "eta": "45–75 phút", "note": "Nhận cả xưởng và kho. Gộp nhiều máy một chuyến thì đỡ công đi lại." },
+      { "id": "nha-be", "label": "Nhà Bè — KCN Hiệp Phước", "eta": "45–75 phút", "note": "Nhận cả trong khu công nghiệp." }
+    ]
+  },
+
+  "pages": {
+    "ads-nap-muc": {
+      "slug": "nap-muc-may-in-van-phong",
+      "noindex": true,
+      "title": "Nạp Mực Máy In Cho Văn Phòng, Xưởng — Khu Nam TP.HCM",
+      "metaDesc": "Nạp mực máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Gộp nhiều máy một lượt, báo giá trước bằng văn bản, bảo hành theo số trang in.",
+      "ogTitle": "Nạp mực máy in cho văn phòng và xưởng — khu Nam TP.HCM",
+      "h1": "Nạp mực máy in tận nơi cho văn phòng, cửa hàng và xưởng",
+      "lead": "Kỹ thuật mang đủ vật tư tới chỗ anh/chị làm việc, xử lý tại chỗ và in thử trước khi rời đi. Nhiều máy cùng một địa chỉ thì làm gộp trong một lượt.",
+      "sections": [
+        {
+          "h": "Dịch vụ này làm cho nơi nào",
+          "p": [
+            "Trang này dành cho nơi có máy in chạy việc. Ở văn phòng hay xưởng, máy in dừng là công việc dừng theo — nên chi phí thật không nằm ở hộp mực mà nằm ở quãng thời gian cả phòng phải chờ.",
+            "Cửa hàng và kỹ thuật của chúng tôi ở 5/19 Phạm Hùng, xã Bình Hưng, sát ranh Quận 8 và nhìn sang Quận 7 qua Nguyễn Văn Linh. Thêm một cửa hàng ở 77 Cửu Long, phường Hoà Hưng. Làm nghề này từ năm 2019."
+          ],
+          "list": [
+            "Văn phòng công ty, phòng kế toán, phòng hành chính nhân sự",
+            "Cửa hàng, nhà thuốc, phòng khám — nơi in hoá đơn và phiếu liên tục",
+            "Xưởng và kho, kể cả KCN Hiệp Phước và khu chế xuất Tân Thuận",
+            "Cao ốc Phú Mỹ Hưng — kỹ thuật quen thủ tục thẻ khách từng toà",
+            "Trường học và trung tâm, nơi in đề và tài liệu theo đợt"
+          ]
+        },
+        {
+          "h": "Nhiều máy thì làm gộp một lượt",
+          "p": [
+            "Một văn phòng thường có vài máy, có khi cùng một dòng. Gọi lẻ từng cái là trả công đi lại nhiều lần, và mỗi lần lại mất một người ngồi trông. Gộp lại một lượt thì kỹ thuật mang sẵn đúng số chai mực và đủ vật tư thay thế, làm liền tay, anh/chị chỉ phải sắp xếp một lần.",
+            "Cần báo giá trước bằng văn bản để trình kế toán thì nhắn Zalo danh sách máy — ghi dòng máy và số lượng — chúng tôi gửi lại khung giá theo từng mã hộp mực trước khi kỹ thuật tới."
+          ]
+        },
+        {
+          "h": "Nhận bảo trì theo tháng",
+          "p": [
+            "Công ty, xưởng, kho và trường học trong khu Nam có thể ký bảo trì tháng. Chúng tôi theo dõi số trang in của từng máy và chủ động xử lý trước khi máy dừng giữa giờ làm, thay vì chờ tới lúc bản in đã mờ mới gọi.",
+            "Cách này hợp với nơi có lịch in dày và không muốn công việc phụ thuộc vào chuyện có ai để ý thấy máy sắp hết mực hay không."
+          ]
+        },
+        {
+          "h": "Giá tính theo mã hộp mực",
+          "p": [
+            "Giá đi theo mã hộp mực, không theo cảm tính. Hộp laser A4 của HP và Canon là 80.000 – 100.000đ. Dòng HP 107a, 135w, 137fnw dùng hộp W1106A có chip thì 100.000 – 150.000đ, tuỳ có phải cộng chip. Brother, Samsung, Fuji Xerox 120.000đ. Panasonic 140.000đ. Máy A3 từ 250.000đ. Máy phun mực hệ bình Epson L-series 150.000 – 200.000đ.",
+            "Các mức trên đã gồm công đi lại trong địa bàn khu Nam và vệ sinh buồng mực, không phát sinh phí ẩn. Kỹ thuật xem máy rồi chốt lại tại chỗ; phát sinh linh kiện phải được anh/chị đồng ý trước khi thay."
+          ]
+        },
+        {
+          "h": "Bảo hành tính theo số trang in",
+          "p": [
+            "Phiếu bảo hành của chúng tôi ghi số trang, không ghi số ngày. Lý do đơn giản: một phòng kế toán in 3.000 trang trong tháng và một quầy in 80 trang không thể được bảo hành bằng nhau — hộp mực của bên in nhiều đã dùng gần hết, còn hộp của bên in ít thì gần như còn mới.",
+            "Trong khoảng số trang đó, nếu bản in mờ, lem, sọc hay có vệt do lỗi mực, chúng tôi quay lại xử lý miễn phí và không tính công đi lại, kể cả khi phải đổi sang hộp mực khác."
+          ]
+        },
+        {
+          "h": "Quy trình làm tại chỗ",
+          "steps": [
+            "Anh/chị đọc dòng máy và địa chỉ. Chúng tôi báo khung giá ngay trong cuộc gọi, không hẹn báo sau.",
+            "Kỹ thuật tới tận nơi, mang theo mực, chip, trống, trục từ và giấy in thử. Không phải tháo máy hay chở máy đi đâu.",
+            "Xem hộp mực, trống và trục rồi chốt giá. Phát sinh linh kiện thì báo giá trước và chờ anh/chị đồng ý.",
+            "Hút sạch mực thải, vệ sinh trống – trục – gạt, nạp mực mới rồi lắp lại. Khoảng 15–20 phút cho một máy A4.",
+            "In thử 5–10 trang trước mặt anh/chị để kiểm độ đậm, lem mực và kẹt giấy. Nhận phiếu bảo hành ghi số trang."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Một lượt làm được mấy máy?",
+          "a": "Không có giới hạn cứng. Anh/chị nhắn trước danh sách dòng máy và số lượng để kỹ thuật mang đủ chai mực và vật tư, làm liền trong một lượt. Mỗi máy A4 mất khoảng 15–20 phút thao tác."
+        },
+        {
+          "q": "Có báo giá bằng văn bản để trình kế toán không?",
+          "a": "Có. Nhắn Zalo danh sách máy, chúng tôi gửi lại khung giá theo từng mã hộp mực trước khi kỹ thuật tới, để anh/chị trình trước rồi mới hẹn lịch."
+        },
+        {
+          "q": "Máy đã bị người khác tháo sửa trước đó thì sao?",
+          "a": "Kỹ thuật kiểm tra rồi mới nhận, và ghi rõ phần lỗi đã tồn tại lên phiếu. Làm vậy để không bảo hành chồng lên lỗi cũ, và cũng để không ai phải tranh với ai về chuyện lỗi đó từ đâu ra."
+        },
+        {
+          "q": "Hẹn giờ nào cũng được không?",
+          "a": "Chúng tôi mở cửa 8h đến 19h từ thứ 2 tới thứ 7, chủ nhật tới 17h. Anh/chị hẹn giờ nào trong khung đó cũng được — nói trước để kỹ thuật xếp lịch đúng giờ đó."
+        },
+        {
+          "q": "Nạp mực có làm hỏng máy không?",
+          "a": "Không, nếu làm đúng cách. Rủi ro thật nằm ở nạp sai loại mực hoặc không hút hết mực thải — khiến bản in lem và trống nhanh xước. Chúng tôi hút sạch mực thải, vệ sinh trống – trục – gạt rồi mới nạp, và in thử trước khi rời đi."
+        }
+      ]
+    },
+
+    "ads-sua-may-in": {
+      "slug": "sua-may-in-van-phong",
+      "noindex": true,
+      "title": "Sửa Máy In Cho Văn Phòng, Xưởng — Khu Nam TP.HCM",
+      "metaDesc": "Sửa máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Kỹ thuật xem máy rồi mới báo giá, mang đủ vật tư theo xe, nhận cả KCN Hiệp Phước.",
+      "ogTitle": "Sửa máy in cho văn phòng và xưởng — khu Nam TP.HCM",
+      "h1": "Sửa máy in tận nơi cho văn phòng, cửa hàng và xưởng",
+      "lead": "Kỹ thuật xem máy tại chỗ rồi mới báo giá, anh/chị đồng ý thì mới tháo máy. Phần lớn ca xử lý xong trong một lượt vì vật tư mang sẵn theo xe.",
+      "sections": [
+        {
+          "h": "Những lỗi xử lý được tại chỗ",
+          "list": [
+            "Kẹt giấy liên tục, kéo giấy lệch, cuốn hai tờ một lúc",
+            "Bản in mờ, lem mực, có sọc dọc hoặc vệt đen lặp lại",
+            "Máy không nhận lệnh in, báo đèn lỗi, không kết nối được",
+            "Hộp mực báo hết dù mới nạp, máy khoá chip",
+            "Trống xước, trục từ mòn, gạt mực hỏng"
+          ],
+          "p": [
+            "Vật tư mang theo xe gồm trống, trục từ, gạt mực, chip và bánh kéo giấy. Nhờ vậy phần lớn ca xử lý xong trong một lượt, không phải hẹn lại lần hai — điều quan trọng với văn phòng không thể để máy dừng qua ngày."
+          ]
+        },
+        {
+          "h": "Xem máy rồi mới báo giá",
+          "p": [
+            "Chúng tôi không chốt giá sửa qua điện thoại khi chưa thấy máy. Trong cuộc gọi anh/chị đọc dòng máy và hiện tượng, chúng tôi nói trước khoảng giá có thể rơi vào; con số chốt lại sau khi kỹ thuật mở máy xem. Phát sinh linh kiện phải được anh/chị đồng ý trước khi thay.",
+            "Phần lỗi đã tồn tại trước khi chúng tôi nhận máy được ghi rõ lên phiếu. Làm vậy để sau này không phải tranh nhau về chuyện lỗi đó từ đâu ra."
+          ]
+        },
+        {
+          "h": "Sửa tại chỗ hay mang về cửa hàng",
+          "p": [
+            "Phần lớn lỗi xử lý ngay tại chỗ. Những ca phải tháo sâu — lô sấy, bo mạch — thì mang về cửa hàng ở 5/19 Phạm Hùng rồi trả lại, và chúng tôi nói rõ mốc thời gian trước khi mang máy đi.",
+            "Nơi không thể dừng in thì anh/chị nói trước, để kỹ thuật biết mà sắp xếp thứ tự xử lý các máy trong phòng."
+          ]
+        },
+        {
+          "h": "Nhận bảo trì theo tháng",
+          "p": [
+            "Công ty, xưởng, kho và trường học trong khu Nam có thể ký bảo trì tháng. Chúng tôi theo dõi số trang in của từng máy và chủ động xử lý trước khi máy dừng giữa giờ làm.",
+            "Với nơi có nhiều máy, cách này rẻ hơn gọi lẻ từng lần, vì công đi lại gộp vào một lượt thay vì tính nhiều lần."
+          ]
+        },
+        {
+          "h": "Dòng máy quen tay",
+          "p": [
+            "Canon LBP gồm 2900 và 6030, HP LaserJet gồm 107a, 135w, 137fnw và P1102, Brother dòng HL và MFC, Samsung, Fuji Xerox, Panasonic, cùng máy phun mực hệ bình Epson L-series.",
+            "Dòng nào cũng vậy: kỹ thuật xem máy, nói rõ nên sửa hay nên thay linh kiện, rồi để anh/chị quyết."
+          ]
+        },
+        {
+          "h": "Những gì bảo hành không nhận",
+          "list": [
+            "Hỏng do máy bị rơi, vào nước, hoặc có dị vật rơi trong đường giấy",
+            "Lỗi phát sinh sau khi người khác tháo sửa máy kể từ lúc chúng tôi làm xong",
+            "Giấy ẩm gây kẹt và nhoè — đây là chuyện bảo quản giấy, không phải lỗi mực",
+            "Lỗi bo mạch, lô sấy, bánh kéo giấy nếu anh/chị đã từ chối thay khi kỹ thuật khuyến nghị",
+            "Phần lỗi đã tồn tại trước khi chúng tôi nhận máy, đã được ghi rõ trên phiếu"
+          ],
+          "p": [
+            "Nói trước những điều này để anh/chị biết đúng mình đang được bảo hành cái gì, thay vì tới lúc cần mới phát hiện ra không thuộc diện."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Bao lâu thì kỹ thuật tới?",
+          "a": "Quận 8 và Bình Hưng thường 15–30 phút. Quận 4, Quận 5, Quận 6 khoảng 25–40 phút. Quận 7 và Phú Mỹ Hưng 30–50 phút. Nhà Bè và các xã xa của Bình Chánh 45–75 phút."
+        },
+        {
+          "q": "Có nhận trong khu công nghiệp và cao ốc không?",
+          "a": "Có. Kỹ thuật quen thủ tục cổng khu chế xuất Tân Thuận, KCN Hiệp Phước, và thủ tục thẻ khách từng toà trong Phú Mỹ Hưng. Anh/chị nhắn tên toà và tầng trước để làm thủ tục nhanh."
+        },
+        {
+          "q": "Nhiều máy cùng lúc thì xử lý thế nào?",
+          "a": "Nhắn trước danh sách dòng máy và hiện tượng của từng máy. Kỹ thuật mang đủ vật tư cho cả lượt và xử lý theo thứ tự anh/chị cần máy nào chạy trước."
+        },
+        {
+          "q": "Máy đã bị người khác sửa rồi thì sao?",
+          "a": "Kỹ thuật kiểm tra rồi mới nhận, và ghi phần lỗi có trước lên phiếu. Chúng tôi không bảo hành chồng lên lỗi cũ, nhưng cũng không tính thêm tiền cho phần đó về sau."
+        }
+      ]
+    }
+  }
+}

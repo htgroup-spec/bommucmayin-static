@@ -91,7 +91,9 @@ if (existsSync(resolve(ROOT, 'sitemap.xml'))) {
     const p = resolve(ROOT, '.' + loc, 'index.html');
     if (!existsSync(p)) errors.push(`sitemap.xml: trỏ tới trang không tồn tại — ${loc}`);
   }
+  // Trang noindex (trang đích Google Ads) CỐ Ý không nằm trong sitemap — bỏ qua, đừng báo.
   const pages = files.filter(f => f.endsWith('index.html'))
+    .filter(f => !/<meta name="robots" content="noindex/.test(readFileSync(f, 'utf8')))
     .map(f => '/' + f.slice(ROOT.length + 1).replace(/\\/g, '/').replace(/index\.html$/, ''));
   for (const pg of pages)
     if (!locs.includes(pg)) warns.push(`sitemap.xml: thiếu trang ${pg}`);
