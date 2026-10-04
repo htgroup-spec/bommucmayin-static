@@ -40,6 +40,7 @@ const built = [];
 const esc = s => String(s).replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const attr = s => String(s).replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 /** Bỏ thực thể HTML để nhét an toàn vào JSON-LD. */
+const NL = String.fromCharCode(10);   // dùng thay cho ký tự xuống dòng trong template lồng nhau
 const plain = s => String(s).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/<[^>]*>/g, '');
 /** prefix tương đối theo độ sâu: 0 -> '', 1 -> '../', 2 -> '../../' */
 const pre = d => '../'.repeat(d);
@@ -805,6 +806,55 @@ ${a.local.map(l => `      <div class="card"><h3>${l.h}</h3><p>${l.p}</p></div>`)
     </div>
   </div>
 </section>
+
+<!-- ba khối dưới chỉ hiện khi trang khu vực đó đã có dữ liệu trong areas.json,
+     nên có thể viết dần từng khu mà không làm vỡ các khu chưa viết -->
+${!a.etaDetail ? '' : `
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="thoi-gian">Tới trong bao lâu, tính theo từng khu của ${a.label}</h2>
+      <p>Số dưới đây là thời gian thật từ lúc anh/chị gác máy tới lúc kỹ thuật có mặt, đo trong giờ hành chính ngày thường.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Khu</th><th>Thời gian tới</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+${a.etaDetail.map(e => `          <tr><td><strong>${e.khu}</strong></td><td class="price">${e.phut}</td><td class="card-meta">${e.note}</td></tr>`).join(NL)}
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Giờ cao điểm sáng 7–8h và chiều 17–18h cộng thêm khoảng 10 phút. Ca đặt trước thì đúng khung giờ hẹn.</p>
+  </div>
+</section>`}
+
+${!a.loiHayGap ? '' : `
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="loi-hay-gap">${a.loiHayGapTitle}</h2>
+      <p>Những lỗi dưới đây kỹ thuật mang sẵn vật tư nên xử lý xong ngay trong một lượt, không phải hẹn lại.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bản in bị gì</th><th>Thường là do</th><th>Xử lý tại chỗ</th></tr></thead>
+        <tbody>
+${a.loiHayGap.map(l => `          <tr><td><strong>${l.trieuChung}</strong></td><td>${l.nguyenNhan}</td><td class="card-meta">${l.xuLy}</td></tr>`).join(NL)}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>`}
+
+${!a.chuanBi ? '' : `
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2 id="chuan-bi">Nói giúp mấy thứ này lúc gọi, đỡ mất một lượt đi lại</h2></div>
+    <div class="grid grid-2">
+${a.chuanBi.map(c => `      <div class="card"><h3>${c.h}</h3><p>${c.p}</p></div>`).join(NL)}
+    </div>
+  </div>
+</section>`}
 
 <section class="section">
   <div class="container">

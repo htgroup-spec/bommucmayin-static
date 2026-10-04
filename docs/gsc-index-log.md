@@ -76,6 +76,15 @@ Trong mục "Sơ đồ trang web" có **5 sitemap cũ từ website trước đâ
 
 Đã kiểm tra: `https://bommucmayin.net/sitemap.xml` hiện trả về **HTTP 200, application/xml, 3.783 byte** — hoàn toàn bình thường. Trạng thái "Không thể tìm nạp" là tồn đọng từ lần đọc tháng 4/2025, trước khi site mới lên.
 
-**Đã làm:** gửi lại `https://bommucmayin.net/sitemap.xml` ngày 4/10/2026.
+**Đã làm:** gửi lại `https://bommucmayin.net/sitemap.xml` ngày 4/10/2026. Cột "Đã gửi" đã nhảy sang 4/10/2026, nhưng cột "Lần đọc cuối" vẫn là 21/4/2025 và trạng thái vẫn đỏ — đó là kết quả tồn đọng từ lần đọc cũ, Google chưa fetch lại. Bình thường mất vài giờ đến 1-2 ngày.
+
+**Đã test phía mình, không có lỗi gì:**
+
+| Kiểm tra | Kết quả |
+|----------|---------|
+| Fetch `https://.../sitemap.xml` với user-agent Googlebot | 200, `application/xml`, 3.783 byte, không redirect |
+| Fetch `http://.../sitemap.xml` với user-agent Googlebot | redirect 1 lần sang https → 200 (chuẩn) |
+| Nội dung | XML hợp lệ, 21 URL, `lastmod` 2026-10-04 |
+| robots.txt | `Allow: /` + khai báo đúng dòng `Sitemap: https://bommucmayin.net/sitemap.xml` |
 
 **Cần theo dõi:** 1-3 ngày sau kiểm tra lại. Nếu vẫn "Không thể tìm nạp" thì phải đào sâu thêm. Nếu chuyển "Thành công" thì nên **xóa 4 sitemap rác còn lại** (3 cái không phải sitemap + bản http) cho sạch báo cáo.
