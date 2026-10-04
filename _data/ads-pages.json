@@ -1,7 +1,8 @@
 {
   "_note": "Trang đích CHỈ dùng cho Google Ads (chiến dịch HTquan8). Viết cho khách doanh nghiệp — văn phòng, cửa hàng, xưởng, kho — vì chính sách 'third-party consumer technical support' của Google chặn quảng cáo dịch vụ kỹ thuật nhắm người dùng cá nhân. Vì vậy TUYỆT ĐỐI không đưa chữ 'tại nhà', 'hộ gia đình', 'hẻm nhỏ' vào hai trang này.",
   "_note_noindex": "Cả hai trang để noindex, follow và KHÔNG vào sitemap.xml — nếu để index thì chúng cạnh tranh với 21 trang SEO đang nhắm đúng các từ đó. Trang SEO giữ nguyên chữ 'tại nhà' để ăn organic cụm 420 lượt/tháng.",
-  "_note_facts": "Mọi con số và lời hứa trong file này đều lấy từ _data/site.json (pricing, steps, whyUs, pricingNotes, faq, hours) và _data/pages.json (quy-trinh). Không thêm cam kết mới: KHÔNG hứa hoá đơn VAT, không hứa bảo hành linh kiện, không hứa sửa miễn phí nếu không sửa được — những thứ đó chủ shop chưa xác nhận.",
+  "_note_facts": "Mọi con số và lời hứa trong file này đều lấy từ _data/site.json (pricing, steps, whyUs, pricingNotes, faq, hours) và _data/pages.json (quy-trinh). Không thêm cam kết mới: không hứa bảo hành linh kiện, không hứa sửa miễn phí nếu không sửa được — chủ shop chưa xác nhận hai thứ đó.",
+  "_note_vat": "04/10/2026: Chủ shop xác nhận CÓ xuất hoá đơn VAT, pháp nhân là công ty Hưng Thịnh. Nhưng CỐ Ý không nêu tên công ty trên site — các site anh em dùng chung pháp nhân, lộ ra thì khách thấy giống nhau và không gọi. Vì vậy chỉ được ghi 'có xuất hoá đơn VAT', TUYỆT ĐỐI không ghi tên công ty, mã số thuế hay địa chỉ pháp nhân. Ghi chú này thay cho lệnh gỡ VAT ngày 02/10/2026 trong README.",
 
   "coverage": {
     "h": "Khung thời gian kỹ thuật tới từng khu",
@@ -23,7 +24,7 @@
       "slug": "nap-muc-may-in-van-phong",
       "noindex": true,
       "title": "Nạp Mực Máy In Cho Văn Phòng, Xưởng — Khu Nam TP.HCM",
-      "metaDesc": "Nạp mực máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Gộp nhiều máy một lượt, báo giá trước bằng văn bản, bảo hành theo số trang in.",
+      "metaDesc": "Nạp mực máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Gộp nhiều máy một lượt, có xuất hoá đơn VAT, bảo hành theo số trang in.",
       "ogTitle": "Nạp mực máy in cho văn phòng và xưởng — khu Nam TP.HCM",
       "h1": "Nạp mực máy in tận nơi cho văn phòng, cửa hàng và xưởng",
       "lead": "Kỹ thuật mang đủ vật tư tới chỗ anh/chị làm việc, xử lý tại chỗ và in thử trước khi rời đi. Nhiều máy cùng một địa chỉ thì làm gộp trong một lượt.",
@@ -57,6 +58,13 @@
           ]
         },
         {
+          "h": "Hoá đơn VAT cho kế toán",
+          "p": [
+            "Có xuất hoá đơn VAT. Anh/chị báo trước lúc đặt lịch và gửi thông tin xuất hoá đơn qua Zalo, chúng tôi chuẩn bị sẵn để không phải chờ thêm sau khi kỹ thuật làm xong.",
+            "Chuyện này hay được hỏi sau cùng, nhưng với phòng kế toán thì nó quyết định có chi được hay không — nên chúng tôi nói ngay ở đây thay vì để anh/chị phải hỏi."
+          ]
+        },
+        {
           "h": "Giá tính theo mã hộp mực",
           "p": [
             "Giá đi theo mã hộp mực, không theo cảm tính. Hộp laser A4 của HP và Canon là 80.000 – 100.000đ. Dòng HP 107a, 135w, 137fnw dùng hộp W1106A có chip thì 100.000 – 150.000đ, tuỳ có phải cộng chip. Brother, Samsung, Fuji Xerox 120.000đ. Panasonic 140.000đ. Máy A3 từ 250.000đ. Máy phun mực hệ bình Epson L-series 150.000 – 200.000đ.",
@@ -87,6 +95,10 @@
           "a": "Không có giới hạn cứng. Anh/chị nhắn trước danh sách dòng máy và số lượng để kỹ thuật mang đủ chai mực và vật tư, làm liền trong một lượt. Mỗi máy A4 mất khoảng 15–20 phút thao tác."
         },
         {
+          "q": "Có xuất hoá đơn VAT không?",
+          "a": "Có. Anh/chị báo trước lúc đặt lịch và gửi thông tin xuất hoá đơn qua Zalo, chúng tôi chuẩn bị sẵn để không phải chờ thêm sau khi làm xong."
+        },
+        {
           "q": "Có báo giá bằng văn bản để trình kế toán không?",
           "a": "Có. Nhắn Zalo danh sách máy, chúng tôi gửi lại khung giá theo từng mã hộp mực trước khi kỹ thuật tới, để anh/chị trình trước rồi mới hẹn lịch."
         },
@@ -109,7 +121,7 @@
       "slug": "sua-may-in-van-phong",
       "noindex": true,
       "title": "Sửa Máy In Cho Văn Phòng, Xưởng — Khu Nam TP.HCM",
-      "metaDesc": "Sửa máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Kỹ thuật xem máy rồi mới báo giá, mang đủ vật tư theo xe, nhận cả KCN Hiệp Phước.",
+      "metaDesc": "Sửa máy in tận nơi cho văn phòng, cửa hàng, xưởng và kho ở khu Nam TP.HCM. Kỹ thuật xem máy rồi mới báo giá, có xuất hoá đơn VAT, nhận cả KCN Hiệp Phước.",
       "ogTitle": "Sửa máy in cho văn phòng và xưởng — khu Nam TP.HCM",
       "h1": "Sửa máy in tận nơi cho văn phòng, cửa hàng và xưởng",
       "lead": "Kỹ thuật xem máy tại chỗ rồi mới báo giá, anh/chị đồng ý thì mới tháo máy. Phần lớn ca xử lý xong trong một lượt vì vật tư mang sẵn theo xe.",
@@ -149,6 +161,13 @@
           ]
         },
         {
+          "h": "Hoá đơn VAT cho kế toán",
+          "p": [
+            "Có xuất hoá đơn VAT. Anh/chị gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch, chúng tôi chuẩn bị sẵn thay vì để kế toán phải đi đòi sau.",
+            "Linh kiện thay thế đều được báo giá và chờ anh/chị đồng ý trước khi thay, nên không có khoản nào xuất hiện trên chứng từ mà anh/chị chưa biết."
+          ]
+        },
+        {
           "h": "Dòng máy quen tay",
           "p": [
             "Canon LBP gồm 2900 và 6030, HP LaserJet gồm 107a, 135w, 137fnw và P1102, Brother dòng HL và MFC, Samsung, Fuji Xerox, Panasonic, cùng máy phun mực hệ bình Epson L-series.",
@@ -173,6 +192,10 @@
         {
           "q": "Bao lâu thì kỹ thuật tới?",
           "a": "Quận 8 và Bình Hưng thường 15–30 phút. Quận 4, Quận 5, Quận 6 khoảng 25–40 phút. Quận 7 và Phú Mỹ Hưng 30–50 phút. Nhà Bè và các xã xa của Bình Chánh 45–75 phút."
+        },
+        {
+          "q": "Có xuất hoá đơn VAT không?",
+          "a": "Có. Anh/chị gửi thông tin xuất hoá đơn qua Zalo lúc đặt lịch, chúng tôi chuẩn bị sẵn cùng với phiếu ghi phần đã làm và linh kiện đã thay."
         },
         {
           "q": "Có nhận trong khu công nghiệp và cao ốc không?",

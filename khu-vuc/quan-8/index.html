@@ -25,6 +25,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/responsive.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16732602636"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-16732602636');
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -465,5 +472,20 @@
 </div>
 
 <script src="../../js/main.js" defer></script>
+<script>
+(function () {
+  // Bắt ở cấp document để link sinh sau cũng được tính, khỏi phải gắn lại listener.
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var sendTo = href.indexOf('tel:') === 0 ? 'AW-16732602636/MM69CJvt848dEIyC3ao-'
+      : href.indexOf('zalo.me') !== -1 ? 'AW-16732602636/7VqvCJ7t848dEIyC3ao-'
+      : null;
+    if (!sendTo || typeof gtag !== 'function') return;
+    gtag('event', 'conversion', { send_to: sendTo });
+  }, true);
+})();
+</script>
 </body>
 </html>

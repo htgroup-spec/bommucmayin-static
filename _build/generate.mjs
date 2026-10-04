@@ -154,6 +154,49 @@ const crumbSchema = (items, depth) => ({
 });
 
 // ---------- layout ----------
+/**
+ * Thẻ Google Ads. Chuyển đổi chính của tiệm là GỌI và NHẮN ZALO — không có form nào —
+ * nên đo bằng click trên link `tel:` và `zalo.me` có sẵn khắp site.
+ *
+ * Dùng thẻ Google Ads bắn thẳng chứ không nhập chuyển đổi từ GA4: thẻ Ads vào thẳng tài
+ * khoản quảng cáo nên đấu giá tự động dùng được ngay, còn đường vòng qua GA4 trễ vài giờ
+ * và rụng bớt vì mô hình phiên của GA4 khác mô hình click của Ads.
+ *
+ * Thẻ nằm trên MỌI trang chứ không riêng trang đích, vì khách bấm quảng cáo xong còn đi
+ * qua bảng giá rồi mới gọi — cuộc gọi đó vẫn phải được tính.
+ *
+ * ID và nhãn send_to sinh bởi adsgoogle/scripts/actions/conv_htquan8.js.
+ */
+function adsTag() {
+  if (!S.ads || !S.ads.gtagId) return '';
+  return `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.ads.gtagId}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${S.ads.gtagId}');
+</script>`;
+}
+
+function adsClickTracking() {
+  if (!S.ads || !S.ads.gtagId) return '';
+  return `<script>
+(function () {
+  // Bắt ở cấp document để link sinh sau cũng được tính, khỏi phải gắn lại listener.
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var sendTo = href.indexOf('tel:') === 0 ? '${S.ads.sendToCall}'
+      : href.indexOf('zalo.me') !== -1 ? '${S.ads.sendToZalo}'
+      : null;
+    if (!sendTo || typeof gtag !== 'function') return;
+    gtag('event', 'conversion', { send_to: sendTo });
+  }, true);
+})();
+</script>`;
+}
+
 function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
@@ -197,6 +240,7 @@ ${crumbs.map(c => c.href === null
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="${p}css/style.css">
 <link rel="stylesheet" href="${p}css/responsive.css">
+${adsTag()}
 ${ld}
 </head>
 <body>
@@ -232,6 +276,7 @@ ${body}
 </main>
 ${footer(depth)}
 <script src="${p}js/main.js" defer></script>
+${adsClickTracking()}
 </body>
 </html>
 `;
