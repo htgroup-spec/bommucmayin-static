@@ -164,6 +164,40 @@ các hồ sơ còn lại.
 
 ---
 
+## Việc 7 — Liên kết hồ sơ vào Google Ads (để quảng cáo hiện kèm bản đồ)
+
+**Vì sao cần:** quảng cáo chỉ hiện địa chỉ và chỉ đủ điều kiện lên Google Maps khi
+chiến dịch có *tài sản vị trí*. Tài sản đó lấy từ Hồ sơ doanh nghiệp đã liên kết — ghim
+anh kéo trên hồ sơ **không** tự chảy sang Google Ads.
+
+**Tình trạng 04/10/2026:** tài khoản Ads `569-369-5868` đã liên kết sẵn một tài khoản Hồ
+sơ doanh nghiệp, nhưng tài khoản đó chỉ có 10 địa điểm của các cơ sở khác (Nam Phong,
+Hi-tech Quận 10, Bình Chánh…). **Hồ sơ "Mực in HT" không nằm trong đó** — nó do
+`dongocvu@gmail.com` quản. Đã đối chiếu bằng CID lấy từ URL Maps:
+`2898525234951475199`, không khớp địa điểm nào đang đồng bộ.
+
+**Đường đi:**
+
+1. Google Ads → **Công cụ** → **Tài khoản được liên kết** → **Hồ sơ doanh nghiệp**
+2. Liên kết tài khoản đang quản *Mực in HT* (`dongocvu@gmail.com`)
+3. Mở Hồ sơ doanh nghiệp bằng **chính tài khoản đó** → bấm **Chấp nhận lời mời**
+4. Chờ Google đồng bộ, thường vài giờ tới một ngày
+5. Báo lại để chạy `adsgoogle/scripts/actions/attach_location_htquan8.js`
+
+Script đó **lọc đúng một hồ sơ** rồi mới gắn. Không được gắn nguyên bộ đồng bộ vào chiến
+dịch HTquan8: làm vậy thì quảng cáo của HT sẽ hiện địa chỉ Nam Phong hay Hi-tech Quận 10,
+phá đúng cái nguyên tắc giữ các site trông độc lập với nhau.
+
+> Ghim địa chỉ đang chờ Google duyệt cũng có thể là lý do hồ sơ chưa đồng bộ về. Nếu sau
+> khi liên kết vẫn chưa thấy, chờ ghim duyệt xong rồi thử lại.
+
+**Nhắc lại cái đã nói ở Việc 6:** hồ sơ đang 0 đánh giá. Gắn bản đồ vào quảng cáo Tìm
+kiếm thì có lợi — khách thấy địa chỉ thật, tin hơn. Nhưng khi quảng cáo bắt đầu hiện trên
+Maps cạnh đối thủ 4,8–5,0 sao thì hồ sơ trống vẫn thua. Gắn trước được, nhưng đừng kỳ
+vọng Maps ra khách cho tới khi có 8–10 đánh giá.
+
+---
+
 ## Tuyệt đối không làm
 
 - **Không đổi tên hồ sơ** thành dạng nhồi từ khoá kiểu "Nạp Mực Máy In Tận Nơi
