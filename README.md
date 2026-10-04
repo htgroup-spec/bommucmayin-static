@@ -110,7 +110,8 @@ https://htgroup-spec@github.com/htgroup-spec/bommucmayin-static.git
 | Không có chữ "tại nhà", "hộ gia đình", "hẻm nhỏ" | Google chặn quảng cáo dịch vụ kỹ thuật nhắm **người dùng cá nhân** bằng chính sách `THIRD_PARTY_CONSUMER_TECHNICAL_SUPPORT`. Chính nó làm tài khoản ngừng hiển thị từ 8/2026. Chạy cho doanh nghiệp thì không thuộc diện đó. |
 | `noindex, follow`, không vào `sitemap.xml` | Để index thì chúng cạnh tranh với 21 trang SEO đang nhắm đúng cụm "tại nhà" (420 lượt/tháng). |
 | 21 trang SEO **giữ nguyên** chữ "tại nhà" | Đó là organic miễn phí, không đụng tới. Tách trang là để quảng cáo và SEO không giẫm chân nhau. |
-| Không hứa hoá đơn VAT, không hứa bảo hành linh kiện | Chủ shop chưa xác nhận hai thứ này — xem `_note_facts` trong `ads-pages.json`. |
+| Nói "có xuất hoá đơn VAT" nhưng không nêu tên công ty | Chủ shop xác nhận có VAT ngày 04/10/2026 — xem `_note_vat` trong `ads-pages.json`. Tên pháp nhân vẫn giữ kín. |
+| Không hứa bảo hành linh kiện, không hứa sửa không được thì miễn phí | Chủ shop chưa xác nhận hai thứ này. |
 
 Google đã tự xác nhận ranh giới khi duyệt từ khoá: cụm trần trụi **"sửa máy in"** và
 **"sửa máy in tận nơi"** bị chặn thẳng, còn "sửa máy in gần đây", "sửa máy in canon",
