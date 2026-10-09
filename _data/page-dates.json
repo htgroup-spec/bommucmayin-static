@@ -1,0 +1,98 @@
+{
+  "_note": "SINH RA bởi _build/page-dates.mjs từ lịch sử git — đừng sửa tay. Ngày chỉ nhảy khi khối nội dung của riêng trang đó đổi.",
+  "_generated": "2026-10-09T03:02:10.482Z",
+  "pages": {
+    "/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/nap-muc-may-in-tan-noi/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/sua-may-in/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/bang-gia/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/quy-trinh-bao-hanh/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/ve-chung-toi/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/lien-he/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/cau-hoi-thuong-gap/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/khu-vuc/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/kinh-nghiem/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-02"
+    },
+    "/khu-vuc/quan-8/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/quan-7/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/quan-6/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/khu-vuc/binh-chanh/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/quan-4/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/quan-5/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/nha-be/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/khu-vuc/phu-my-hung/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-04"
+    },
+    "/kinh-nghiem/nap-muc-hay-thay-hop-muc-moi/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-02"
+    },
+    "/kinh-nghiem/bao-lau-nen-nap-muc-mot-lan/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-06"
+    },
+    "/kinh-nghiem/dau-hieu-phai-thay-trong-may-in/": {
+      "published": "2026-10-02",
+      "modified": "2026-10-02"
+    },
+    "/nap-muc-may-in-van-phong/": {
+      "published": "2026-10-04",
+      "modified": "2026-10-06"
+    },
+    "/sua-may-in-van-phong/": {
+      "published": "2026-10-04",
+      "modified": "2026-10-06"
+    }
+  }
+}

@@ -10,7 +10,7 @@ Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub
 
 ---
 
-## Ba quy tắc không được phá
+## Bốn quy tắc không được phá
 
 1. **URL sạch.** Mọi trang là `<slug>/index.html`, mọi link nội bộ **không chứa `.html`**.
    `_build/audit.mjs` sẽ báo lỗi nếu lọt.
@@ -18,6 +18,10 @@ Site tĩnh thuần HTML/CSS/JS, sinh từ dữ liệu JSON, deploy bằng GitHub
    để site chạy được cả khi mở local lẫn khi đổi domain.
 3. **Không bịa số liệu.** Mọi con số lượt tìm kiếm phải đến từ `_data/keywords.json`
    (Google Ads API). Chưa đo thì ghi "chưa có số", không ước lượng.
+4. **Ngày cập nhật và người soát không bịa.** Ngày hiển thị lấy từ lịch sử git
+   (`_build/page-dates.mjs`), không lấy ngày build và không rải ngẫu nhiên — repo này public
+   nên git log đối chiếu được trong vài giây. Người soát là **Nhật Phạm**, chỉ dùng cho site
+   này; **đừng đặt cùng một tên cho các site anh em** (xem `_note_reviewer` trong `site.json`).
 
 ---
 
@@ -35,10 +39,12 @@ bommucmayin/
 │   ├── areas.json              8 trang khu vực, mỗi trang một góc riêng
 │   ├── pages.json              nội dung các trang lõi + 3 bài blog
 │   ├── ads-pages.json          2 trang đích Google Ads (B2B, noindex) — đọc mục bên dưới
-│   └── keywords.json           số liệu Google Ads (sinh ra, đừng sửa tay)
+│   ├── keywords.json           số liệu Google Ads (sinh ra, đừng sửa tay)
+│   └── page-dates.json         ngày cập nhật thật từng trang (sinh ra, đừng sửa tay)
 ├── _includes/                  ← khung menu + footer dùng chung
 ├── _build/
 │   ├── extract-keywords.mjs    gom số thật từ các file VIP trong hub
+│   ├── page-dates.mjs          đọc lịch sử git -> ngày cập nhật từng trang
 │   ├── generate.mjs            sinh toàn bộ trang
 │   ├── audit.mjs               kiểm trước khi đẩy
 │   └── serve.mjs               server local hiểu URL sạch
@@ -58,14 +64,21 @@ node _build/generate.mjs     # sinh 21 trang + sitemap + robots + CNAME + 404
 node _build/audit.mjs        # kiểm: link .html sót, link gãy, H1, title trùng, JSON-LD
 node _build/serve.mjs 4321   # xem trước ở http://localhost:4321
 node _build/extract-keywords.mjs   # gom lại số liệu từ khoá từ hub
+node _build/page-dates.mjs    # đọc git, sinh _data/page-dates.json (ngày cập nhật thật từng trang)
 node _build/export-logo.mjs   # dựng lại logo, favicon, apple-touch, ảnh OG từ _img-src/logo-moi-2026.png
 ```
 
 Quy trình chuẩn mỗi lần sửa:
 
 ```bash
-node _build/generate.mjs && node _build/audit.mjs
+node _build/page-dates.mjs && node _build/generate.mjs && node _build/audit.mjs
 ```
+
+`page-dates.mjs` chạy **trước** `generate`: nó đọc git để biết trang nào vừa đổi nội dung
+thật. Nội dung đã sửa mà chưa commit thì nó tính là hôm nay — nên cứ **sửa xong là commit
+ngay trong ngày**, đừng để dồn, vì dấu ngày lấy theo ngày commit. Không sửa gì thì không
+cần chạy lại; chạy lại cũng không làm trang nào trẻ lại (sửa `_note`, hotline, logo, menu
+hay schema đều không tính là đổi nội dung).
 
 `audit.mjs` thoát mã 1 nếu có lỗi — đừng commit khi còn lỗi.
 

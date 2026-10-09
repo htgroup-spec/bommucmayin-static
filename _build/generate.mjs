@@ -25,6 +25,11 @@ const KW = existsSync(resolve(ROOT, '_data/keywords.json')) ? json('_data/keywor
 // Trang đích riêng cho Google Ads — viết cho khách doanh nghiệp, để noindex, không vào
 // sitemap và không có trong menu. Xem _note trong file đó để biết vì sao phải tách ra.
 const ADS = existsSync(resolve(ROOT, '_data/ads-pages.json')) ? json('_data/ads-pages.json') : null;
+// Ngày cập nhật thật của từng trang, sinh từ lịch sử git bởi _build/page-dates.mjs.
+// KHÔNG lấy ngày build: 21 trang cùng một dấu ngày thì vừa sai vừa lộ là máy sinh một lượt,
+// mà repo public nên git log đối chiếu được ngay. Chạy page-dates.mjs trước generate.
+const DATES = existsSync(resolve(ROOT, '_data/page-dates.json')) ? json('_data/page-dates.json').pages : {};
+
 const IMG = existsSync(resolve(ROOT, '_data/images.json'))
   ? Object.fromEntries(json('_data/images.json').images.map(i => [i.name, i]))
   : {};
@@ -35,6 +40,11 @@ const FOOTER_TPL = read('_includes/footer.html');
 const YEAR = new Date().getFullYear();
 const TODAY = new Date().toISOString().slice(0, 10);
 const built = [];
+
+/** Ngày của một trang theo url ('/' , '/bang-gia/'); chưa có trong page-dates.json thì trả null. */
+const pageDates = url => DATES[url] || null;
+/** 2026-10-06 -> 06/10/2026 */
+const viDate = iso => iso.split('-').reverse().join('/');
 
 // ---------- helpers ----------
 const esc = s => String(s).replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -222,6 +232,7 @@ function adsClickTracking() {
 function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
+  const dts = pageDates('/' + (slug ? slug + '/' : ''));
   const crumbHtml = crumbs && crumbs.length ? `
 <nav class="breadcrumb" aria-label="Đường dẫn">
   <div class="container">
@@ -233,7 +244,19 @@ ${crumbs.map(c => c.href === null
   </div>
 </nav>` : '';
 
-  const ld = schemas.map(s => `<script type="application/ld+json">\n${JSON.stringify(s, null, 2)}\n</script>`).join('\n');
+  /* WebPage mang ngày cập nhật và người soát nội dung. Bản cập nhật 01/10/2026 của Google
+     (trỏ Quality Rater Guidelines §4.6.6) đòi nội dung phải có người kiểm chứng trước khi
+     đăng — lastReviewed/reviewedBy là chỗ khai việc đó cho máy, dòng "Cập nhật" dưới chân
+     nội dung là chỗ khai cho người đọc. Tên người soát nằm ở S.reviewer trong site.json;
+     mỗi site anh em dùng một người khác nhau, xem _note_reviewer ở đó. */
+  const schemaAll = !dts ? schemas : [{
+    '@context': 'https://schema.org', '@type': 'WebPage',
+    '@id': canonical, url: canonical, name: plain(title), inLanguage: 'vi-VN',
+    datePublished: dts.published, dateModified: dts.modified,
+    ...(S.reviewer ? { lastReviewed: dts.modified, reviewedBy: { '@type': 'Person', name: S.reviewer } } : {}),
+    isPartOf: { '@type': 'WebSite', name: plain(S.brandFull), url: S.baseUrl + '/' },
+  }, ...schemas];
+  const ld = schemaAll.map(s => `<script type="application/ld+json">\n${JSON.stringify(s, null, 2)}\n</script>`).join('\n');
 
   const html = `<!DOCTYPE html>
 <html lang="vi">
@@ -295,6 +318,9 @@ ${hero ? `<section class="hero">
   </div>
 </section>` : ''}
 ${body}
+${!dts ? '' : `<div class="container">
+  <p class="page-updated">Cập nhật ${viDate(dts.modified)}${S.reviewer ? ` · Nội dung do <strong>${S.reviewer}</strong> soát` : ''}</p>
+</div>`}
 </main>
 ${footer(depth)}
 <script src="${p}js/main.js" defer></script>
@@ -1003,10 +1029,10 @@ ${ctaBand(2, 'Đặt nạp mực hoặc sửa máy in', 'Khu Nam TP.HCM — xem 
         {
           '@context': 'https://schema.org', '@type': 'Article',
           headline: plain(po.title), description: plain(po.metaDesc),
-          // ngày chốt trong _data/pages.json, KHÔNG lấy ngày build:
-          // để TODAY thì mỗi lần sinh lại bài tự "trẻ lại" một ngày, Google đọc là đăng mới
-          datePublished: po.datePublished || TODAY,
-          dateModified: po.dateModified || po.datePublished || TODAY,
+          // ngày THẬT lấy từ git qua _data/page-dates.json (xem _build/page-dates.mjs).
+          // Không lấy TODAY: mỗi lần sinh lại bài sẽ tự trẻ lại một ngày, Google đọc ra là đăng mới.
+          datePublished: (pageDates(`/kinh-nghiem/${po.slug}/`) || {}).published || po.datePublished || TODAY,
+          dateModified: (pageDates(`/kinh-nghiem/${po.slug}/`) || {}).modified || po.dateModified || po.datePublished || TODAY,
           author: { '@type': 'Organization', name: S.brandFull },
           publisher: { '@type': 'Organization', name: S.brandFull },
           mainEntityOfPage: { '@type': 'WebPage', '@id': `${S.baseUrl}/kinh-nghiem/${po.slug}/` },
@@ -1153,7 +1179,7 @@ ${ctaBand(1, 'Đặt lịch cho văn phòng của anh/chị', 'Nhắn danh sách
   const urls = built.filter(b => !b.noindex).map(b => {
     const priority = b.url === '/' ? '1.0' : b.url.startsWith('/khu-vuc/') && b.url !== '/khu-vuc/' ? '0.8'
       : /^\/(nap-muc-may-in-tan-noi|sua-may-in|bang-gia|khu-vuc)\/$/.test(b.url) ? '0.9' : '0.6';
-    return `  <url>\n    <loc>${S.baseUrl}${b.url}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+    return `  <url>\n    <loc>${S.baseUrl}${b.url}</loc>\n    <lastmod>${(pageDates(b.url) || {}).modified || TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
   }).join('\n');
   writeFileSync(resolve(ROOT, 'sitemap.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, 'utf8');

@@ -455,3 +455,15 @@ td.price { color: var(--accent); }
   overflow: hidden; background: var(--bg-alt); line-height: 0;
 }
 .map-wrap iframe { display: block; width: 100%; }
+
+/* ---------- dấu ngày cập nhật + người soát ----------
+   Ngày lấy từ lịch sử git (_build/page-dates.mjs), không phải ngày build. Đặt cuối nội
+   dung, trước footer: ai đọc hết bài mới cần biết bài cũ hay mới và ai chịu trách nhiệm. */
+.page-updated {
+  margin: 0;
+  padding: 20px 0 32px;
+  border-top: 1px solid var(--line);
+  font-size: .86rem;
+  color: var(--muted);
+}
+.page-updated strong { color: var(--body); font-weight: 600; }

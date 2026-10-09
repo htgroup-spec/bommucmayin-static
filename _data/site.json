@@ -38,6 +38,8 @@
   "yearsActive": "2019",
   "_note_ads": "04/10/2026: Chủ shop xác nhận CÓ xuất hoá đơn VAT — pháp nhân là công ty Hưng Thịnh, nhưng CỐ Ý không nêu tên công ty trên site để các site anh em trông độc lập với nhau. Chỉ được ghi \"có xuất hoá đơn VAT\", KHÔNG ghi tên công ty, mã số thuế hay địa chỉ pháp nhân. Điều này thay cho ghi chú gỡ VAT ngày 02/10/2026.",
   "vatInvoice": true,
+  "_note_reviewer": "09/10/2026: Chủ shop chốt Nhật Phạm là người soát nội dung của RIÊNG site này. Hai lý do phải mỗi site một người khác: (1) bản cập nhật 01/10/2026 của Google — Quality Rater Guidelines §4.6.5 + §4.6.6 — đòi nội dung AI phải có người kiểm chứng trước khi đăng, nên tên người soát là tín hiệu thật, không phải trang trí; (2) đặt một tên chung cho cả 6 site anh em là thêm dấu vết người đọc được nối chúng lại, trái với quyết định giấu tên pháp nhân (xem _note_ads). Lưu ý tên nhân viên là dữ liệu cá nhân — chỉ đăng sau khi người đó đồng ý. Dùng ở: dòng Cập nhật dưới chân mỗi trang + reviewedBy trong schema WebPage.",
+  "reviewer": "Nhật Phạm",
   "ads": {
     "_note": "Thẻ chuyển đổi Google Ads cho chiến dịch HTquan8. Chuyển đổi chính của tiệm là GỌI và ZALO nên đo bằng click trên link tel: và zalo.me. Sinh ra bởi adsgoogle/scripts/actions/conv_htquan8.js — đừng sửa tay.",
     "gtagId": "AW-16732602636",
