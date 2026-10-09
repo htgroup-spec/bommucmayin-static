@@ -19,7 +19,7 @@
  */
 
 import { execFileSync } from 'child_process';
-import { readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -117,16 +117,16 @@ for (const e of entries) {
   process.stdout.write(`${modified}  ${e.url}\n`);
 }
 
-writeFileSync(
-  resolve(ROOT, '_data/page-dates.json'),
-  JSON.stringify({
-    _note: 'SINH RA bởi _build/page-dates.mjs từ lịch sử git — đừng sửa tay. Ngày chỉ nhảy khi khối nội dung của riêng trang đó đổi.',
-    _generated: new Date().toISOString(),
-    pages: out,
-  }, null, 2) + '\n',
-  'utf8',
-);
+/* Không đóng dấu thời điểm chạy vào file: chạy lại mà ngày không đổi thì file phải y
+   nguyên, nếu không cứ 1-2 ngày chạy lại là đẻ một diff rác. Ngày chạy đã nằm trong git. */
+const OUT = resolve(ROOT, '_data/page-dates.json');
+const body = JSON.stringify({
+  _note: 'SINH RA bởi _build/page-dates.mjs từ lịch sử git — đừng sửa tay. Ngày chỉ nhảy khi khối nội dung của riêng trang đó đổi.',
+  pages: out,
+}, null, 2) + '\n';
+const same = existsSync(OUT) && readFileSync(OUT, 'utf8') === body;
+if (!same) writeFileSync(OUT, body, 'utf8');
 
 const spread = [...new Set(Object.values(out).map(d => d.modified))].sort();
 console.log(`\n${Object.keys(out).length} trang, ${spread.length} mốc ngày: ${spread.join(' · ')}`);
-console.log('-> _data/page-dates.json');
+console.log(same ? '-> _data/page-dates.json không đổi' : '-> _data/page-dates.json đã ghi lại');
