@@ -198,7 +198,11 @@ const crumbSchema = (items, depth) => ({
  * qua bảng giá rồi mới gọi — cuộc gọi đó vẫn phải được tính.
  *
  * ID và nhãn send_to sinh bởi adsgoogle/scripts/actions/conv_htquan8.js.
+ * S.ads.extra = các TK Ads khác cũng dẫn khách về site này (vd TK Maps Q8 346-813-0025) —
+ * mỗi TK một bộ thẻ riêng, Google chỉ tính chuyển đổi cho TK sở hữu lượt nhấp.
  */
+const adsAll = () => (S.ads && S.ads.gtagId ? [S.ads, ...(S.ads.extra || [])] : []);
+
 function adsTag() {
   if (!S.ads || !S.ads.gtagId) return '';
   return `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.ads.gtagId}"></script>
@@ -206,7 +210,7 @@ function adsTag() {
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${S.ads.gtagId}');
+${adsAll().map((a) => `gtag('config', '${a.gtagId}');`).join('\n')}
 </script>`;
 }
 
@@ -219,11 +223,11 @@ function adsClickTracking() {
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '';
-    var sendTo = href.indexOf('tel:') === 0 ? '${S.ads.sendToCall}'
-      : href.indexOf('zalo.me') !== -1 ? '${S.ads.sendToZalo}'
-      : null;
-    if (!sendTo || typeof gtag !== 'function') return;
-    gtag('event', 'conversion', { send_to: sendTo });
+    var kind = href.indexOf('tel:') === 0 ? 0 : href.indexOf('zalo.me') !== -1 ? 1 : -1;
+    if (kind < 0 || typeof gtag !== 'function') return;
+    ${JSON.stringify(adsAll().map((a) => [a.sendToCall, a.sendToZalo]))}.forEach(function (t) {
+      gtag('event', 'conversion', { send_to: t[kind] });
+    });
   }, true);
 })();
 </script>`;

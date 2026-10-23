@@ -31,6 +31,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-16732602636');
+gtag('config', 'AW-18528137822');
 </script>
 <script type="application/ld+json">
 {
@@ -603,11 +604,11 @@ gtag('config', 'AW-16732602636');
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '';
-    var sendTo = href.indexOf('tel:') === 0 ? 'AW-16732602636/MM69CJvt848dEIyC3ao-'
-      : href.indexOf('zalo.me') !== -1 ? 'AW-16732602636/7VqvCJ7t848dEIyC3ao-'
-      : null;
-    if (!sendTo || typeof gtag !== 'function') return;
-    gtag('event', 'conversion', { send_to: sendTo });
+    var kind = href.indexOf('tel:') === 0 ? 0 : href.indexOf('zalo.me') !== -1 ? 1 : -1;
+    if (kind < 0 || typeof gtag !== 'function') return;
+    [["AW-16732602636/MM69CJvt848dEIyC3ao-","AW-16732602636/7VqvCJ7t848dEIyC3ao-"],["AW-18528137822/YfomCOu7sKYdEN7k84JF","AW-18528137822/yKoHCLP8sqYdEN7k84JF"]].forEach(function (t) {
+      gtag('event', 'conversion', { send_to: t[kind] });
+    });
   }, true);
 })();
 </script>

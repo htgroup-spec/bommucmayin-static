@@ -44,7 +44,15 @@
     "_note": "Thẻ chuyển đổi Google Ads cho chiến dịch HTquan8. Chuyển đổi chính của tiệm là GỌI và ZALO nên đo bằng click trên link tel: và zalo.me. Sinh ra bởi adsgoogle/scripts/actions/conv_htquan8.js — đừng sửa tay.",
     "gtagId": "AW-16732602636",
     "sendToCall": "AW-16732602636/MM69CJvt848dEIyC3ao-",
-    "sendToZalo": "AW-16732602636/7VqvCJ7t848dEIyC3ao-"
+    "sendToZalo": "AW-16732602636/7VqvCJ7t848dEIyC3ao-",
+    "extra": [
+      {
+        "_note": "23/10/2026: TK Maps Q8 346-813-0025 (PMax, trang đích /nap-muc-may-in-tan-noi/). Sinh bởi adsgoogle/scripts/actions/conv_site.js --site bommucmayin-maps.",
+        "gtagId": "AW-18528137822",
+        "sendToCall": "AW-18528137822/YfomCOu7sKYdEN7k84JF",
+        "sendToZalo": "AW-18528137822/yKoHCLP8sqYdEN7k84JF"
+      }
+    ]
   },
   "_note_keywords": "Mọi số lượt trong site này lấy từ _data/keywords.json (Google Ads API, geo TP.HCM). Không tự điền số.",
   "nav": [
