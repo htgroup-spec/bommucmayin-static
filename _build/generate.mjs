@@ -225,6 +225,10 @@ function adsClickTracking() {
     var href = a.getAttribute('href') || '';
     var kind = href.indexOf('tel:') === 0 ? 0 : href.indexOf('zalo.me') !== -1 ? 1 : -1;
     if (kind < 0 || typeof gtag !== 'function') return;
+    // 28/10/2026: chỉ đếm click thật của người (bot/script bắn click giả bị bỏ) và mỗi loại 1 lần/phiên —
+    // Google Ads từng ghi 27 "gọi" trên 9 lượt nhấp quảng cáo trong 1 ngày.
+    if (e.isTrusted === false) return;
+    try { var k = 'ads_conv_' + kind; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1'); } catch (_) {}
     ${JSON.stringify(adsAll().map((a) => [a.sendToCall, a.sendToZalo]))}.forEach(function (t) {
       gtag('event', 'conversion', { send_to: t[kind] });
     });
