@@ -218,6 +218,10 @@ function adsClickTracking() {
   if (!S.ads || !S.ads.gtagId) return '';
   return `<script>
 (function () {
+  var T0 = Date.now(), HUMAN = false;
+  ['pointermove', 'touchstart', 'scroll', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { HUMAN = true; }, { once: true, passive: true });
+  });
   // Bắt ở cấp document để link sinh sau cũng được tính, khỏi phải gắn lại listener.
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -228,6 +232,9 @@ function adsClickTracking() {
     // 28/10/2026: chỉ đếm click thật của người (bot/script bắn click giả bị bỏ) và mỗi loại 1 lần/phiên —
     // Google Ads từng ghi 27 "gọi" trên 9 lượt nhấp quảng cáo trong 1 ngày.
     if (e.isTrusted === false) return;
+    // Dấu hiệu người thật: không phải trình duyệt tự động, đã ở trang ≥ 2 giây, có rê/chạm/cuộn trước khi bấm.
+    if (navigator.webdriver) return;
+    if (Date.now() - T0 < 2000 || !HUMAN) return;
     try { var k = 'ads_conv_' + kind; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1'); } catch (_) {}
     ${JSON.stringify(adsAll().map((a) => [a.sendToCall, a.sendToZalo]))}.forEach(function (t) {
       gtag('event', 'conversion', { send_to: t[kind] });

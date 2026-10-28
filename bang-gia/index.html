@@ -537,6 +537,10 @@ gtag('config', 'AW-18528137822');
 <script src="../js/main.js" defer></script>
 <script>
 (function () {
+  var T0 = Date.now(), HUMAN = false;
+  ['pointermove', 'touchstart', 'scroll', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { HUMAN = true; }, { once: true, passive: true });
+  });
   // Bắt ở cấp document để link sinh sau cũng được tính, khỏi phải gắn lại listener.
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -547,6 +551,9 @@ gtag('config', 'AW-18528137822');
     // 28/10/2026: chỉ đếm click thật của người (bot/script bắn click giả bị bỏ) và mỗi loại 1 lần/phiên —
     // Google Ads từng ghi 27 "gọi" trên 9 lượt nhấp quảng cáo trong 1 ngày.
     if (e.isTrusted === false) return;
+    // Dấu hiệu người thật: không phải trình duyệt tự động, đã ở trang ≥ 2 giây, có rê/chạm/cuộn trước khi bấm.
+    if (navigator.webdriver) return;
+    if (Date.now() - T0 < 2000 || !HUMAN) return;
     try { var k = 'ads_conv_' + kind; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1'); } catch (_) {}
     [["AW-16732602636/MM69CJvt848dEIyC3ao-","AW-16732602636/7VqvCJ7t848dEIyC3ao-"],["AW-18528137822/YfomCOu7sKYdEN7k84JF","AW-18528137822/yKoHCLP8sqYdEN7k84JF"]].forEach(function (t) {
       gtag('event', 'conversion', { send_to: t[kind] });
