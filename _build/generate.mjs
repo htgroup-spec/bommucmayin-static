@@ -244,6 +244,33 @@ function adsClickTracking() {
 </script>`;
 }
 
+// 04/11/2026: nhật ký bấm gọi → Google Form → Sheet (adsgoogle/data/calls/README.md). Chỉ gửi khi khách đến từ quảng cáo (có gclid).
+// Chủ shop đánh dấu dòng nào là khách thật → adsgoogle/scripts/actions/upload_real_calls.js nhập vào Google Ads để Google học từ khách thật.
+function callLog() {
+  if (!S.ads || !S.ads.gtagId) return '';
+  const F = 'https://docs.google.com/forms/d/e/1FAIpQLSdGmtnssPys8M0fVDWWuhj4UcL1jr1DjIik_SqHUC5X_qh3XA/formResponse';
+  const E = { gclid: '1170266095', page: '138633163', time: '2050608494', site: '1058356040', kind: '1645863857' };
+  return `<!-- ads-calllog-v1 --><script>
+(function(){try{
+var q=new URLSearchParams(location.search),g=q.get('gclid');
+if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now()}));}
+function gid(){try{var o=JSON.parse(localStorage.getItem('_ht_gclid')||'null');if(!o)return'';if(Date.now()-o.t>90*864e5)return'';return o.g;}catch(x){return'';}}
+var sent=false;
+document.addEventListener('click',function(ev){
+ if(!ev.isTrusted||sent)return;
+ var a=ev.target.closest&&ev.target.closest('a[href^="tel:"],a[href*="zalo.me"]');if(!a)return;
+ var g=gid();if(!g)return;sent=true;
+ var kind=a.getAttribute('href').indexOf('tel:')===0?'goi':'zalo';
+ var d=new FormData();
+ d.append('entry.${E.gclid}',g);d.append('entry.${E.page}',location.pathname);
+ d.append('entry.${E.time}',new Date().toLocaleString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'}));
+ d.append('entry.${E.site}','bommucmayin');d.append('entry.${E.kind}',kind);
+ fetch('${F}',{method:'POST',mode:'no-cors',body:d,keepalive:true});
+},true);
+}catch(x){}})();
+</script>`;
+}
+
 function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
@@ -340,6 +367,7 @@ ${!dts ? '' : `<div class="container">
 ${footer(depth)}
 <script src="${p}js/main.js" defer></script>
 ${adsClickTracking()}
+${callLog()}
 </body>
 </html>
 `;
