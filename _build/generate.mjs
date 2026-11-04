@@ -234,7 +234,7 @@ function adsClickTracking() {
     if (e.isTrusted === false) return;
     // Dấu hiệu người thật: không phải trình duyệt tự động, đã ở trang ≥ 2 giây, có rê/chạm/cuộn trước khi bấm.
     if (navigator.webdriver) return;
-    if (Date.now() - T0 < 2000 || !HUMAN) return;
+    if (Date.now() - T0 < 1200 || !HUMAN) return;
     try { var k = 'ads_conv_' + kind; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1'); } catch (_) {}
     ${JSON.stringify(adsAll().map((a) => [a.sendToCall, a.sendToZalo]))}.forEach(function (t) {
       gtag('event', 'conversion', { send_to: t[kind] });
