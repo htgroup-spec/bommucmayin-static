@@ -2,6 +2,45 @@
   "_note": "Đợt thử 05/11/2026: 6 trang hướng dẫn theo triệu chứng cho chiến dịch 'Bài lỗi' ở TK 346-813-0025 (adsgoogle/_config/plan_loi_may_in.js). noindex, không vào sitemap, không nằm trong menu: site này KHÔNG xây kho how-to (how-to thuộc tinhocnamphong.net theo bảng phân vùng), đây chỉ là trang đo xem triệu chứng nào ra khách. Bài thắng thì mới bàn chuyện làm SEO ở đâu.",
   "_note_policy": "Chính sách THIRD_PARTY_CONSUMER_TECHNICAL_SUPPORT: _build/generate.mjs sẽ DỪNG nếu nội dung có các chữ trong BANNED_SYMPTOM. Giọng bài: hướng dẫn thật, cửa hàng mực in, không phải trung tâm hỗ trợ kỹ thuật.",
   "_note_facts": "Giá lấy tự động từ site.json theo tên dòng (khóa prices), không gõ tay vào đây. Không thêm cam kết mới. Nội dung kỹ thuật phải được người soát của site xem trước khi đăng.",
+  "_note_stores": "Chủ shop yêu cầu 05/11/2026 đưa hết địa chỉ hệ thống lên trang quảng cáo. Chỉ gồm hồ sơ Google đang hoạt động (adsgoogle/_config/sites/*.json). Chỉ ghi địa chỉ, không ghi tên từng tiệm hay pháp nhân. Không có: 43 Trịnh Đình Thảo và 1/283 Thuận Giao 19 (bị tạm ngưng), Hưng Thịnh Bình Trị Đông (chưa có số nhà). Chỉ dùng ở 6 trang này.",
+  "stores": [
+    {
+      "area": "Quận 8",
+      "street": "5/19 Phạm Hùng, Bình Hưng"
+    },
+    {
+      "area": "Quận 10",
+      "street": "77 Cửu Long, Hòa Hưng"
+    },
+    {
+      "area": "Quận 10",
+      "street": "79 Bắc Hải"
+    },
+    {
+      "area": "Quận 11",
+      "street": "64 Bình Thới"
+    },
+    {
+      "area": "Phú Nhuận",
+      "street": "240 Nguyễn Trọng Tuyển"
+    },
+    {
+      "area": "Bình Thạnh",
+      "street": "1/2/26 Võ Oanh"
+    },
+    {
+      "area": "Bình Chánh",
+      "street": "203 Thế Lữ, Tân Nhựt"
+    },
+    {
+      "area": "Thủ Đức",
+      "street": "75 đường số 4, KDC Tam Bình"
+    },
+    {
+      "area": "Bình Dương",
+      "street": "3 Lái Thiêu 1"
+    }
+  ],
   "pages": [
     {
       "slug": "may-in-bi-mo",

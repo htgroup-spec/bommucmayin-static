@@ -120,7 +120,7 @@ function cleanMenu(depth) {
     <div class="nav">
       <a class="brand" href="${p}">
         <img class="brand-mark" src="${p}images/logo-ht.png" srcset="${p}images/logo-ht.png 1x, ${p}images/logo-ht@2x.png 2x" width="40" height="40" alt="Logo cửa hàng mực in HT">
-        <span class="brand-text"><span class="brand-name">Cửa Hàng Mực In HT</span><span class="brand-sub">${ADDR_FULL}</span></span>
+        <span class="brand-text"><span class="brand-name">Cửa Hàng Mực In HT</span><span class="brand-sub">${SYMPTOM.stores.length} địa chỉ tại TP.HCM và Bình Dương</span></span>
       </a>
       <div class="nav-cta"><a class="btn btn-primary btn-sm" href="tel:${S.hotlineTel}">Gọi ${S.hotline}</a></div>
     </div>
@@ -131,7 +131,7 @@ function cleanMenu(depth) {
 function cleanFooter() {
   return `<footer class="site-footer site-footer-clean">
   <div class="container">
-    <p>Cửa hàng mực in HT · ${ADDR_FULL} · Gọi / Zalo: <a href="tel:${S.hotlineTel}">${S.hotline}</a> · ${S.hours}</p>
+    <p>Cửa hàng mực in HT · ${SYMPTOM.stores.length} địa chỉ tại TP.HCM và Bình Dương · Gọi / Zalo: <a href="tel:${S.hotlineTel}">${S.hotline}</a> · ${S.hours}</p>
   </div>
 </footer>
 <div class="callbar">
@@ -1279,6 +1279,11 @@ ${ctaBand(1, 'Đặt lịch cho văn phòng của anh/chị', 'Nhắn danh sách
 const BANNED_SYMPTOM = /sửa|tận nơi|tại nhà|hộ gia đình|hỗ trợ|kỹ thuật|reset|driver|phần mềm/i;
 if (SYMPTOM) {
   const rows = S.pricing.flatMap((g) => g.rows);
+  const storeList = SYMPTOM.stores.map((c) => {
+    const q = encodeURIComponent(`${c.street}, ${c.area}`);
+    return `        <li><a href="https://www.google.com/maps/search/?api=1&query=${q}" rel="nofollow noopener" target="_blank"><b>${c.area}</b> ${c.street}</a></li>`;
+  }).join('\n');
+  const areaLine = [...new Set(SYMPTOM.stores.map((c) => c.area))].join(', ');
   const blocks = (s2) => {
     let inner = '';
     if (s2.p) inner += s2.p.map((x) => `<p>${x}</p>`).join('\n');
@@ -1298,6 +1303,7 @@ if (SYMPTOM) {
   <div class="container">
     <div class="prose" style="max-width:none">
       <h2 id="${slugify(q.h)}">${q.h}</h2>
+      <p><a href="#he-thong-cua-hang">Hệ thống ${SYMPTOM.stores.length} địa chỉ</a>: ${areaLine}.</p>
       <p class="muted">Tìm hình giống tờ giấy của anh/chị, mũi tên đỏ chỉ đúng chỗ lỗi. Hình là minh hoạ, bấm vào hình để xem nguyên nhân.</p>
       <ul class="symptom-grid">
 ${thumbs}
@@ -1350,8 +1356,11 @@ ${priceRows}
         </tbody>
       </table>
       <p class="muted">Giá chốt sau khi xem máy, anh/chị đồng ý thì mới làm.</p>
-      <h3>Cửa hàng ở đâu</h3>
-      <p>${ADDR_FULL}. <a href="${S.mapLink}" rel="nofollow noopener" target="_blank">Mở chỉ đường trên Google Maps</a></p>
+      <h3 id="he-thong-cua-hang">Hệ thống ${SYMPTOM.stores.length} địa chỉ, chọn nơi gần anh/chị</h3>
+      <ul class="symptom-stores">
+${storeList}
+      </ul>
+      <p>Gọi hoặc nhắn Zalo <a href="tel:${S.hotlineTel}">${S.hotline}</a> cho mọi địa chỉ. Bấm vào địa chỉ để mở chỉ đường.</p>
       <div class="map-wrap"><iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}" width="100%" height="220" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </div>

@@ -483,6 +483,10 @@ td.price { color: var(--accent); }
 .symptom-list { max-width: 720px; margin: 0 auto; padding-left: 22px; font-size: .95em; }
 .symptom-list li { scroll-margin-top: 90px; }
 .symptom-list li:target { background: var(--accent-light); }
+.symptom-stores { list-style: none; padding: 0; margin: 10px 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 6px 16px; }
+.prose .symptom-stores li { margin: 0; }
+.symptom-stores b { display: inline-block; min-width: 84px; color: var(--ink); }
+#he-thong-cua-hang { scroll-margin-top: 90px; }
 .symptom-fig { margin: 22px auto 0; max-width: 440px; }
 .symptom-diagram { width: 100%; height: auto; display: block; }
 .symptom-fig figcaption, .symptom-photos figcaption { margin-top: 6px; font-size: .85em; color: var(--muted); text-align: center; }
