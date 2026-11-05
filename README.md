@@ -135,6 +135,18 @@ Kế hoạch chiến dịch và script dựng nằm ở `AUTOMATION/adsgoogle/`:
 
 ---
 
+## Sáu trang hướng dẫn theo triệu chứng — đợt thử Ads 05/11/2026
+
+`may-in-bi-mo/`, `may-in-bi-soc/`, `may-in-bi-lem-muc/`, `may-in-bao-het-muc/`, `may-in-bi-ket-giay/`, `may-in-bao-loi-drum/`. Nguồn: `_data/symptom-pages.json`.
+
+- `noindex`, không vào sitemap, không có trong menu. Đây **không** phải kho how-to (how-to thuộc tinhocnamphong.net), chỉ là trang đo triệu chứng nào ra khách.
+- Bố cục gọn (`clean: true`): không menu dịch vụ, không footer đầy đủ. `generate.mjs` dừng build nếu trang có chữ trong `BANNED_SYMPTOM`.
+- Giá lấy từ `site.json` theo tên dòng; đổi tên dòng giá thì build báo lỗi, sửa khóa `prices` theo.
+- Trang này gắn `window.HT_SITE = bommucmayin-maps` để nhật ký gọi nhập khách thật đúng TK 346-813-0025, và cột `page` ghi `trang đích > trang lúc bấm`.
+- Chiến dịch, ngưỡng kết luận: `adsgoogle/_config/plan_loi_may_in.js`, `adsgoogle/scripts/actions/report_loi_may_in.js`.
+
+---
+
 ## Ranh giới nội dung với các site anh em
 
 Theo `projects/phan-vung-keyword-2026-07.md` (bảng phân vùng 27/07/2026) và quyết định

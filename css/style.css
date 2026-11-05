@@ -467,3 +467,17 @@ td.price { color: var(--accent); }
   color: var(--muted);
 }
 .page-updated strong { color: var(--body); font-weight: 600; }
+
+/* ---------- trang hướng dẫn theo triệu chứng (Ads, bố cục gọn) ---------- */
+.site-footer-clean { padding: 24px 0; }
+.site-footer-clean p { margin: 0; color: #b9c2cf; }
+.symptom-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 640px) {
+  .symptom-table thead { display: none; }
+  .symptom-table, .symptom-table tbody, .symptom-table tr, .symptom-table td { display: block; width: 100%; }
+  .symptom-table tr { border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 12px; padding: 10px 12px; }
+  .symptom-table td { border: 0; padding: 4px 0; }
+  .symptom-table td + td::before { content: attr(data-label) ": "; color: var(--muted); }
+}
+.page-head:has(+ .section .symptom-table) { padding-bottom: 8px; }
+.page-head + .section:has(.symptom-table) { padding-top: 16px; }

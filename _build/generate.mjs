@@ -25,6 +25,8 @@ const KW = existsSync(resolve(ROOT, '_data/keywords.json')) ? json('_data/keywor
 // Trang đích riêng cho Google Ads — viết cho khách doanh nghiệp, để noindex, không vào
 // sitemap và không có trong menu. Xem _note trong file đó để biết vì sao phải tách ra.
 const ADS = existsSync(resolve(ROOT, '_data/ads-pages.json')) ? json('_data/ads-pages.json') : null;
+// Trang hướng dẫn theo triệu chứng cho đợt thử Ads 05/11/2026 — xem _note trong file.
+const SYMPTOM = existsSync(resolve(ROOT, '_data/symptom-pages.json')) ? json('_data/symptom-pages.json') : null;
 // Ngày cập nhật thật của từng trang, sinh từ lịch sử git bởi _build/page-dates.mjs.
 // KHÔNG lấy ngày build: 21 trang cùng một dấu ngày thì vừa sai vừa lộ là máy sinh một lượt,
 // mà repo public nên git log đối chiếu được ngay. Chạy page-dates.mjs trước generate.
@@ -105,6 +107,61 @@ function menu(depth, current) {
     .replace(/{{HOTLINE}}/g, S.hotline)
     .replace(/{{TEL}}/g, S.hotlineTel)
     .replace(/{{STREET}}/g, ADDR_FULL);
+}
+
+// Bố cục gọn cho trang hướng dẫn chạy Ads: không có menu dịch vụ "Sửa máy in tận nơi" — menu đúng kiểu đó
+// từng làm trang đích Hitech bị từ chối THIRD_PARTY_CONSUMER_TECHNICAL_SUPPORT (29/10/2026).
+function cleanMenu(depth) {
+  const p = pre(depth);
+  return `<a class="skip-link" href="#main-content">Bỏ qua, tới nội dung chính</a>
+<header class="site-header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="${p}">
+        <img class="brand-mark" src="${p}images/logo-ht.png" srcset="${p}images/logo-ht.png 1x, ${p}images/logo-ht@2x.png 2x" width="40" height="40" alt="Logo cửa hàng mực in HT">
+        <span class="brand-text"><span class="brand-name">Cửa Hàng Mực In HT</span><span class="brand-sub">${ADDR_FULL}</span></span>
+      </a>
+      <div class="nav-cta"><a class="btn btn-primary btn-sm" href="tel:${S.hotlineTel}">Gọi ${S.hotline}</a></div>
+    </div>
+  </div>
+</header>`;
+}
+
+function cleanFooter() {
+  return `<footer class="site-footer site-footer-clean">
+  <div class="container">
+    <p>Cửa hàng mực in HT · ${ADDR_FULL} · Gọi / Zalo: <a href="tel:${S.hotlineTel}">${S.hotline}</a> · ${S.hours}</p>
+  </div>
+</footer>
+<div class="callbar">
+  <a href="tel:${S.hotlineTel}">Gọi ${S.hotline}</a>
+  <a href="https://zalo.me/${S.hotlineRaw}" rel="nofollow noopener" target="_blank">Nhắn Zalo</a>
+</div>`;
+}
+
+// Chuyển đổi PHỤ "Bài lỗi - Đọc sâu" (không ảnh hưởng đặt giá): người thật, cuộn ≥ 60%, ở trang ≥ 30 giây. Chỉ tính khách từ quảng cáo.
+// HT_SITE báo cho nhật ký gọi biết lượt nhấp thuộc TK 346-813-0025, không phải 569.
+function symptomTracking() {
+  const ex = (S.ads && S.ads.extra || []).find((a) => a.sendToRead);
+  if (!ex) throw new Error('site.json: thiếu ads.extra[].sendToRead');
+  return `<script>
+window.HT_SITE = 'bommucmayin-maps';
+(function () {
+  var T0 = Date.now(), human = false, done = false;
+  ['pointermove', 'touchstart', 'scroll', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { human = true; check(); }, { passive: true });
+  });
+  setInterval(check, 5000);
+  function check() {
+    if (done || !human || navigator.webdriver || Date.now() - T0 < 30000) return;
+    if (!/[?&]gclid=/.test(location.search) || typeof gtag !== 'function') return;
+    var h = document.documentElement;
+    if ((window.scrollY + window.innerHeight) / h.scrollHeight < 0.6) return;
+    done = true;
+    gtag('event', 'conversion', { send_to: '${ex.sendToRead}' });
+  }
+})();
+</script>`;
 }
 
 function footer(depth) {
@@ -253,25 +310,25 @@ function callLog() {
   return `<!-- ads-calllog-v1 --><script>
 (function(){try{
 var q=new URLSearchParams(location.search),g=q.get('gclid');
-if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now()}));}
-function gid(){try{var o=JSON.parse(localStorage.getItem('_ht_gclid')||'null');if(!o)return'';if(Date.now()-o.t>90*864e5)return'';return o.g;}catch(x){return'';}}
+if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now(),s:window.HT_SITE||'bommucmayin',l:location.pathname}));}
+function rec(){try{var o=JSON.parse(localStorage.getItem('_ht_gclid')||'null');if(!o)return null;if(Date.now()-o.t>90*864e5)return null;return o;}catch(x){return null;}}
 var sent=false;
 document.addEventListener('click',function(ev){
  if(!ev.isTrusted||sent)return;
  var a=ev.target.closest&&ev.target.closest('a[href^="tel:"],a[href*="zalo.me"]');if(!a)return;
- var g=gid();if(!g)return;sent=true;
+ var o=rec();if(!o)return;sent=true;
  var kind=a.getAttribute('href').indexOf('tel:')===0?'goi':'zalo';
  var d=new FormData();
- d.append('entry.${E.gclid}',g);d.append('entry.${E.page}',location.pathname);
+ d.append('entry.${E.gclid}',o.g);d.append('entry.${E.page}',(o.l&&o.l!==location.pathname?o.l+' > ':'')+location.pathname);
  d.append('entry.${E.time}',new Date().toLocaleString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'}));
- d.append('entry.${E.site}','bommucmayin');d.append('entry.${E.kind}',kind);
+ d.append('entry.${E.site}',o.s||'bommucmayin');d.append('entry.${E.kind}',kind);
  fetch('${F}',{method:'POST',mode:'no-cors',body:d,keepalive:true});
 },true);
 }catch(x){}})();
 </script>`;
 }
 
-function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false }) {
+function page({ slug, depth, title, metaDesc, ogTitle, h1, lead, body, crumbs, schemas = [], current = '', hero = null, noindex = false, clean = false }) {
   const p = pre(depth);
   const canonical = S.baseUrl + '/' + (slug ? slug + '/' : '');
   const dts = pageDates('/' + (slug ? slug + '/' : ''));
@@ -331,7 +388,7 @@ ${adsTag()}
 ${ld}
 </head>
 <body>
-${menu(depth, current)}
+${clean ? cleanMenu(depth) : menu(depth, current)}
 ${crumbHtml}
 <main id="main-content">
 ${hero ? `<section class="hero">
@@ -364,8 +421,9 @@ ${!dts ? '' : `<div class="container">
   <p class="page-updated">Cập nhật ${viDate(dts.modified)}${S.reviewer ? ` · Nội dung do <strong>${S.reviewer}</strong> soát` : ''}</p>
 </div>`}
 </main>
-${footer(depth)}
+${clean ? cleanFooter() : footer(depth)}
 <script src="${p}js/main.js" defer></script>
+${clean ? symptomTracking() : ''}
 ${adsClickTracking()}
 ${callLog()}
 </body>
@@ -1212,6 +1270,83 @@ ${ctaBand(1, 'Đặt lịch cho văn phòng của anh/chị', 'Nhắn danh sách
         crumbSchema([{ label: 'Trang chủ', href: '' }, { label: plain(d.h1), href: d.slug + '/' }]),
       ],
     });
+  }
+}
+
+// ======================= TRANG HƯỚNG DẪN THEO TRIỆU CHỨNG (noindex, đợt thử Ads) =======================
+// Giá lấy thẳng từ S.pricing theo tên dòng, chỉ dùng tên + giá: cột ghi chú có chữ "kỹ thuật", "reset".
+const BANNED_SYMPTOM = /sửa|tận nơi|tại nhà|hộ gia đình|hỗ trợ|kỹ thuật|reset|driver|phần mềm/i;
+if (SYMPTOM) {
+  const rows = S.pricing.flatMap((g) => g.rows);
+  const blocks = (s2) => {
+    let inner = '';
+    if (s2.p) inner += s2.p.map((x) => `<p>${x}</p>`).join('\n');
+    if (s2.list) inner += `<ul>\n${s2.list.map((x) => `  <li>${x}</li>`).join('\n')}\n</ul>`;
+    if (s2.steps) inner += `<ol>\n${s2.steps.map((x) => `  <li>${x}</li>`).join('\n')}\n</ol>`;
+    return inner;
+  };
+  for (const d of SYMPTOM.pages) {
+    const q = d.quick;
+    const quickRows = q.rows.map((r) => `          <tr><td data-label="Dấu hiệu"><strong>${r[0]}</strong></td><td data-label="Nguyên nhân">${r[1]}</td><td data-label="Nên làm">${r[2]}</td></tr>`).join('\n');
+    const quickHtml = `
+<section class="section">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="${slugify(q.h)}">${q.h}</h2>
+      <table class="price-table symptom-table">
+        <thead><tr><th>Bản in, thông báo</th><th>Nguyên nhân thường gặp</th><th>Nên làm gì</th></tr></thead>
+        <tbody>
+${quickRows}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>`;
+    const sec = d.sections.map((s2, i) => `
+<section class="section${i % 2 ? '' : ' section-alt'}">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="${slugify(s2.h)}">${s2.h}</h2>
+      ${blocks(s2)}
+    </div>
+  </div>
+</section>`).join('\n');
+    const priceRows = d.prices.map((n) => {
+      const r = rows.find((x) => x.name === n);
+      if (!r) throw new Error(`symptom-pages ${d.slug}: không có dòng giá "${n}" trong site.json`);
+      return `          <tr><td>${r.name}</td><td><strong>${r.price}</strong></td></tr>`;
+    }).join('\n');
+    const ctaHtml = `
+<section class="section">
+  <div class="container">
+    <div class="prose" style="max-width:none">
+      <h2 id="neu-van-chua-duoc">Thử rồi vẫn chưa được?</h2>
+      <p>Gọi hoặc gửi ảnh bản in qua Zalo, cửa hàng sẽ nói anh/chị biết nên làm gì tiếp theo và báo giá trước. Văn phòng, cửa hàng ở nội thành TP.HCM có nhiều máy thì nhắn danh sách dòng máy để cửa hàng sắp xếp một lượt. Có xuất hoá đơn VAT, bảo hành tính theo số trang in.</p>
+      <p class="symptom-cta">
+        <a class="btn btn-primary btn-lg" href="tel:${S.hotlineTel}">Gọi ${S.hotline}</a>
+        <a class="btn btn-ghost btn-lg" href="https://zalo.me/${S.hotlineRaw}" rel="nofollow noopener" target="_blank">Gửi ảnh qua Zalo</a>
+      </p>
+      <h3>Giá tham khảo</h3>
+      <table class="price-table">
+        <thead><tr><th>Hạng mục</th><th>Giá</th></tr></thead>
+        <tbody>
+${priceRows}
+        </tbody>
+      </table>
+      <p class="muted">Giá chốt sau khi xem máy, anh/chị đồng ý thì mới làm.</p>
+    </div>
+  </div>
+</section>`;
+    page({
+      slug: d.slug, depth: 1, noindex: true, clean: true,
+      title: d.title, metaDesc: d.metaDesc, ogTitle: d.title, h1: d.h1, lead: d.lead,
+      body: quickHtml + sec + ctaHtml + faqBlock(d.faq),
+      schemas: [faqSchema(d.faq)],
+    });
+    const text = readFileSync(resolve(ROOT, d.slug, 'index.html'), 'utf8')
+      .replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ');
+    const hit = text.match(BANNED_SYMPTOM);
+    if (hit) throw new Error(`${d.slug}: có chữ cấm "${hit[0]}" — "${text.slice(Math.max(0, hit.index - 40), hit.index + 40).replace(/\s+/g, ' ')}"`);
   }
 }
 
