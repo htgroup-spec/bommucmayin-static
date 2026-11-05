@@ -479,5 +479,18 @@ td.price { color: var(--accent); }
   .symptom-table td { border: 0; padding: 4px 0; }
   .symptom-table td + td::before { content: attr(data-label) ": "; color: var(--muted); }
 }
-.page-head:has(+ .section .symptom-table) { padding-bottom: 8px; }
-.page-head + .section:has(.symptom-table) { padding-top: 16px; }
+
+.symptom-grid { list-style: none; padding: 0; margin: 20px 0 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+.prose .symptom-grid li { margin: 0; }
+.symptom-card { display: grid; grid-template-columns: 104px 1fr; gap: 14px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.symptom-card p { margin: 6px 0 0; font-size: .95em; }
+.symptom-sample { width: 100%; height: auto; display: block; }
+.symptom-fig { margin: 24px auto 0; max-width: 560px; }
+.symptom-diagram { width: 100%; height: auto; display: block; }
+.symptom-fig figcaption, .symptom-photos figcaption { margin-top: 8px; font-size: .9em; color: var(--muted); text-align: center; }
+.symptom-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px; }
+.symptom-photos .fig { margin: 0; }
+.symptom-photos img { width: 100%; height: 220px; object-fit: cover; margin: 0; }
+@media (max-width: 400px) { .symptom-grid { grid-template-columns: 1fr; } .symptom-card { grid-template-columns: 84px 1fr; } }
+.page-head:has(+ .section .symptom-grid) { padding-bottom: 8px; }
+.page-head + .section:has(.symptom-grid) { padding-top: 16px; }

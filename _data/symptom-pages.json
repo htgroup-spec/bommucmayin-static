@@ -12,11 +12,36 @@
       "quick": {
         "h": "Bản in của anh/chị giống kiểu nào?",
         "rows": [
-          ["Nhạt đều cả trang, nhạt dần qua nhiều ngày", "Hộp mực sắp hết", "Lắc hộp để in tạm, sau đó cần nạp"],
-          ["Nhạt đều ngay từ trang đầu, mực vẫn còn", "Đang bật chế độ tiết kiệm mực", "Tự tắt được trong cài đặt in"],
-          ["Mờ một bên trang, bên kia vẫn đậm", "Mực dồn lệch trong hộp, hoặc trục từ đã mòn", "Lắc hộp trước, không hết thì thay trục từ"],
-          ["Mờ kèm nền xám, chữ có viền bẩn", "Trống đã mòn", "Cần thay trống"],
-          ["Vừa nạp mực xong mà vẫn mờ", "Mực chưa xuống đều, hoặc nạp sai loại mực", "In thử 10 trang, còn mờ thì báo lại nơi nạp"]
+          [
+            "Nhạt đều cả trang, nhạt dần qua nhiều ngày",
+            "Hộp mực sắp hết",
+            "Lắc hộp để in tạm, sau đó cần nạp",
+            "mo-deu"
+          ],
+          [
+            "Nhạt đều ngay từ trang đầu, mực vẫn còn",
+            "Đang bật chế độ tiết kiệm mực",
+            "Tự tắt được trong cài đặt in",
+            "mo-nhat"
+          ],
+          [
+            "Mờ một bên trang, bên kia vẫn đậm",
+            "Mực dồn lệch trong hộp, hoặc trục từ đã mòn",
+            "Lắc hộp trước, không hết thì thay trục từ",
+            "mo-ben"
+          ],
+          [
+            "Mờ kèm nền xám, chữ có viền bẩn",
+            "Trống đã mòn",
+            "Cần thay trống",
+            "mo-nen"
+          ],
+          [
+            "Vừa nạp mực xong mà vẫn mờ",
+            "Mực chưa xuống đều, hoặc nạp sai loại mực",
+            "In thử 10 trang, còn mờ thì báo lại nơi nạp",
+            "mo-nap"
+          ]
         ]
       },
       "sections": [
@@ -28,7 +53,9 @@
             "Tắt máy, lấy hộp mực ra, cầm hai đầu và lắc ngang nhẹ 5 đến 6 lần rồi lắp lại. Để hộp tránh nắng và đừng chạm tay vào trục bên trong.",
             "Đổi vài tờ giấy khô, mới. Giấy ẩm làm mực bám kém, nhìn rất giống máy hết mực.",
             "In lại trang thử và so với bản cũ."
-          ]
+          ],
+          "diagram": "lac-hop",
+          "cap": "Lắc ngang để mực dàn đều trong hộp."
         },
         {
           "h": "Đọc kết quả sau khi thử",
@@ -36,14 +63,46 @@
             "<strong>Đậm trở lại nhưng vài chục trang sau lại mờ:</strong> gần như chắc là hết mực. Lắc hộp chỉ giúp in thêm được ít trang, nên chuẩn bị nạp để không dừng giữa lúc đang cần in.",
             "<strong>Không đậm lên dù hộp còn mực:</strong> mực không xuống được trang giấy, thường do trục từ hoặc trống đã mòn. Cứ nạp thêm mực ở trường hợp này sẽ tốn tiền mà bản in vẫn mờ.",
             "<strong>Mờ một bên không đổi:</strong> nhiều khả năng do trục từ. Đổi hộp mực khác để thử là cách kiểm tra nhanh nhất nếu văn phòng có sẵn hộp dự phòng."
+          ],
+          "photos": [
+            [
+              "hop-muc-can-canh",
+              "Hộp mực laser nhìn cận cảnh",
+              "Hộp mực laser: phần cần lắc khi bản in nhạt."
+            ],
+            [
+              "trong-va-cum-hop-muc",
+              "Trống và hộp mực tháo rời trên bàn",
+              "Trống (ống màu xanh) khi tháo rời khỏi hộp mực."
+            ]
           ]
         }
       ],
-      "prices": ["HP — 12A, 35A, 85A, 49A, 05A, 80A", "Canon — EP-26, 303, 325, 326, 329, 051", "Brother — TN-1000, 2130, 2260, 2365, 2385", "Trục từ", "Trống (drum) máy in A4"],
+      "prices": [
+        "HP — 12A, 35A, 85A, 49A, 05A, 80A",
+        "Canon — EP-26, 303, 325, 326, 329, 051",
+        "Brother — TN-1000, 2130, 2260, 2365, 2385",
+        "Trục từ",
+        "Trống (drum) máy in A4"
+      ],
       "faq": [
-        { "q": "Máy in phun bị mờ thì sao?", "a": "Máy phun bị mờ thường do mực trong bình đã thấp hoặc đầu phun bị nghẹt, khác với máy laser. Kiểm tra mức mực trong bình trước, rồi chạy Head Cleaning trong phần cài đặt máy in. Chạy 1 đến 2 lần mà chưa cải thiện thì nên dừng, vì chạy nhiều lần rất tốn mực." },
-        { "q": "Nạp mực bao nhiêu lần thì nên thay hộp mới?", "a": "Khi vỏ hộp đã nạp quá 4 đến 5 lần, các chi tiết bên trong thường đã mòn, nên tính tới hộp mới nguyên bộ thay vì nạp tiếp." }
-      ]
+        {
+          "q": "Máy in phun bị mờ thì sao?",
+          "a": "Máy phun bị mờ thường do mực trong bình đã thấp hoặc đầu phun bị nghẹt, khác với máy laser. Kiểm tra mức mực trong bình trước, rồi chạy Head Cleaning trong phần cài đặt máy in. Chạy 1 đến 2 lần mà chưa cải thiện thì nên dừng, vì chạy nhiều lần rất tốn mực."
+        },
+        {
+          "q": "Nạp mực bao nhiêu lần thì nên thay hộp mới?",
+          "a": "Khi vỏ hộp đã nạp quá 4 đến 5 lần, các chi tiết bên trong thường đã mòn, nên tính tới hộp mới nguyên bộ thay vì nạp tiếp."
+        }
+      ],
+      "path": {
+        "hl": [
+          "hop",
+          "truc",
+          "trong"
+        ],
+        "cap": "Ba bộ phận quyết định độ đậm của bản in. Sơ đồ đơn giản hoá, vị trí thực tế khác nhau theo máy."
+      }
     },
     {
       "slug": "may-in-bi-soc",
@@ -54,11 +113,36 @@
       "quick": {
         "h": "Vệt trên bản in của anh/chị trông thế nào?",
         "rows": [
-          ["Vệt đen dọc chạy suốt trang, cùng một vị trí", "Trống bị xước hoặc gạt mực đã mòn", "Cần thay linh kiện"],
-          ["Sọc hoặc đốm ngang lặp lại cách đều nhau", "Vết xước hay vết bẩn trên một trục quay", "Đo khoảng cách lặp rồi kiểm tra trục"],
-          ["Vạch trắng dọc, chữ bị mất một đường", "Thiếu mực ở phần đó, hoặc bụi che đường laser", "Lắc hộp trước, không hết thì cần mở máy vệ sinh"],
-          ["Nền xám kèm nhiều sọc mờ", "Trống đã hết tuổi", "Cần thay trống"],
-          ["Máy phun: sọc ngang mảnh, thiếu màu", "Đầu phun bị nghẹt", "Tự chạy Head Cleaning"]
+          [
+            "Vệt đen dọc chạy suốt trang, cùng một vị trí",
+            "Trống bị xước hoặc gạt mực đã mòn",
+            "Cần thay linh kiện",
+            "soc-doc"
+          ],
+          [
+            "Sọc hoặc đốm ngang lặp lại cách đều nhau",
+            "Vết xước hay vết bẩn trên một trục quay",
+            "Đo khoảng cách lặp rồi kiểm tra trục",
+            "soc-ngang"
+          ],
+          [
+            "Vạch trắng dọc, chữ bị mất một đường",
+            "Thiếu mực ở phần đó, hoặc bụi che đường laser",
+            "Lắc hộp trước, không hết thì cần mở máy vệ sinh",
+            "vach-trang"
+          ],
+          [
+            "Nền xám kèm nhiều sọc mờ",
+            "Trống đã hết tuổi",
+            "Cần thay trống",
+            "soc-nen"
+          ],
+          [
+            "Máy phun: sọc ngang mảnh, thiếu màu",
+            "Đầu phun bị nghẹt",
+            "Tự chạy Head Cleaning",
+            "soc-phun"
+          ]
         ]
       },
       "sections": [
@@ -69,7 +153,9 @@
             "Tắt máy, chờ nguội rồi lấy hộp mực ra. Xem có mực rò ở mép hộp không. Hộp rò mực thì vệ sinh sẽ không giải quyết được.",
             "Với máy Brother có thanh trượt màu xanh trên cụm trống, gạt thanh này qua lại khoảng 10 lần rồi đưa về đúng vị trí ban đầu. Việc này lau dây sạc và xử lý được nhiều trường hợp sọc dọc.",
             "Nếu sọc ngang lặp lại, đo khoảng cách giữa hai vệt liền nhau. Khoảng cách này giúp xác định đúng trục bị lỗi, nên ghi lại để báo khi gọi."
-          ]
+          ],
+          "diagram": "do-lap",
+          "cap": "Sọc ngang lặp lại: đo khoảng cách giữa hai vệt liền nhau."
         },
         {
           "h": "Với máy phun mực",
@@ -85,14 +171,44 @@
             "Sọc do trống hoặc gạt mực thì nạp mực không hết được. Thay cả hộp mới chỉ đúng với loại máy có trống liền trong hộp.",
             "Đừng lau mặt trống bằng khăn ướt hay cồn, và đừng chạm tay vào bề mặt trống. Vết xước trên trống là không phục hồi được.",
             "Chụp một tấm ảnh bản in gửi Zalo là đủ để biết sơ bộ lỗi nằm ở đâu, trước khi anh/chị quyết định làm gì."
+          ],
+          "photos": [
+            [
+              "hop-muc-pantum-chip",
+              "Mặt trống màu xanh trên hộp mực",
+              "Mặt trống màu xanh: không chạm tay, không lau bằng khăn ướt."
+            ],
+            [
+              "gat-muc-ban",
+              "Thanh gạt mực bám đầy mực cũ",
+              "Gạt mực bám bẩn, mòn là nguyên nhân hay gặp của vệt và lem."
+            ]
           ]
         }
       ],
-      "prices": ["Trống (drum) máy in A4", "Gạt mực", "Trục từ", "Thông đầu phun (nghẹt do để lâu không in)"],
+      "prices": [
+        "Trống (drum) máy in A4",
+        "Gạt mực",
+        "Trục từ",
+        "Thông đầu phun (nghẹt do để lâu không in)"
+      ],
       "faq": [
-        { "q": "Sọc mới xuất hiện sau khi nạp mực thì sao?", "a": "Thường do trong quá trình nạp có mực dính lại hoặc gạt mực bị lệch. Hãy báo lại nơi đã nạp kèm ảnh bản in. Nơi có bảo hành sẽ kiểm tra lại cho anh/chị." },
-        { "q": "In được nhưng có sọc mờ, dùng tiếp có sao không?", "a": "Máy vẫn chạy được, nhưng nếu sọc do gạt mực mòn thì mực thừa có thể làm bẩn thêm các chi tiết bên trong. Nên xử lý sớm với văn phòng in nhiều." }
-      ]
+        {
+          "q": "Sọc mới xuất hiện sau khi nạp mực thì sao?",
+          "a": "Thường do trong quá trình nạp có mực dính lại hoặc gạt mực bị lệch. Hãy báo lại nơi đã nạp kèm ảnh bản in. Nơi có bảo hành sẽ kiểm tra lại cho anh/chị."
+        },
+        {
+          "q": "In được nhưng có sọc mờ, dùng tiếp có sao không?",
+          "a": "Máy vẫn chạy được, nhưng nếu sọc do gạt mực mòn thì mực thừa có thể làm bẩn thêm các chi tiết bên trong. Nên xử lý sớm với văn phòng in nhiều."
+        }
+      ],
+      "path": {
+        "hl": [
+          "trong",
+          "gat"
+        ],
+        "cap": "Sọc trên máy laser thường bắt nguồn từ trống hoặc gạt mực. Sơ đồ đơn giản hoá."
+      }
     },
     {
       "slug": "may-in-bi-lem-muc",
@@ -103,11 +219,36 @@
       "quick": {
         "h": "Bản in của anh/chị bị lem kiểu nào?",
         "rows": [
-          ["Chà tay là chữ bong, nhòe ra", "Bộ sấy không còn ép chặt mực vào giấy", "Thử giấy khô trước, không hết thì cần thay bao lụa hoặc lô sấy"],
-          ["Lem khắp trang, nền bẩn dù chữ không bong", "Gạt mực đã mòn", "Cần thay gạt mực"],
-          ["Lem theo một dải hoặc một bên", "Hộp mực rò hoặc nạp quá đầy", "Lấy hộp ra kiểm tra mép hộp"],
-          ["Mặt sau tờ giấy bị dính mực", "Có mực rơi trên đường đi của giấy", "In vài tờ trắng để giấy tự kéo sạch mực"],
-          ["Bản in nhòe như bị ẩm", "Giấy ẩm hoặc bộ sấy yếu", "Đổi giấy mới, khô"]
+          [
+            "Chà tay là chữ bong, nhòe ra",
+            "Bộ sấy không còn ép chặt mực vào giấy",
+            "Thử giấy khô trước, không hết thì cần thay bao lụa hoặc lô sấy",
+            "lem-bong"
+          ],
+          [
+            "Lem khắp trang, nền bẩn dù chữ không bong",
+            "Gạt mực đã mòn",
+            "Cần thay gạt mực",
+            "lem-khap"
+          ],
+          [
+            "Lem theo một dải hoặc một bên",
+            "Hộp mực rò hoặc nạp quá đầy",
+            "Lấy hộp ra kiểm tra mép hộp",
+            "lem-dai"
+          ],
+          [
+            "Mặt sau tờ giấy bị dính mực",
+            "Có mực rơi trên đường đi của giấy",
+            "In vài tờ trắng để giấy tự kéo sạch mực",
+            "lem-sau"
+          ],
+          [
+            "Bản in nhòe như bị ẩm",
+            "Giấy ẩm hoặc bộ sấy yếu",
+            "Đổi giấy mới, khô",
+            "lem-am"
+          ]
         ]
       },
       "sections": [
@@ -119,7 +260,10 @@
             "Tắt máy, chờ nguội, lấy hộp mực ra và đặt lên tờ giấy. Xem mép hộp có mực rò không, lau phần vỏ ngoài bằng khăn khô.",
             "Lắp lại rồi in 3 đến 5 tờ trắng để giấy kéo sạch phần mực rơi trong máy.",
             "In trang thử và làm lại phép chà tay."
-          ]
+          ],
+          "diagram": "cha-tay",
+          "cap": "Phép thử chà tay: làm sau khi in vài giây.",
+          "top": true
         },
         {
           "h": "Khi nào không nên tự làm tiếp",
@@ -127,14 +271,43 @@
             "<strong>Vẫn bong mực khi chà:</strong> đây là lỗi bộ sấy. Khu vực này rất nóng và khó tháo lắp, không nên tự mở.",
             "<strong>Mực rơi thành vệt trong máy:</strong> dừng in sớm để mực không bám thêm vào các trục. Đừng dùng máy hút bụi gia dụng để hút mực vì bột mực rất mịn.",
             "<strong>Mới nạp xong đã lem:</strong> nhiều khả năng nạp quá đầy hoặc gạt mực đã mòn từ trước. Báo lại nơi nạp kèm ảnh bản in."
+          ],
+          "photos": [
+            [
+              "gat-muc-ban",
+              "Thanh gạt mực bám đầy mực cũ",
+              "Gạt mực đã bẩn và mòn."
+            ],
+            [
+              "lo-say-thao-ra",
+              "Cụm lô sấy tháo khỏi máy in",
+              "Cụm bộ sấy tháo khỏi máy: khu vực rất nóng khi máy đang chạy."
+            ]
           ]
         }
       ],
-      "prices": ["Gạt mực", "Bao lụa / lô sấy", "Hộp mực mới nguyên bộ"],
+      "prices": [
+        "Gạt mực",
+        "Bao lụa / lô sấy",
+        "Hộp mực mới nguyên bộ"
+      ],
       "faq": [
-        { "q": "Dính mực ra tay hoặc quần áo thì xử lý sao?", "a": "Dùng nước lạnh và xà phòng. Không dùng nước nóng vì nhiệt làm bột mực bám chặt hơn." },
-        { "q": "Thay gạt mực có cần thay cả hộp không?", "a": "Không nhất thiết. Nếu vỏ hộp còn tốt và các chi tiết khác chưa mòn thì chỉ cần thay gạt mực. Khi vỏ hộp đã nạp quá 4 đến 5 lần thì nên tính tới hộp mới." }
-      ]
+        {
+          "q": "Dính mực ra tay hoặc quần áo thì xử lý sao?",
+          "a": "Dùng nước lạnh và xà phòng. Không dùng nước nóng vì nhiệt làm bột mực bám chặt hơn."
+        },
+        {
+          "q": "Thay gạt mực có cần thay cả hộp không?",
+          "a": "Không nhất thiết. Nếu vỏ hộp còn tốt và các chi tiết khác chưa mòn thì chỉ cần thay gạt mực. Khi vỏ hộp đã nạp quá 4 đến 5 lần thì nên tính tới hộp mới."
+        }
+      ],
+      "path": {
+        "hl": [
+          "gat",
+          "say"
+        ],
+        "cap": "Lem mực thường liên quan tới gạt mực hoặc bộ sấy. Sơ đồ đơn giản hoá."
+      }
     },
     {
       "slug": "may-in-bao-het-muc",
@@ -145,11 +318,36 @@
       "quick": {
         "h": "Máy của anh/chị đang báo gì?",
         "rows": [
-          ["Toner Low, bản in còn đậm", "Mực sắp hết, chưa phải hết", "Cứ in tiếp, chuẩn bị nạp trong thời gian tới"],
-          ["Replace Toner, máy dừng in, bản in còn đậm", "Bộ đếm của máy đã tới ngưỡng", "Cần nạp mực và đặt lại cữ trên hộp"],
-          ["Báo hết và bản in đã nhạt", "Hết mực thật", "Lắc hộp để in tạm, sau đó nạp"],
-          ["Vừa nạp xong vẫn báo hết (Brother)", "Hộp chưa được đặt lại cữ", "Cần đặt lại cữ trên hộp mực"],
-          ["Vừa nạp xong vẫn báo hết (HP đời mới, Samsung, Fuji Xerox)", "Chip trên hộp đã hết lượt đếm", "Cần thay chip hộp mực"]
+          [
+            "Toner Low, bản in còn đậm",
+            "Mực sắp hết, chưa phải hết",
+            "Cứ in tiếp, chuẩn bị nạp trong thời gian tới",
+            "lcd:Toner Low"
+          ],
+          [
+            "Replace Toner, máy dừng in, bản in còn đậm",
+            "Bộ đếm của máy đã tới ngưỡng",
+            "Cần nạp mực và đặt lại cữ trên hộp",
+            "lcd:Replace Toner"
+          ],
+          [
+            "Báo hết và bản in đã nhạt",
+            "Hết mực thật",
+            "Lắc hộp để in tạm, sau đó nạp",
+            "mo-deu"
+          ],
+          [
+            "Vừa nạp xong vẫn báo hết (Brother)",
+            "Hộp chưa được đặt lại cữ",
+            "Cần đặt lại cữ trên hộp mực",
+            "lcd:Replace Toner|Brother"
+          ],
+          [
+            "Vừa nạp xong vẫn báo hết (HP đời mới, Samsung, Fuji Xerox)",
+            "Chip trên hộp đã hết lượt đếm",
+            "Cần thay chip hộp mực",
+            "lcd:Replace Toner|có chip"
+          ]
         ]
       },
       "sections": [
@@ -159,7 +357,9 @@
             "Đọc chính xác dòng báo trên màn hình hoặc trên máy tính. \"Toner Low\" là sắp hết và máy vẫn in được. \"Replace Toner\" hoặc \"Toner End\" là máy sẽ dừng.",
             "In một trang chữ và nhìn độ đậm. Bản in còn đậm mà máy vẫn báo hết thì vấn đề nằm ở bộ đếm, không phải ở lượng mực.",
             "Tắt máy, lấy hộp ra lắc ngang nhẹ rồi lắp lại cho chắc. Hộp lắp lỏng cũng có thể làm máy báo sai."
-          ]
+          ],
+          "diagram": "cay-het-muc",
+          "cap": "Nhìn bản in trước khi quyết định nạp mực."
         },
         {
           "h": "Khác nhau theo từng hãng",
@@ -168,20 +368,58 @@
             "<strong>HP đời mới (107a, 135w, 137fnw, hộp W1106A):</strong> hộp có chip. Tùy máy có khóa hay không mà cần cộng thêm chip khi nạp.",
             "<strong>Canon LBP2900 và các dòng tương tự:</strong> thường không có chip hộp mực, bản in nhạt dần là dấu hiệu chính cần theo dõi.",
             "<strong>Samsung, Fuji Xerox:</strong> gần như luôn phải thay chip sau khi nạp."
+          ],
+          "photos": [
+            [
+              "hop-muc-pantum-chip",
+              "Hộp mực có chip gắn ở góc",
+              "Chip là miếng nhỏ ở góc hộp mực, loại máy có chip thì thay kèm khi nạp."
+            ],
+            [
+              "hop-muc-brother-tn2385",
+              "Hai hộp mực Brother TN-2385",
+              "Hộp mực Brother TN-2385 có cữ riêng."
+            ]
           ]
         },
         {
           "h": "Trước khi mua hộp mới",
           "p": [
             "Hãy nhìn tem dưới đáy hoặc trên thân hộp để lấy đúng mã hộp mực. Máy cùng hãng nhưng khác đời có thể dùng hộp khác nhau, và giá nạp cũng tính theo mã hộp này. Nhắn mã hộp qua Zalo để cửa hàng báo giá."
+          ],
+          "photos": [
+            [
+              "cam-hop-muc-hp-59a",
+              "Cầm hộp mực HP để đọc mã trên nhãn",
+              "Mã hộp mực nằm trên nhãn, chụp ảnh nhãn gửi Zalo là đủ."
+            ]
           ]
         }
       ],
-      "prices": ["Brother — TN-1000, 2130, 2260, 2365, 2385", "HP 107a / 135w / 137fnw (hộp W1106A, có chip)", "Canon — EP-26, 303, 325, 326, 329, 051", "Samsung — MLT-D101S, D104S, D111S, D203", "Chip hộp mực"],
+      "prices": [
+        "Brother — TN-1000, 2130, 2260, 2365, 2385",
+        "HP 107a / 135w / 137fnw (hộp W1106A, có chip)",
+        "Canon — EP-26, 303, 325, 326, 329, 051",
+        "Samsung — MLT-D101S, D104S, D111S, D203",
+        "Chip hộp mực"
+      ],
       "faq": [
-        { "q": "Có nên tiếp tục in khi máy báo Toner Low không?", "a": "Được, miễn là bản in còn đậm. Nên chuẩn bị nạp sớm để máy không dừng đúng lúc đang cần in." },
-        { "q": "Nạp mực có làm hỏng máy không?", "a": "Nạp đúng loại mực theo mã hộp và vệ sinh buồng mực thì không ảnh hưởng tới máy. Rủi ro thường đến từ mực sai loại hoặc hộp đã nạp quá nhiều lần." }
-      ]
+        {
+          "q": "Có nên tiếp tục in khi máy báo Toner Low không?",
+          "a": "Được, miễn là bản in còn đậm. Nên chuẩn bị nạp sớm để máy không dừng đúng lúc đang cần in."
+        },
+        {
+          "q": "Nạp mực có làm hỏng máy không?",
+          "a": "Nạp đúng loại mực theo mã hộp và vệ sinh buồng mực thì không ảnh hưởng tới máy. Rủi ro thường đến từ mực sai loại hoặc hộp đã nạp quá nhiều lần."
+        }
+      ],
+      "path": {
+        "hl": [
+          "hop",
+          "chip"
+        ],
+        "cap": "Với máy dùng chip, bộ đếm nằm trên hộp mực chứ không đo mực thật. Sơ đồ đơn giản hoá."
+      }
     },
     {
       "slug": "may-in-bi-ket-giay",
@@ -192,11 +430,36 @@
       "quick": {
         "h": "Máy kẹt giấy kiểu nào?",
         "rows": [
-          ["Giấy nhăn, kẹt gần cửa ra", "Giấy ẩm, hoặc bộ sấy đã mòn", "Đổi giấy trước, kẹt lại thì cần kiểm tra bộ sấy"],
-          ["Máy không kéo giấy, kêu rè", "Bánh kéo giấy đã mòn", "Lau bánh kéo, không hết thì thay"],
-          ["Mỗi lần kéo vào 2 đến 3 tờ", "Giấy dính nhau hoặc khay quá đầy", "Xòe giấy, bớt giấy trong khay"],
-          ["Báo kẹt nhưng không thấy giấy", "Còn mảnh giấy nhỏ trong máy, hoặc cảm biến bị kẹt", "Soi đèn tìm mảnh giấy"],
-          ["Kẹt ngay khi vừa bật máy", "Giấy còn sót ở bên trong", "Mở tất cả các nắp để kiểm tra"]
+          [
+            "Giấy nhăn, kẹt gần cửa ra",
+            "Giấy ẩm, hoặc bộ sấy đã mòn",
+            "Đổi giấy trước, kẹt lại thì cần kiểm tra bộ sấy",
+            "ket-nhan"
+          ],
+          [
+            "Máy không kéo giấy, kêu rè",
+            "Bánh kéo giấy đã mòn",
+            "Lau bánh kéo, không hết thì thay",
+            "ket-keo"
+          ],
+          [
+            "Mỗi lần kéo vào 2 đến 3 tờ",
+            "Giấy dính nhau hoặc khay quá đầy",
+            "Xòe giấy, bớt giấy trong khay",
+            "ket-nhieu"
+          ],
+          [
+            "Báo kẹt nhưng không thấy giấy",
+            "Còn mảnh giấy nhỏ trong máy, hoặc cảm biến bị kẹt",
+            "Soi đèn tìm mảnh giấy",
+            "ket-manh"
+          ],
+          [
+            "Kẹt ngay khi vừa bật máy",
+            "Giấy còn sót ở bên trong",
+            "Mở tất cả các nắp để kiểm tra",
+            "ket-bat"
+          ]
         ]
       },
       "sections": [
@@ -209,7 +472,9 @@
             "Cầm giấy bằng hai tay và kéo chậm theo đúng chiều giấy chạy. Không giật, không kéo ngược chiều nếu tránh được.",
             "Không dùng kéo, kẹp kim loại hay tua vít để cạy, vì rất dễ làm xước trống và các trục.",
             "Rách thì soi đèn pin để tìm phần giấy còn lại, sau đó lắp lại hộp mực và đóng hết các nắp."
-          ]
+          ],
+          "diagram": "keo-giay",
+          "cap": "Kéo theo chiều giấy chạy để giấy không rách trong máy."
         },
         {
           "h": "Để không bị kẹt lại",
@@ -224,14 +489,43 @@
           "h": "Khi nào là lỗi linh kiện",
           "p": [
             "Kẹt lặp lại với giấy mới và khay xếp đúng thì không còn là chuyện giấy nữa. Thường gặp nhất là bánh kéo giấy mòn, khiến máy không ăn giấy và kêu rè. Giấy nhăn ở cửa ra lặp đi lặp lại thì cần kiểm tra bao lụa, lô sấy."
+          ],
+          "photos": [
+            [
+              "ben-trong-may-in",
+              "Mặt trước máy in và khu vực đường giấy",
+              "Kiểm tra cả khu vực khay và cửa ra giấy."
+            ],
+            [
+              "lo-say-thao-ra",
+              "Cụm lô sấy tháo khỏi máy in",
+              "Bộ sấy là nơi giấy hay bị nhăn và kẹt ở cửa ra."
+            ]
           ]
         }
       ],
-      "prices": ["Bánh kéo giấy", "Bao lụa / lô sấy"],
+      "prices": [
+        "Bánh kéo giấy",
+        "Bao lụa / lô sấy"
+      ],
       "faq": [
-        { "q": "Canon LBP2900 hay kẹt giấy thì sao?", "a": "Với dòng này, nên kiểm tra giấy và khay trước. Nếu máy không kéo giấy hoặc giấy vào lệch nhiều lần thì thường do bánh kéo giấy đã mòn sau thời gian dài sử dụng." },
-        { "q": "Giấy kẹt rồi rách, còn mảnh nhỏ không lấy được thì sao?", "a": "Đừng dùng vật cứng để cạy. Chụp ảnh chỗ kẹt và gửi Zalo, sau đó tắt máy cho tới khi lấy được mảnh giấy ra, in tiếp có thể làm kẹt nặng hơn." }
-      ]
+        {
+          "q": "Canon LBP2900 hay kẹt giấy thì sao?",
+          "a": "Với dòng này, nên kiểm tra giấy và khay trước. Nếu máy không kéo giấy hoặc giấy vào lệch nhiều lần thì thường do bánh kéo giấy đã mòn sau thời gian dài sử dụng."
+        },
+        {
+          "q": "Giấy kẹt rồi rách, còn mảnh nhỏ không lấy được thì sao?",
+          "a": "Đừng dùng vật cứng để cạy. Chụp ảnh chỗ kẹt và gửi Zalo, sau đó tắt máy cho tới khi lấy được mảnh giấy ra, in tiếp có thể làm kẹt nặng hơn."
+        }
+      ],
+      "path": {
+        "hl": [
+          "khay",
+          "banh",
+          "say"
+        ],
+        "cap": "Giấy thường kẹt ở ba vùng tô màu. Sơ đồ đơn giản hoá."
+      }
     },
     {
       "slug": "may-in-bao-loi-drum",
@@ -242,11 +536,36 @@
       "quick": {
         "h": "Máy của anh/chị đang báo gì?",
         "rows": [
-          ["Drum End Soon", "Trống sắp tới hạn theo số trang đã đếm", "Cứ in tiếp, chuẩn bị thay"],
-          ["Drum Error", "Dây sạc trong cụm trống bị bẩn", "Tự gạt thanh trượt màu xanh"],
-          ["Replace Drum, bản in còn đẹp", "Máy đếm đủ số trang, trống có thể vẫn dùng được", "Theo dõi bản in, chuẩn bị thay"],
-          ["Replace Drum, bản in sọc, xám nền", "Trống đã mòn thật", "Cần thay trống"],
-          ["Drum Stop", "Trống đã quá hạn, máy dừng in", "Cần thay trống"]
+          [
+            "Drum End Soon",
+            "Trống sắp tới hạn theo số trang đã đếm",
+            "Cứ in tiếp, chuẩn bị thay",
+            "lcd:Drum End Soon"
+          ],
+          [
+            "Drum Error",
+            "Dây sạc trong cụm trống bị bẩn",
+            "Tự gạt thanh trượt màu xanh",
+            "lcd:Drum Error"
+          ],
+          [
+            "Replace Drum, bản in còn đẹp",
+            "Máy đếm đủ số trang, trống có thể vẫn dùng được",
+            "Theo dõi bản in, chuẩn bị thay",
+            "lcd:Replace Drum"
+          ],
+          [
+            "Replace Drum, bản in sọc, xám nền",
+            "Trống đã mòn thật",
+            "Cần thay trống",
+            "soc-nen"
+          ],
+          [
+            "Drum Stop",
+            "Trống đã quá hạn, máy dừng in",
+            "Cần thay trống",
+            "lcd:Drum Stop"
+          ]
         ]
       },
       "sections": [
@@ -258,7 +577,9 @@
             "Gạt thanh qua lại khoảng 10 lần từ đầu này sang đầu kia.",
             "Đưa thanh về đúng vị trí ban đầu có mũi tên. Để sai vị trí thì bản in sẽ có sọc dọc.",
             "Lắp lại, bật máy và in thử."
-          ]
+          ],
+          "diagram": "thanh-xanh",
+          "cap": "Thanh trượt nhỏ màu xanh nằm trên cụm trống máy Brother."
         },
         {
           "h": "Cách biết trống đã thật sự mòn",
@@ -266,6 +587,18 @@
             "Nền trang xám dù hộp mực còn tốt.",
             "Có vệt đen dọc lặp đúng chu kỳ, hoặc sọc ở cùng một vị trí trên mọi trang.",
             "Bản in xấu đi ngay cả khi vừa nạp mực hoặc đổi hộp mới."
+          ],
+          "photos": [
+            [
+              "trong-cam-quang",
+              "Trống màu xanh dọc theo cụm hộp",
+              "Trống là ống màu xanh chạy dọc cụm hộp."
+            ],
+            [
+              "trong-va-cum-hop-muc",
+              "Trống và hộp mực tháo rời",
+              "Trống tháo rời để kiểm tra bề mặt."
+            ]
           ]
         },
         {
@@ -277,11 +610,26 @@
           ]
         }
       ],
-      "prices": ["Trống (drum) máy in A4", "Hộp mực mới nguyên bộ"],
+      "prices": [
+        "Trống (drum) máy in A4",
+        "Hộp mực mới nguyên bộ"
+      ],
       "faq": [
-        { "q": "Máy báo Replace Drum có in tiếp được không?", "a": "Nhiều máy vẫn in tiếp được một thời gian. Nếu bản in vẫn đẹp, anh/chị có thể dùng tiếp và chuẩn bị thay. Khi máy chuyển sang Drum Stop thì máy sẽ dừng in." },
-        { "q": "Trống dùng được bao lâu?", "a": "Tùy dòng máy và số trang in mỗi ngày nên không có một con số chung. Hãy xem chất lượng bản in thay vì chỉ nhìn vào thông báo của máy." }
-      ]
+        {
+          "q": "Máy báo Replace Drum có in tiếp được không?",
+          "a": "Nhiều máy vẫn in tiếp được một thời gian. Nếu bản in vẫn đẹp, anh/chị có thể dùng tiếp và chuẩn bị thay. Khi máy chuyển sang Drum Stop thì máy sẽ dừng in."
+        },
+        {
+          "q": "Trống dùng được bao lâu?",
+          "a": "Tùy dòng máy và số trang in mỗi ngày nên không có một con số chung. Hãy xem chất lượng bản in thay vì chỉ nhìn vào thông báo của máy."
+        }
+      ],
+      "path": {
+        "hl": [
+          "trong"
+        ],
+        "cap": "Trống đưa mực từ hộp sang giấy. Sơ đồ đơn giản hoá."
+      }
     }
   ]
 }

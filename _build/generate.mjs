@@ -12,6 +12,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { sample, printerPath, diagram } from './symptom-figures.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
@@ -71,13 +72,13 @@ const ADDR2_FULL = ADDR2 ? [ADDR2.street, ADDR2.ward, ADDR2.locality].filter(Boo
  * trình duyệt chừa sẵn chỗ — không có thì trang bị giật khi ảnh tải xong (CLS).
  * `eager` chỉ dùng cho ảnh nằm ngay màn hình đầu; còn lại tải lười.
  */
-function pic(name, depth, { eager = false, cls = '', caption = '' } = {}) {
+function pic(name, depth, { eager = false, cls = '', caption = '', alt = '' } = {}) {
   const m = IMG[name];
   if (!m) { console.error(`  ! thiếu ảnh: ${name}`); return ''; }
   const p = pre(depth);
   const img = `<picture>
       <source type="image/webp" srcset="${p}images/${name}@small.webp ${m.smallW}w, ${p}images/${name}.webp ${m.w}w" sizes="(max-width: 768px) 100vw, 50vw">
-      <img src="${p}images/${name}.jpg" width="${m.w}" height="${m.h}" alt="${attr(m.alt)}"
+      <img src="${p}images/${name}.jpg" width="${m.w}" height="${m.h}" alt="${attr(alt || m.alt)}"
            loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>
     </picture>`;
   return caption
@@ -1287,27 +1288,42 @@ if (SYMPTOM) {
   };
   for (const d of SYMPTOM.pages) {
     const q = d.quick;
-    const quickRows = q.rows.map((r) => `          <tr><td data-label="Dấu hiệu"><strong>${r[0]}</strong></td><td data-label="Nguyên nhân">${r[1]}</td><td data-label="Nên làm">${r[2]}</td></tr>`).join('\n');
+    const cards = q.rows.map((r) => `        <li class="symptom-card">
+          ${sample(r[3], plain(r[0]))}
+          <div>
+            <strong>${r[0]}</strong>
+            <p><span class="muted">Nguyên nhân:</span> ${r[1]}</p>
+            <p><span class="muted">Nên làm:</span> ${r[2]}</p>
+          </div>
+        </li>`).join('\n');
     const quickHtml = `
 <section class="section">
   <div class="container">
     <div class="prose" style="max-width:none">
       <h2 id="${slugify(q.h)}">${q.h}</h2>
-      <table class="price-table symptom-table">
-        <thead><tr><th>Bản in, thông báo</th><th>Nguyên nhân thường gặp</th><th>Nên làm gì</th></tr></thead>
-        <tbody>
-${quickRows}
-        </tbody>
-      </table>
+      <p class="muted">Đặt tờ giấy của anh/chị cạnh các mẫu dưới đây. Hình mẫu là minh hoạ.</p>
+      <ul class="symptom-grid">
+${cards}
+      </ul>
+      <figure class="symptom-fig">
+        ${printerPath(d.path.hl, plain(d.path.cap))}
+        <figcaption>${d.path.cap}</figcaption>
+      </figure>
     </div>
   </div>
 </section>`;
+    const media = (s2) => {
+      let out = '';
+      if (s2.diagram) out += `<figure class="symptom-fig">${diagram(s2.diagram, plain(s2.cap))}<figcaption>${s2.cap}</figcaption></figure>`;
+      if (s2.photos) out += `<div class="symptom-photos">${s2.photos.map(([name, alt, cap]) => pic(name, 1, { alt, caption: cap })).join('')}</div>`;
+      return out;
+    };
     const sec = d.sections.map((s2, i) => `
 <section class="section${i % 2 ? '' : ' section-alt'}">
   <div class="container">
     <div class="prose" style="max-width:none">
       <h2 id="${slugify(s2.h)}">${s2.h}</h2>
-      ${blocks(s2)}
+      ${s2.top ? media(s2) + blocks(s2) : blocks(s2) + media(s2)}
     </div>
   </div>
 </section>`).join('\n');
@@ -1334,6 +1350,9 @@ ${priceRows}
         </tbody>
       </table>
       <p class="muted">Giá chốt sau khi xem máy, anh/chị đồng ý thì mới làm.</p>
+      <h3>Cửa hàng ở đâu</h3>
+      <p>${ADDR_FULL}. <a href="${S.mapLink}" rel="nofollow noopener" target="_blank">Mở chỉ đường trên Google Maps</a></p>
+      <div class="map-wrap"><iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </div>
 </section>`;
