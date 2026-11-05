@@ -16,31 +16,36 @@
             "Nhạt đều cả trang, nhạt dần qua nhiều ngày",
             "Hộp mực sắp hết",
             "Lắc hộp để in tạm, sau đó cần nạp",
-            "mo-deu"
+            "mo-deu",
+            "Nhạt đều, nhạt dần"
           ],
           [
             "Nhạt đều ngay từ trang đầu, mực vẫn còn",
             "Đang bật chế độ tiết kiệm mực",
             "Tự tắt được trong cài đặt in",
-            "mo-nhat"
+            "mo-nhat",
+            "Nhạt ngay từ đầu"
           ],
           [
             "Mờ một bên trang, bên kia vẫn đậm",
             "Mực dồn lệch trong hộp, hoặc trục từ đã mòn",
             "Lắc hộp trước, không hết thì thay trục từ",
-            "mo-ben"
+            "mo-ben",
+            "Mờ một bên"
           ],
           [
             "Mờ kèm nền xám, chữ có viền bẩn",
             "Trống đã mòn",
             "Cần thay trống",
-            "mo-nen"
+            "mo-nen",
+            "Mờ kèm nền xám"
           ],
           [
             "Vừa nạp mực xong mà vẫn mờ",
             "Mực chưa xuống đều, hoặc nạp sai loại mực",
             "In thử 10 trang, còn mờ thì báo lại nơi nạp",
-            "mo-nap"
+            "mo-nap",
+            "Mờ sau khi nạp"
           ]
         ]
       },
@@ -117,31 +122,50 @@
             "Vệt đen dọc chạy suốt trang, cùng một vị trí",
             "Trống bị xước hoặc gạt mực đã mòn",
             "Cần thay linh kiện",
-            "soc-doc"
+            "soc-doc",
+            "Vệt đen dọc"
           ],
           [
-            "Sọc hoặc đốm ngang lặp lại cách đều nhau",
-            "Vết xước hay vết bẩn trên một trục quay",
-            "Đo khoảng cách lặp rồi kiểm tra trục",
-            "soc-ngang"
-          ],
-          [
-            "Vạch trắng dọc, chữ bị mất một đường",
+            "Sọc nhạt hoặc trắng chạy dọc trang",
             "Thiếu mực ở phần đó, hoặc bụi che đường laser",
             "Lắc hộp trước, không hết thì cần mở máy vệ sinh",
-            "vach-trang"
+            "soc-nhat",
+            "Sọc nhạt dọc"
+          ],
+          [
+            "Chấm đen lặp lại cách nhau khoảng 75 đến 95 mm",
+            "Thường do vết trên mặt trống, khoảng lặp bằng một vòng trống",
+            "Cần thay trống",
+            "cham-trong",
+            "Chấm lặp theo trống"
+          ],
+          [
+            "Vệt ngắn lặp lại dày, cách nhau khoảng 35 đến 40 mm",
+            "Thường do trục sạc bẩn hoặc hỏng",
+            "Vệ sinh hoặc thay trục sạc",
+            "vet-sac",
+            "Vệt lặp theo trục sạc"
+          ],
+          [
+            "Sọc ngang chạy hết bề rộng trang, cách đều nhau",
+            "Trục từ hoặc bánh răng đã mòn",
+            "Đo khoảng cách rồi gọi để xác định đúng trục",
+            "soc-ngang",
+            "Sọc ngang"
           ],
           [
             "Nền xám kèm nhiều sọc mờ",
             "Trống đã hết tuổi",
             "Cần thay trống",
-            "soc-nen"
+            "soc-nen",
+            "Nền xám, sọc mờ"
           ],
           [
-            "Máy phun: sọc ngang mảnh, thiếu màu",
+            "Máy phun: vạch trắng ngang mảnh, thiếu màu",
             "Đầu phun bị nghẹt",
             "Tự chạy Head Cleaning",
-            "soc-phun"
+            "soc-phun",
+            "Máy phun bị sọc"
           ]
         ]
       },
@@ -152,7 +176,7 @@
             "In 3 trang có nhiều chữ. Đặt cạnh nhau và xem vệt có nằm đúng cùng một chỗ không. Có thì lỗi nằm ở linh kiện, không phải ở file.",
             "Tắt máy, chờ nguội rồi lấy hộp mực ra. Xem có mực rò ở mép hộp không. Hộp rò mực thì vệ sinh sẽ không giải quyết được.",
             "Với máy Brother có thanh trượt màu xanh trên cụm trống, gạt thanh này qua lại khoảng 10 lần rồi đưa về đúng vị trí ban đầu. Việc này lau dây sạc và xử lý được nhiều trường hợp sọc dọc.",
-            "Nếu sọc ngang lặp lại, đo khoảng cách giữa hai vệt liền nhau. Khoảng cách này giúp xác định đúng trục bị lỗi, nên ghi lại để báo khi gọi."
+            "Nếu vệt hoặc chấm lặp lại, đo khoảng cách giữa hai vệt liền nhau. Khoảng 75 đến 95 mm thường là trống, khoảng 35 đến 40 mm thường là trục sạc. Con số thay đổi theo máy, nên ghi lại để báo khi gọi."
           ],
           "diagram": "do-lap",
           "cap": "Sọc ngang lặp lại: đo khoảng cách giữa hai vệt liền nhau."
@@ -223,31 +247,36 @@
             "Chà tay là chữ bong, nhòe ra",
             "Bộ sấy không còn ép chặt mực vào giấy",
             "Thử giấy khô trước, không hết thì cần thay bao lụa hoặc lô sấy",
-            "lem-bong"
+            "lem-bong",
+            "Chà là bong"
           ],
           [
             "Lem khắp trang, nền bẩn dù chữ không bong",
             "Gạt mực đã mòn",
             "Cần thay gạt mực",
-            "lem-khap"
+            "lem-khap",
+            "Lem khắp trang"
           ],
           [
             "Lem theo một dải hoặc một bên",
             "Hộp mực rò hoặc nạp quá đầy",
             "Lấy hộp ra kiểm tra mép hộp",
-            "lem-dai"
+            "lem-dai",
+            "Lem một dải"
           ],
           [
             "Mặt sau tờ giấy bị dính mực",
             "Có mực rơi trên đường đi của giấy",
             "In vài tờ trắng để giấy tự kéo sạch mực",
-            "lem-sau"
+            "lem-sau",
+            "Bẩn mặt sau"
           ],
           [
             "Bản in nhòe như bị ẩm",
             "Giấy ẩm hoặc bộ sấy yếu",
             "Đổi giấy mới, khô",
-            "lem-am"
+            "lem-am",
+            "Nhòe như ẩm"
           ]
         ]
       },
@@ -322,31 +351,36 @@
             "Toner Low, bản in còn đậm",
             "Mực sắp hết, chưa phải hết",
             "Cứ in tiếp, chuẩn bị nạp trong thời gian tới",
-            "lcd:Toner Low"
+            "lcd:Toner Low",
+            "Toner Low"
           ],
           [
             "Replace Toner, máy dừng in, bản in còn đậm",
             "Bộ đếm của máy đã tới ngưỡng",
             "Cần nạp mực và đặt lại cữ trên hộp",
-            "lcd:Replace Toner"
+            "lcd:Replace Toner",
+            "Replace Toner"
           ],
           [
             "Báo hết và bản in đã nhạt",
             "Hết mực thật",
             "Lắc hộp để in tạm, sau đó nạp",
-            "mo-deu"
+            "mo-deu",
+            "Đã nhạt thật"
           ],
           [
             "Vừa nạp xong vẫn báo hết (Brother)",
             "Hộp chưa được đặt lại cữ",
             "Cần đặt lại cữ trên hộp mực",
-            "lcd:Replace Toner|Brother"
+            "lcd:Replace Toner|Brother",
+            "Nạp xong vẫn báo (Brother)"
           ],
           [
             "Vừa nạp xong vẫn báo hết (HP đời mới, Samsung, Fuji Xerox)",
             "Chip trên hộp đã hết lượt đếm",
             "Cần thay chip hộp mực",
-            "lcd:Replace Toner|có chip"
+            "lcd:Replace Toner|có chip",
+            "Nạp xong vẫn báo (có chip)"
           ]
         ]
       },
@@ -434,31 +468,36 @@
             "Giấy nhăn, kẹt gần cửa ra",
             "Giấy ẩm, hoặc bộ sấy đã mòn",
             "Đổi giấy trước, kẹt lại thì cần kiểm tra bộ sấy",
-            "ket-nhan"
+            "ket-nhan",
+            "Nhăn ở cửa ra"
           ],
           [
             "Máy không kéo giấy, kêu rè",
             "Bánh kéo giấy đã mòn",
             "Lau bánh kéo, không hết thì thay",
-            "ket-keo"
+            "ket-keo",
+            "Không kéo giấy"
           ],
           [
             "Mỗi lần kéo vào 2 đến 3 tờ",
             "Giấy dính nhau hoặc khay quá đầy",
             "Xòe giấy, bớt giấy trong khay",
-            "ket-nhieu"
+            "ket-nhieu",
+            "Kéo nhiều tờ"
           ],
           [
             "Báo kẹt nhưng không thấy giấy",
             "Còn mảnh giấy nhỏ trong máy, hoặc cảm biến bị kẹt",
             "Soi đèn tìm mảnh giấy",
-            "ket-manh"
+            "ket-manh",
+            "Không thấy giấy"
           ],
           [
             "Kẹt ngay khi vừa bật máy",
             "Giấy còn sót ở bên trong",
             "Mở tất cả các nắp để kiểm tra",
-            "ket-bat"
+            "ket-bat",
+            "Kẹt khi bật máy"
           ]
         ]
       },
@@ -540,31 +579,36 @@
             "Drum End Soon",
             "Trống sắp tới hạn theo số trang đã đếm",
             "Cứ in tiếp, chuẩn bị thay",
-            "lcd:Drum End Soon"
+            "lcd:Drum End Soon",
+            "Drum End Soon"
           ],
           [
             "Drum Error",
             "Dây sạc trong cụm trống bị bẩn",
             "Tự gạt thanh trượt màu xanh",
-            "lcd:Drum Error"
+            "lcd:Drum Error",
+            "Drum Error"
           ],
           [
             "Replace Drum, bản in còn đẹp",
             "Máy đếm đủ số trang, trống có thể vẫn dùng được",
             "Theo dõi bản in, chuẩn bị thay",
-            "lcd:Replace Drum"
+            "lcd:Replace Drum",
+            "Replace Drum, in đẹp"
           ],
           [
             "Replace Drum, bản in sọc, xám nền",
             "Trống đã mòn thật",
             "Cần thay trống",
-            "soc-nen"
+            "soc-nen",
+            "Replace Drum, in xấu"
           ],
           [
             "Drum Stop",
             "Trống đã quá hạn, máy dừng in",
             "Cần thay trống",
-            "lcd:Drum Stop"
+            "lcd:Drum Stop",
+            "Drum Stop"
           ]
         ]
       },

@@ -1288,23 +1288,23 @@ if (SYMPTOM) {
   };
   for (const d of SYMPTOM.pages) {
     const q = d.quick;
-    const cards = q.rows.map((r) => `        <li class="symptom-card">
+    const thumbs = q.rows.map((r, i) => `        <li><a href="#benh-${i + 1}">
           ${sample(r[3], plain(r[0]))}
-          <div>
-            <strong>${r[0]}</strong>
-            <p><span class="muted">Nguyên nhân:</span> ${r[1]}</p>
-            <p><span class="muted">Nên làm:</span> ${r[2]}</p>
-          </div>
-        </li>`).join('\n');
+          <span><b>${i + 1}</b> ${r[4]}</span>
+        </a></li>`).join('\n');
+    const details = q.rows.map((r, i) => `        <li id="benh-${i + 1}"><strong>${r[0]}.</strong> <span class="muted">Nguyên nhân:</span> ${r[1]}. <span class="muted">Nên làm:</span> ${r[2]}.</li>`).join('\n');
     const quickHtml = `
 <section class="section">
   <div class="container">
     <div class="prose" style="max-width:none">
       <h2 id="${slugify(q.h)}">${q.h}</h2>
-      <p class="muted">Đặt tờ giấy của anh/chị cạnh các mẫu dưới đây. Hình mẫu là minh hoạ.</p>
+      <p class="muted">Tìm hình giống tờ giấy của anh/chị, mũi tên đỏ chỉ đúng chỗ lỗi. Hình là minh hoạ, bấm vào hình để xem nguyên nhân.</p>
       <ul class="symptom-grid">
-${cards}
+${thumbs}
       </ul>
+      <ol class="symptom-list">
+${details}
+      </ol>
       <figure class="symptom-fig">
         ${printerPath(d.path.hl, plain(d.path.cap))}
         <figcaption>${d.path.cap}</figcaption>
@@ -1352,7 +1352,7 @@ ${priceRows}
       <p class="muted">Giá chốt sau khi xem máy, anh/chị đồng ý thì mới làm.</p>
       <h3>Cửa hàng ở đâu</h3>
       <p>${ADDR_FULL}. <a href="${S.mapLink}" rel="nofollow noopener" target="_blank">Mở chỉ đường trên Google Maps</a></p>
-      <div class="map-wrap"><iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="map-wrap"><iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}" width="100%" height="220" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </div>
 </section>`;

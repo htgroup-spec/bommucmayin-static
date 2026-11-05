@@ -31,6 +31,10 @@ const S = {
   'soc-doc': () => sheet(textLines(INK) + `<rect x="80" y="1" width="3.5" height="158" fill="#111"/>`),
   'soc-ngang': () => sheet(textLines(INK) + [38, 88, 138].map((y) => `<rect x="1" y="${y}" width="118" height="4" fill="#111" opacity=".8"/>`).join('')),
   'vach-trang': () => sheet(textLines(INK) + `<rect x="54" y="1" width="6" height="158" fill="#fff"/>`),
+  // Tỉ lệ khung: A4 dài 297 mm = 160 đơn vị. Chấm lặp theo trống ~90 mm = 48 đơn vị, theo trục sạc ~38 mm = 20 đơn vị.
+  'soc-nhat': () => sheet(textLines(INK) + `<rect x="62" y="1" width="20" height="158" fill="#fff" opacity=".72"/>`),
+  'cham-trong': () => sheet(textLines(INK, 0.75) + [32, 80, 128].map((y) => `<circle cx="84" cy="${y}" r="3.2" fill="#111"/>`).join('')),
+  'vet-sac': () => sheet(textLines(INK, 0.75) + [24, 44, 64, 84, 104, 124, 144].map((y) => `<rect x="30" y="${y}" width="9" height="3" fill="#111"/>`).join('')),
   'soc-nen': () => sheet(textLines('#444') + [22, 47, 71, 96].map((x) => `<rect x="${x}" y="1" width="1.6" height="158" fill="#777" opacity=".7"/>`).join(''), '#dcdcdc'),
   'soc-phun': () => { const id = `g${++uid}`; return `<defs><linearGradient id="${id}" x2="1" y2="1"><stop stop-color="#1c7ed6"/><stop offset=".5" stop-color="#e64980"/><stop offset="1" stop-color="#fcc419"/></linearGradient></defs>` + sheet(`<rect x="10" y="12" width="100" height="136" fill="url(#${id})"/>` + Array.from({ length: 14 }, (_, i) => `<rect x="10" y="${16 + i * 9.6}" width="100" height="2" fill="#fff" opacity=".85"/>`).join('')); },
   'lem-bong': () => { const id = `b${++uid}`; return `<defs><filter id="${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>` + sheet(textLines(INK) + `<g filter="url(#${id})"><path d="M14 64 L108 92" stroke="#555" stroke-width="11" opacity=".55"/></g>`); },
@@ -51,13 +55,51 @@ function lcd(text, sub = '') {
 <circle cx="32" cy="104" r="9" fill="#ced4da"/><circle cx="60" cy="104" r="9" fill="${ACC}"/><circle cx="88" cy="104" r="9" fill="#ced4da"/>`;
 }
 
+// Chú thích trên từng mẫu: t = chữ, [x, y] = tâm nhãn, [ax, ay] = đầu mũi tên chỉ vào chỗ lỗi.
+const NOTE = {
+  'mo-deu': { t: 'Nhạt cả trang', x: 60, y: 146, ax: 60, ay: 112 },
+  'mo-nhat': { t: 'Nhạt từ đầu', x: 60, y: 146, ax: 60, ay: 112 },
+  'mo-ben': { t: 'Bên này nhạt', x: 62, y: 146, ax: 92, ay: 112 },
+  'mo-nen': { t: 'Nền xám', x: 60, y: 10, ax: 100, ay: 26 },
+  'mo-nap': { t: 'Mờ từng dải', x: 60, y: 146, ax: 84, ay: 110 },
+  'soc-doc': { t: 'Vệt đen dọc', x: 42, y: 146, ax: 79, ay: 118 },
+  'soc-nhat': { t: 'Sọc nhạt', x: 34, y: 146, ax: 70, ay: 118 },
+  'cham-trong': { t: 'Lặp ~90 mm', x: 38, y: 104, ax: 80, ay: 80 },
+  'vet-sac': { t: 'Lặp ~38 mm', x: 82, y: 94, ax: 41, ay: 84 },
+  'soc-ngang': { t: 'Sọc ngang', x: 72, y: 62, ax: 50, ay: 86 },
+  'vach-trang': { t: 'Mất một đường', x: 60, y: 146, ax: 57, ay: 112 },
+  'soc-nen': { t: 'Nền xám, sọc mờ', x: 60, y: 146, ax: 47, ay: 112 },
+  'soc-phun': { t: 'Vạch trắng mảnh', x: 60, y: 8, ax: 60, ay: 35 },
+  'lem-bong': { t: 'Chữ bong', x: 60, y: 146, ax: 62, ay: 84 },
+  'lem-khap': { t: 'Chấm bẩn', x: 60, y: 146, ax: 76, ay: 106 },
+  'lem-dai': { t: 'Dải lem', x: 44, y: 146, ax: 92, ay: 120 },
+  'lem-sau': { t: 'Mặt sau dính mực', x: 60, y: 108, ax: 34, ay: 84 },
+  'lem-am': { t: 'Chữ nhòe', x: 60, y: 146, ax: 60, ay: 112 },
+  'ket-nhan': { t: 'Giấy nhăn', x: 60, y: 146, ax: 62, ay: 100 },
+  'ket-keo': { t: 'Bánh kéo mòn', x: 60, y: 8, ax: 60, ay: 18 },
+  'ket-nhieu': { t: 'Dính nhiều tờ', x: 60, y: 146, ax: 64, ay: 118 },
+  'ket-manh': { t: 'Mảnh giấy sót', x: 60, y: 10, ax: 56, ay: 66 },
+  'ket-bat': { t: 'Báo kẹt', x: 60, y: 148, ax: 60, ay: 104 },
+  lcd: { t: 'Dòng báo lỗi', x: 60, y: 10, ax: 60, ay: 38 },
+};
+
+function note(id) {
+  const n = NOTE[id.startsWith('lcd:') ? 'lcd' : id];
+  if (!n) throw new Error(`symptom-figures: chưa có chú thích cho "${id}"`);
+  const a = `n${++uid}`;
+  const w = n.t.length * 5.9 + 10;
+  const fromY = n.ay < n.y ? n.y - 8 : n.y + 8;
+  return `${arrowDefs(a, BAD)}<line x1="${n.x}" y1="${fromY}" x2="${n.ax}" y2="${n.ay}" stroke="${BAD}" stroke-width="2" marker-end="url(#${a})"/>
+<rect x="${n.x - w / 2}" y="${n.y - 8}" width="${w}" height="16" rx="4" fill="#fff" stroke="${BAD}"/><text x="${n.x}" y="${n.y + 3.6}" text-anchor="middle" font-size="10" font-weight="700" fill="${BAD}">${n.t}</text>`;
+}
+
 export function sample(id, label) {
   if (id.startsWith('lcd:')) {
     const [text, sub] = id.slice(4).split('|');
-    return svg(120, 160, label, lcd(text, sub), 'symptom-sample');
+    return svg(120, 160, label, lcd(text, sub) + note(id), 'symptom-sample');
   }
   if (!S[id]) throw new Error(`symptom-figures: không có mẫu "${id}"`);
-  return svg(120, 160, label, S[id](), 'symptom-sample');
+  return svg(120, 160, label, S[id]() + note(id), 'symptom-sample');
 }
 
 // ---------- sơ đồ đường giấy ----------
@@ -87,7 +129,7 @@ export function printerPath(hl, label) {
 }
 
 // ---------- hình thao tác ----------
-const arrowDefs = (id, c) => `<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="${c}"/></marker></defs>`;
+function arrowDefs(id, c) { return `<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="${c}"/></marker></defs>`; }
 const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" text-anchor="${o.a || 'middle'}" font-size="${o.fs || 14}" font-weight="${o.w || 500}" fill="${o.c || INK}">${s}</text>`;
 
 const D = {
