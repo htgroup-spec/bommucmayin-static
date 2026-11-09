@@ -304,14 +304,17 @@ function adsClickTracking() {
 
 // 04/11/2026: nhật ký bấm gọi → Google Form → Sheet (adsgoogle/data/calls/README.md). Chỉ gửi khi khách đến từ quảng cáo (có gclid).
 // Chủ shop đánh dấu dòng nào là khách thật → adsgoogle/scripts/actions/upload_real_calls.js nhập vào Google Ads để Google học từ khách thật.
+// 06/11/2026: site này nhận khách từ 2 TK. gad_campaignid (Google tự gắn khi auto-tagging) cho biết lượt nhấp thuộc TK nào;
+// mã chiến dịch ghi kèm cột page để đối chiếu trong Sheet. Thêm chiến dịch mới ở TK 346-813-0025 thì thêm mã vào MAPS_CAMPAIGNS.
+const MAPS_CAMPAIGNS = ['24428020010', '24437975896'];
 function callLog() {
   if (!S.ads || !S.ads.gtagId) return '';
   const F = 'https://docs.google.com/forms/d/e/1FAIpQLSdGmtnssPys8M0fVDWWuhj4UcL1jr1DjIik_SqHUC5X_qh3XA/formResponse';
   const E = { gclid: '1170266095', page: '138633163', time: '2050608494', site: '1058356040', kind: '1645863857' };
   return `<!-- ads-calllog-v1 --><script>
 (function(){try{
-var q=new URLSearchParams(location.search),g=q.get('gclid');
-if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now(),s:window.HT_SITE||'bommucmayin',l:location.pathname}));}
+var q=new URLSearchParams(location.search),g=q.get('gclid'),c=q.get('gad_campaignid');
+if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now(),c:c||'',s:${JSON.stringify(MAPS_CAMPAIGNS)}.indexOf(c)>-1?'bommucmayin-maps':(window.HT_SITE||'bommucmayin'),l:location.pathname}));}
 function rec(){try{var o=JSON.parse(localStorage.getItem('_ht_gclid')||'null');if(!o)return null;if(Date.now()-o.t>90*864e5)return null;return o;}catch(x){return null;}}
 var sent=false;
 document.addEventListener('click',function(ev){
@@ -320,7 +323,7 @@ document.addEventListener('click',function(ev){
  var o=rec();if(!o)return;sent=true;
  var kind=a.getAttribute('href').indexOf('tel:')===0?'goi':'zalo';
  var d=new FormData();
- d.append('entry.${E.gclid}',o.g);d.append('entry.${E.page}',(o.l&&o.l!==location.pathname?o.l+' > ':'')+location.pathname);
+ d.append('entry.${E.gclid}',o.g);d.append('entry.${E.page}',(o.l&&o.l!==location.pathname?o.l+' > ':'')+location.pathname+(o.c?' #'+o.c:''));
  d.append('entry.${E.time}',new Date().toLocaleString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'}));
  d.append('entry.${E.site}',o.s||'bommucmayin');d.append('entry.${E.kind}',kind);
  fetch('${F}',{method:'POST',mode:'no-cors',body:d,keepalive:true});

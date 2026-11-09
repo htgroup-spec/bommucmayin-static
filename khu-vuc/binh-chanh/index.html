@@ -626,8 +626,8 @@ gtag('config', 'AW-18528137822');
 </script>
 <!-- ads-calllog-v1 --><script>
 (function(){try{
-var q=new URLSearchParams(location.search),g=q.get('gclid');
-if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now(),s:window.HT_SITE||'bommucmayin',l:location.pathname}));}
+var q=new URLSearchParams(location.search),g=q.get('gclid'),c=q.get('gad_campaignid');
+if(g){localStorage.setItem('_ht_gclid',JSON.stringify({g:g,t:Date.now(),c:c||'',s:["24428020010","24437975896"].indexOf(c)>-1?'bommucmayin-maps':(window.HT_SITE||'bommucmayin'),l:location.pathname}));}
 function rec(){try{var o=JSON.parse(localStorage.getItem('_ht_gclid')||'null');if(!o)return null;if(Date.now()-o.t>90*864e5)return null;return o;}catch(x){return null;}}
 var sent=false;
 document.addEventListener('click',function(ev){
@@ -636,7 +636,7 @@ document.addEventListener('click',function(ev){
  var o=rec();if(!o)return;sent=true;
  var kind=a.getAttribute('href').indexOf('tel:')===0?'goi':'zalo';
  var d=new FormData();
- d.append('entry.1170266095',o.g);d.append('entry.138633163',(o.l&&o.l!==location.pathname?o.l+' > ':'')+location.pathname);
+ d.append('entry.1170266095',o.g);d.append('entry.138633163',(o.l&&o.l!==location.pathname?o.l+' > ':'')+location.pathname+(o.c?' #'+o.c:''));
  d.append('entry.2050608494',new Date().toLocaleString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'}));
  d.append('entry.1058356040',o.s||'bommucmayin');d.append('entry.1645863857',kind);
  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdGmtnssPys8M0fVDWWuhj4UcL1jr1DjIik_SqHUC5X_qh3XA/formResponse',{method:'POST',mode:'no-cors',body:d,keepalive:true});
