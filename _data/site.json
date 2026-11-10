@@ -27,9 +27,19 @@
     "locality": "TP. Hồ Chí Minh"
   },
   "_note_schema_address": "Schema LocalBusiness chỉ khai địa chỉ Phạm Hùng vì đó là địa chỉ duy nhất đã xác minh trên Hồ sơ Google. Khai hai địa chỉ trong schema mà Google chỉ có một hồ sơ là tín hiệu lệch NAP, hại nhiều hơn lợi. Muốn cửa hàng Quận 10 có sức nặng trong tìm kiếm thì phải mở hồ sơ Google riêng cho nó.",
-  "mapEmbed": "https://www.google.com/maps?q=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20X%C3%A3%20B%C3%ACnh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed",
-  "mapLink": "https://www.google.com/maps/dir/?api=1&destination=5%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20X%C3%A3%20B%C3%ACnh%20H%C6%B0ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh",
-  "hours": "Thứ 2 – Chủ nhật, 08:00 – 19:00",
+  "_note_gbp": "10/11/2026: gắn đúng Hồ sơ Google 'Mực in HT' (place_id + cid đọc qua DataForSEO). Bản đồ nhúng tra theo TÊN + số nhà để hiện thẻ hồ sơ (có sao, đánh giá) thay vì chỉ ghim địa chỉ. Hồ sơ Google ghi phường Chánh Hưng, site ghi xã Bình Hưng theo chủ shop (xem _note_address) — chưa thống nhất, nên link bản đồ không chứa tên phường.",
+  "gbp": {
+    "name": "Mực in HT",
+    "placeId": "ChIJPy-PTuIvdTER_8_JGVihOSg",
+    "cid": "2898525234951475199",
+    "mapsUrl": "https://www.google.com/maps?cid=2898525234951475199",
+    "reviewUrl": "https://search.google.com/local/writereview?placeid=ChIJPy-PTuIvdTER_8_JGVihOSg",
+    "lat": 10.7363193,
+    "lng": 106.6733181
+  },
+  "mapEmbed": "https://www.google.com/maps?q=M%E1%BB%B1c%20in%20HT%2C%205%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed",
+  "mapLink": "https://www.google.com/maps/dir/?api=1&destination=M%E1%BB%B1c%20in%20HT%2C%205%2F19%20Ph%E1%BA%A1m%20H%C3%B9ng&destination_place_id=ChIJPy-PTuIvdTER_8_JGVihOSg",
+  "hours": "Thứ 2 – Thứ 7: 08:00 – 19:00 · Chủ nhật: 08:00 – 17:00",
   "hoursSchema": [
     "Mo-Sa 08:00-19:00",
     "Su 08:00-17:00"

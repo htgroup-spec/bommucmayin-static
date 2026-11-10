@@ -222,7 +222,12 @@ const localBusiness = () => ({
     ...(S.address.postalCode ? { postalCode: S.address.postalCode } : {}),
     addressCountry: S.address.country,
   },
-  hasMap: S.mapLink,
+  ...(S.gbp ? {
+    alternateName: S.gbp.name,
+    geo: { '@type': 'GeoCoordinates', latitude: S.gbp.lat, longitude: S.gbp.lng },
+    hasMap: S.gbp.mapsUrl,
+    sameAs: [S.gbp.mapsUrl],
+  } : { hasMap: S.mapLink }),
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '19:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '08:00', closes: '17:00' },
@@ -839,7 +844,9 @@ ${ADDR2 ? `        <p><strong>${ADDR2.label}</strong><br>${ADDR2_FULL}</p>
     </div>
     <p class="table-note">
       ${ADDR_FULL} ·
-      <a href="${S.mapLink}" rel="noopener" target="_blank">Mở chỉ đường trên Google Maps</a>
+      <a href="${S.mapLink}" rel="noopener" target="_blank">Mở chỉ đường trên Google Maps</a>${S.gbp ? ` ·
+      <a href="${S.gbp.mapsUrl}" rel="noopener" target="_blank">Xem đánh giá trên Google</a> ·
+      <a href="${S.gbp.reviewUrl}" rel="noopener" target="_blank">Viết đánh giá cho chúng tôi</a>` : ''}
     </p>
   </div>
 </section>
@@ -1028,6 +1035,26 @@ ${a.chuanBi.map(c => `      <div class="card"><h3>${c.h}</h3><p>${c.p}</p></div>
     ${linkBox(2, '🔧', 'Máy hỏng chứ không chỉ hết mực?', 'Xem bảng triệu chứng – nguyên nhân để biết việc nào xử lý được ngay tại chỗ.', 'sua-may-in/', 'Xem sửa máy in')}
   </div>
 </section>
+
+${!S.gbp ? '' : `
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="ban-do">Cửa hàng trên bản đồ</h2>
+      <p>Kỹ thuật đi ${a.label} xuất phát từ ${S.address.street}. Đánh giá của khách nằm trên Hồ sơ Google của cửa hàng.</p>
+    </div>
+    <div class="map-wrap">
+      <iframe src="${S.mapEmbed}" title="Bản đồ tới ${attr(ADDR_FULL)}"
+              width="100%" height="360" style="border:0" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p class="table-note">
+      ${ADDR_FULL} ·
+      <a href="${S.mapLink}" rel="noopener" target="_blank">Mở chỉ đường</a> ·
+      <a href="${S.gbp.mapsUrl}" rel="noopener" target="_blank">Xem đánh giá trên Google</a>
+    </p>
+  </div>
+</section>`}
 
 ${faqBlock(a.faq, `Câu hỏi thường gặp — khách ${a.label}`)}
 
