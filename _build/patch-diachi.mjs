@@ -1,4 +1,7 @@
 /**
+ * ⚠️ 14/11/2026: KHÔNG CHẠY LẠI — chủ shop đã chốt ghi Phường Chánh Hưng cho khớp Hồ sơ Google.
+ *    Chạy lại sẽ đổi ngược về Xã Bình Hưng.
+ *
  * patch-diachi.mjs — sửa địa chỉ kho và mọi câu nói sai vị trí kho.
  *
  * Chủ shop xác nhận 02/10/2026: kho ở 5/19 Phạm Hùng thuộc **xã Bình Hưng**,

@@ -10,10 +10,10 @@
   "_note_hotline": "03/10/2026: Chủ shop đổi số chính sang 0986 704 260 (hotline + Zalo). Số 0703 525 478 vẫn nhận máy nên liệt kê thêm ở trang Liên hệ và trong schema, đặt ngay dưới số chính và KHÔNG gắn nhãn \"số cũ\" — với khách thì cả hai đều gọi được, gắn nhãn chỉ làm số đó trông như đã bỏ.",
   "hotlineOld": "0703 525 478",
   "hotlineOldTel": "+84703525478",
-  "_note_address": "02/10/2026: Chủ shop xác nhận kho thuộc XÃ BÌNH HƯNG (không phải phường Chánh Hưng như Hồ sơ Google đang ghi — cần sửa bên đó cho khớp). Từ 01/07/2025 TP.HCM bỏ cấp quận/huyện nên địa chỉ chỉ ghi: số nhà, đường, xã/phường, thành phố. Tên quận cũ VẪN giữ trong nội dung bài vì khách tìm kiếm theo tên cũ.",
+  "_note_address": "14/11/2026: Chủ shop chốt ghi PHƯỜNG CHÁNH HƯNG cho khớp Hồ sơ Google 'Mực in HT' (trước đó 02/10 ghi xã Bình Hưng). Ghim Maps đặt đúng tại tiệm nên lấy phường theo Maps làm chuẩn. Không đổi lại nếu chủ shop không yêu cầu. Từ 01/07/2025 TP.HCM bỏ cấp quận/huyện nên địa chỉ chỉ ghi: số nhà, đường, xã/phường, thành phố. Tên quận cũ VẪN giữ trong nội dung bài vì khách tìm kiếm theo tên cũ.",
   "address": {
     "street": "5/19 Phạm Hùng",
-    "ward": "Xã Bình Hưng",
+    "ward": "Phường Chánh Hưng",
     "locality": "TP. Hồ Chí Minh",
     "postalCode": "700000",
     "country": "VN"
@@ -27,7 +27,7 @@
     "locality": "TP. Hồ Chí Minh"
   },
   "_note_schema_address": "Schema LocalBusiness chỉ khai địa chỉ Phạm Hùng vì đó là địa chỉ duy nhất đã xác minh trên Hồ sơ Google. Khai hai địa chỉ trong schema mà Google chỉ có một hồ sơ là tín hiệu lệch NAP, hại nhiều hơn lợi. Muốn cửa hàng Quận 10 có sức nặng trong tìm kiếm thì phải mở hồ sơ Google riêng cho nó.",
-  "_note_gbp": "10/11/2026: gắn đúng Hồ sơ Google 'Mực in HT' (place_id + cid đọc qua DataForSEO). Bản đồ nhúng tra theo TÊN + số nhà để hiện thẻ hồ sơ (có sao, đánh giá) thay vì chỉ ghim địa chỉ. Hồ sơ Google ghi phường Chánh Hưng, site ghi xã Bình Hưng theo chủ shop (xem _note_address) — chưa thống nhất, nên link bản đồ không chứa tên phường.",
+  "_note_gbp": "10/11/2026: gắn đúng Hồ sơ Google 'Mực in HT' (place_id + cid đọc qua DataForSEO). Bản đồ nhúng tra theo TÊN + số nhà để hiện thẻ hồ sơ (có sao, đánh giá) thay vì chỉ ghim địa chỉ. 14/11/2026: site đổi sang phường Chánh Hưng cho khớp Hồ sơ Google (xem _note_address). Link bản đồ vẫn không chứa tên phường.",
   "gbp": {
     "name": "Mực in HT",
     "placeId": "ChIJPy-PTuIvdTER_8_JGVihOSg",
@@ -271,7 +271,7 @@
     {
       "icon": "📍",
       "title": "Cửa hàng ngay khu Nam",
-      "text": "Cửa hàng và kỹ thuật của chúng tôi ở Phạm Hùng, xã Bình Hưng — sát ranh Quận 8 và nhìn sang Quận 7 qua Nguyễn Văn Linh. Cả bảy khu đều nằm trong bán kính gần, không phải chạy từ trung tâm sang."
+      "text": "Cửa hàng và kỹ thuật của chúng tôi ở Phạm Hùng, phường Chánh Hưng (Quận 8 cũ) — nhìn sang Quận 7 qua Nguyễn Văn Linh. Cả bảy khu đều nằm trong bán kính gần, không phải chạy từ trung tâm sang."
     },
     {
       "icon": "🧾",
@@ -302,7 +302,7 @@
   "faq": [
     {
       "q": "Nạp mực máy in tận nơi mất bao lâu?",
-      "a": "Cửa hàng ở Phạm Hùng (xã Bình Hưng) nên khu Bình Hưng và Quận 8 nhanh nhất, thường 15–30 phút. Quận 4, Quận 5, Quận 6 khoảng 25–40 phút. Quận 7 khoảng 30–50 phút. Nhà Bè và các xã xa của Bình Chánh thì 45–75 phút. Thao tác nạp mực và vệ sinh buồng mực mất thêm 15–20 phút."
+      "a": "Cửa hàng ở Phạm Hùng (phường Chánh Hưng) nên Quận 8 và khu Bình Hưng nhanh nhất, thường 15–30 phút. Quận 4, Quận 5, Quận 6 khoảng 25–40 phút. Quận 7 khoảng 30–50 phút. Nhà Bè và các xã xa của Bình Chánh thì 45–75 phút. Thao tác nạp mực và vệ sinh buồng mực mất thêm 15–20 phút."
     },
     {
       "q": "Giá nạp mực máy in bao nhiêu?",

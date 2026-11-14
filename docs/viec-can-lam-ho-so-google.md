@@ -261,7 +261,7 @@ vọng Maps ra khách cho tới khi có 8–10 đánh giá.
 ## Kiểm lại sau khi làm xong
 
 1. Tìm "Mực in HT" trên Google, xem đã hiện biểu trưng và ảnh bìa chưa.
-2. Xem dòng địa chỉ đã đổi từ Chánh Hưng sang Bình Hưng chưa.
+2. ~~Xem dòng địa chỉ đã đổi từ Chánh Hưng sang Bình Hưng chưa.~~ 14/11/2026: Maps vẫn ghi Chánh Hưng, chủ shop chốt để Chánh Hưng và đổi site theo Maps.
 3. Vào `https://www.google.com/maps/search/nạp+mực+máy+in+quận+8` xem hồ sơ mình
    đã lọt vào danh sách chưa (hiện chưa có mặt).
 4. Ghi lại danh mục nào Google không cho chọn, để tính tiếp.
